@@ -61,11 +61,11 @@ for await (const file of Deno.readDir(path)) {
 
       const progress: Progress = {
         date: commitDates[sha],
-        percentage: typed.length / untyped.length,
         typed: typed.length,
         typedSize: typed.reduce(sum, 0),
         untyped: untyped.length,
         untypedSize: untyped.reduce(sum, 0),
+        percentage: typed.length / untyped.length,
         sha,
       };
 
