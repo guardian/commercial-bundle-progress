@@ -33,7 +33,7 @@ type Blob = {
   };
 };
 
-type File = {
+export type File = {
   path: string;
   mode: string;
   type: "blob" | "tree";
@@ -138,3 +138,5 @@ console.log("Total file count", files);
 console.log("Total file sizes", sizes);
 
 // https://github.com/guardian/frontend/search?o=desc&p=1&q=merge%3Atrue&s=committer-date&type=Commits
+
+export { getFiles };
