@@ -31,13 +31,14 @@ const commitPrs: Partial<Record<Sha, string>> = {
 type Sha = keyof typeof commitDates;
 
 type Progress = {
-  sha: Sha;
   date: string;
+  percentage: number;
   typed: number;
   typedSize: number;
   untyped: number;
   untypedSize: number;
   prLink?: string;
+  sha: Sha;
 };
 
 const progressArray: Progress[] = [];
@@ -59,12 +60,13 @@ for await (const file of Deno.readDir(path)) {
       const sum = (p: number, c: File) => p + c.size;
 
       const progress: Progress = {
-        sha,
         date: commitDates[sha],
+        percentage: typed.length / untyped.length,
         typed: typed.length,
         typedSize: typed.reduce(sum, 0),
         untyped: untyped.length,
         untypedSize: untyped.reduce(sum, 0),
+        sha,
       };
 
       if (commitPrs[sha]) {
