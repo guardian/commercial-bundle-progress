@@ -33,12 +33,12 @@ type Sha = keyof typeof commitDates;
 
 type Progress = {
   date: string;
+  prLink?: string;
   percentage: number;
   typed: number;
   typedSize: number;
   untyped: number;
   untypedSize: number;
-  prLink?: string;
   sha: Sha;
 };
 
@@ -78,6 +78,10 @@ for await (const file of Deno.readDir(path)) {
       progressArray.push(progress);
     }
   }
+
+  progressArray.sort((a, b) =>
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 
   await Deno.writeTextFile(
     `./progress.json`,
