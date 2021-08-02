@@ -6,6 +6,8 @@ const repo = "https://api.github.com/repos/guardian/frontend";
 
 console.log("Using repo:", Colours.bold(repo));
 
+const dir = "/contents/static/src/javascripts/projects";
+
 const files = {
   ts: 0,
   js: 0,
@@ -83,7 +85,7 @@ const getFiles = async (ref?: string): Promise<File[]> => {
     }
 
     const initialTree = (await fetch(
-      repo + "/contents/static/src/javascripts/projects?ref=" + ref,
+      repo + dir + "?ref=" + ref,
     ).then((r) => r.json()) as Blob[]).filter((e) => e.name === "commercial");
 
     console.log("Using tree:", initialTree);
@@ -101,7 +103,7 @@ const getFiles = async (ref?: string): Promise<File[]> => {
     return fileTree;
   } else {
     const initialTree = (await fetch(
-      repo + "/contents/static/src/javascripts/projects",
+      repo + dir,
     ).then((r) => r.json()) as Blob[]).filter((e) => e.name === "commercial");
 
     console.log("Using tree:", initialTree);
