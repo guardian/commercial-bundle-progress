@@ -4,6 +4,8 @@ import type { File } from "./commercial-bundle.ts";
 // getFiles("main");
 
 const commitDates = {
+  "afce864c2599b824f8cdf88e7a22b6c4eb2bdd00": "2021-08-02 11:27:02 +0100",
+  "1f46e8df8163d505ee03760ff2b45f819e4d6df2": "2021-07-30 10:00:33 +0100",
   "03c1e9fac0a6b3fd19ed017dd67e8ee7ae63b338": "2021-07-26 12:06:20 +0100",
   "e2b57978096f5aacadad0f54d4c51001ba0dacc6": "2021-07-22 17:14:16 +0100",
   "c16f9a78480421ad5cc729e8ea4bb54a1148793f": "2021-07-22 11:24:08 +0100",
@@ -22,11 +24,13 @@ const commitDates = {
   "af8b840b7f4108f7980603dd2dfa2174110f3a49": "2021-03-10 13:40:19 +0000",
 };
 
-const commitPrs: Partial<Record<Sha, string>> = {
-  "03c1e9fac0a6b3fd19ed017dd67e8ee7ae63b338": "24025",
-  "3b9703bebd50961b6b914f8989339e1bdcfe8936": "23863",
-  "19d404bcaf74091a7c5a40f0bd5a516fb847f1a1": "23946",
-  "af8b840b7f4108f7980603dd2dfa2174110f3a49": "23594",
+const commitPrs: Partial<Record<Sha, number>> = {
+  "afce864c2599b824f8cdf88e7a22b6c4eb2bdd00": 24045,
+  "1f46e8df8163d505ee03760ff2b45f819e4d6df2": 24044,
+  "03c1e9fac0a6b3fd19ed017dd67e8ee7ae63b338": 24025,
+  "19d404bcaf74091a7c5a40f0bd5a516fb847f1a1": 23946,
+  "3b9703bebd50961b6b914f8989339e1bdcfe8936": 23863,
+  "af8b840b7f4108f7980603dd2dfa2174110f3a49": 23594,
 };
 
 type Sha = keyof typeof commitDates;
