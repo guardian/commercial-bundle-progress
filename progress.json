@@ -1,1 +1,170 @@
-[{"date":"2021-08-02 11:27:02 +0100","typed":27,"typedSize":85869,"untyped":65,"untypedSize":161039,"percentage":0.4153846153846154,"sha":"afce864c2599b824f8cdf88e7a22b6c4eb2bdd00","prLink":"https://github.com/guardian/frontend/pull/24045"},{"date":"2021-07-30 10:00:33 +0100","typed":25,"typedSize":84125,"untyped":67,"untypedSize":170771,"percentage":0.373134328358209,"sha":"1f46e8df8163d505ee03760ff2b45f819e4d6df2","prLink":"https://github.com/guardian/frontend/pull/24044"},{"date":"2021-07-26 12:06:20 +0100","typed":25,"typedSize":84074,"untyped":67,"untypedSize":170763,"percentage":0.373134328358209,"sha":"03c1e9fac0a6b3fd19ed017dd67e8ee7ae63b338","prLink":"https://github.com/guardian/frontend/pull/24025"},{"date":"2021-07-22 17:14:16 +0100","typed":22,"typedSize":71136,"untyped":70,"untypedSize":181240,"percentage":0.3142857142857143,"sha":"e2b57978096f5aacadad0f54d4c51001ba0dacc6"},{"date":"2021-07-22 11:24:08 +0100","typed":22,"typedSize":71136,"untyped":70,"untypedSize":180619,"percentage":0.3142857142857143,"sha":"c16f9a78480421ad5cc729e8ea4bb54a1148793f"},{"date":"2021-07-13 10:15:37 +0100","typed":22,"typedSize":71424,"untyped":72,"untypedSize":181534,"percentage":0.3055555555555556,"sha":"3bb1f605a14bd8efc427667afa8418847830d252"},{"date":"2021-07-09 13:25:39 +0100","typed":22,"typedSize":70004,"untyped":72,"untypedSize":181428,"percentage":0.3055555555555556,"sha":"e45695f217cb50a6c649231fd41e5494f847b506"},{"date":"2021-07-05 14:33:55 +0100","typed":20,"typedSize":54126,"untyped":74,"untypedSize":197875,"percentage":0.2702702702702703,"sha":"b22a9e85ea4d7aec463c30c4d8d8eea19969c0ca"},{"date":"2021-07-01 17:40:29 +0100","typed":20,"typedSize":53308,"untyped":74,"untypedSize":197875,"percentage":0.2702702702702703,"sha":"e7bf10462e65f0e31021b2c57b3d2e1c9210c505"},{"date":"2021-06-28 13:33:32 +0100","typed":20,"typedSize":52800,"untyped":74,"untypedSize":197875,"percentage":0.2702702702702703,"sha":"19d404bcaf74091a7c5a40f0bd5a516fb847f1a1","prLink":"https://github.com/guardian/frontend/pull/23946"},{"date":"2021-06-23 16:23:21 +0100","typed":20,"typedSize":52800,"untyped":74,"untypedSize":197875,"percentage":0.2702702702702703,"sha":"d6eaa9b433251f0b1d6e46b6aaf3b4d86e8ce12a"},{"date":"2021-06-16 17:25:55 +0100","typed":20,"typedSize":52800,"untyped":74,"untypedSize":197815,"percentage":0.2702702702702703,"sha":"2d85e426a2323c9fc60ac5fa82a9b24572b49aad"},{"date":"2021-06-10 14:31:32 +0100","typed":19,"typedSize":50141,"untyped":75,"untypedSize":202456,"percentage":0.25333333333333335,"sha":"56365a13c848a89ae3b07a8621cc72b7612f266f"},{"date":"2021-06-04 18:20:32 +0100","typed":19,"typedSize":49975,"untyped":75,"untypedSize":202988,"percentage":0.25333333333333335,"sha":"4a0c4856b06b2427f8cdfdfdda042a801baf2861"},{"date":"2021-06-02 12:22:28 +0100","typed":18,"typedSize":48605,"untyped":75,"untypedSize":202867,"percentage":0.24,"sha":"3b9703bebd50961b6b914f8989339e1bdcfe8936","prLink":"https://github.com/guardian/frontend/pull/23863"},{"date":"2021-05-13 13:25:31 +0100","typed":10,"typedSize":22653,"untyped":83,"untypedSize":226721,"percentage":0.12048192771084337,"sha":"a0a8179418f7c7c7e1d9247a9cdaf7d671a37985"},{"date":"2021-05-05 16:04:08 +0100","typed":8,"typedSize":20151,"untyped":83,"untypedSize":228123,"percentage":0.0963855421686747,"sha":"5143cc6dfd488b43ff0cc7ab4c35fe8a90dbd268"},{"date":"2021-03-10 13:40:19 +0000","typed":3,"typedSize":6592,"untyped":96,"untypedSize":281233,"percentage":0.03125,"sha":"af8b840b7f4108f7980603dd2dfa2174110f3a49","prLink":"https://github.com/guardian/frontend/pull/23594"}]
+[
+ {
+  "date": "2021-08-02 11:27:02 +0100",
+  "typed": 27,
+  "typedSize": 85869,
+  "untyped": 65,
+  "untypedSize": 161039,
+  "percentage": 0.4153846153846154,
+  "sha": "afce864c2599b824f8cdf88e7a22b6c4eb2bdd00",
+  "prLink": "https://github.com/guardian/frontend/pull/24045"
+ },
+ {
+  "date": "2021-07-30 10:00:33 +0100",
+  "typed": 25,
+  "typedSize": 84125,
+  "untyped": 67,
+  "untypedSize": 170771,
+  "percentage": 0.373134328358209,
+  "sha": "1f46e8df8163d505ee03760ff2b45f819e4d6df2",
+  "prLink": "https://github.com/guardian/frontend/pull/24044"
+ },
+ {
+  "date": "2021-07-26 12:06:20 +0100",
+  "typed": 25,
+  "typedSize": 84074,
+  "untyped": 67,
+  "untypedSize": 170763,
+  "percentage": 0.373134328358209,
+  "sha": "03c1e9fac0a6b3fd19ed017dd67e8ee7ae63b338",
+  "prLink": "https://github.com/guardian/frontend/pull/24025"
+ },
+ {
+  "date": "2021-07-22 17:14:16 +0100",
+  "typed": 22,
+  "typedSize": 71136,
+  "untyped": 70,
+  "untypedSize": 181240,
+  "percentage": 0.3142857142857143,
+  "sha": "e2b57978096f5aacadad0f54d4c51001ba0dacc6"
+ },
+ {
+  "date": "2021-07-22 11:24:08 +0100",
+  "typed": 22,
+  "typedSize": 71136,
+  "untyped": 70,
+  "untypedSize": 180619,
+  "percentage": 0.3142857142857143,
+  "sha": "c16f9a78480421ad5cc729e8ea4bb54a1148793f"
+ },
+ {
+  "date": "2021-07-13 10:15:37 +0100",
+  "typed": 22,
+  "typedSize": 71424,
+  "untyped": 72,
+  "untypedSize": 181534,
+  "percentage": 0.3055555555555556,
+  "sha": "3bb1f605a14bd8efc427667afa8418847830d252"
+ },
+ {
+  "date": "2021-07-09 13:25:39 +0100",
+  "typed": 22,
+  "typedSize": 70004,
+  "untyped": 72,
+  "untypedSize": 181428,
+  "percentage": 0.3055555555555556,
+  "sha": "e45695f217cb50a6c649231fd41e5494f847b506"
+ },
+ {
+  "date": "2021-07-05 14:33:55 +0100",
+  "typed": 20,
+  "typedSize": 54126,
+  "untyped": 74,
+  "untypedSize": 197875,
+  "percentage": 0.2702702702702703,
+  "sha": "b22a9e85ea4d7aec463c30c4d8d8eea19969c0ca"
+ },
+ {
+  "date": "2021-07-01 17:40:29 +0100",
+  "typed": 20,
+  "typedSize": 53308,
+  "untyped": 74,
+  "untypedSize": 197875,
+  "percentage": 0.2702702702702703,
+  "sha": "e7bf10462e65f0e31021b2c57b3d2e1c9210c505"
+ },
+ {
+  "date": "2021-06-28 13:33:32 +0100",
+  "typed": 20,
+  "typedSize": 52800,
+  "untyped": 74,
+  "untypedSize": 197875,
+  "percentage": 0.2702702702702703,
+  "sha": "19d404bcaf74091a7c5a40f0bd5a516fb847f1a1",
+  "prLink": "https://github.com/guardian/frontend/pull/23946"
+ },
+ {
+  "date": "2021-06-23 16:23:21 +0100",
+  "typed": 20,
+  "typedSize": 52800,
+  "untyped": 74,
+  "untypedSize": 197875,
+  "percentage": 0.2702702702702703,
+  "sha": "d6eaa9b433251f0b1d6e46b6aaf3b4d86e8ce12a"
+ },
+ {
+  "date": "2021-06-16 17:25:55 +0100",
+  "typed": 20,
+  "typedSize": 52800,
+  "untyped": 74,
+  "untypedSize": 197815,
+  "percentage": 0.2702702702702703,
+  "sha": "2d85e426a2323c9fc60ac5fa82a9b24572b49aad"
+ },
+ {
+  "date": "2021-06-10 14:31:32 +0100",
+  "typed": 19,
+  "typedSize": 50141,
+  "untyped": 75,
+  "untypedSize": 202456,
+  "percentage": 0.25333333333333335,
+  "sha": "56365a13c848a89ae3b07a8621cc72b7612f266f"
+ },
+ {
+  "date": "2021-06-04 18:20:32 +0100",
+  "typed": 19,
+  "typedSize": 49975,
+  "untyped": 75,
+  "untypedSize": 202988,
+  "percentage": 0.25333333333333335,
+  "sha": "4a0c4856b06b2427f8cdfdfdda042a801baf2861"
+ },
+ {
+  "date": "2021-06-02 12:22:28 +0100",
+  "typed": 18,
+  "typedSize": 48605,
+  "untyped": 75,
+  "untypedSize": 202867,
+  "percentage": 0.24,
+  "sha": "3b9703bebd50961b6b914f8989339e1bdcfe8936",
+  "prLink": "https://github.com/guardian/frontend/pull/23863"
+ },
+ {
+  "date": "2021-05-13 13:25:31 +0100",
+  "typed": 10,
+  "typedSize": 22653,
+  "untyped": 83,
+  "untypedSize": 226721,
+  "percentage": 0.12048192771084337,
+  "sha": "a0a8179418f7c7c7e1d9247a9cdaf7d671a37985"
+ },
+ {
+  "date": "2021-05-05 16:04:08 +0100",
+  "typed": 8,
+  "typedSize": 20151,
+  "untyped": 83,
+  "untypedSize": 228123,
+  "percentage": 0.0963855421686747,
+  "sha": "5143cc6dfd488b43ff0cc7ab4c35fe8a90dbd268"
+ },
+ {
+  "date": "2021-03-10 13:40:19 +0000",
+  "typed": 3,
+  "typedSize": 6592,
+  "untyped": 96,
+  "untypedSize": 281233,
+  "percentage": 0.03125,
+  "sha": "af8b840b7f4108f7980603dd2dfa2174110f3a49",
+  "prLink": "https://github.com/guardian/frontend/pull/23594"
+ }
+]

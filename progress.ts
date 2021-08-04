@@ -89,7 +89,7 @@ for await (const file of Deno.readDir(path)) {
 
   await Deno.writeTextFile(
     `./progress.json`,
-    JSON.stringify(progressArray),
+    JSON.stringify(progressArray, null, " "),
   );
 }
 
