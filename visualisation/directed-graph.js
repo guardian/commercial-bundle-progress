@@ -1,7 +1,7 @@
 import { create } from "https://cdn.skypack.dev/d3-selection@3?dts";
 import { schemeCategory10 } from "https://cdn.skypack.dev/d3-scale-chromatic@3?dts";
 import { scaleOrdinal } from "https://cdn.skypack.dev/d3-scale@4?dts";
-import { data, yOrigin } from "./data.ts";
+import { data, xOrigin, yOrigin } from "./data.ts";
 import { dragging, simulation } from "./simulation.ts";
 
 /**********************
@@ -30,14 +30,14 @@ const node = svg
   .data(nodes)
   .join("g")
   .attr("fill", (d) => scale(String(d.group)))
-  .attr("data-imports", (d) => `imports${d.imports} - ${yOrigin(d.imports)}`);
-  .attr("data-origin", (d) => `${xOrigin(d.imports)},${yOrigin(d.imports)}`);
+  .attr("data-imports", (d) => d.imports)
+  .attr("data-origin", (d) => `${xOrigin(d.imports)},${yOrigin(d.imports)}`)
   .call(dragging(simulation));
 
 node
   .append("circle")
-  .attr("stroke", (d) => d.imports > 1 ? "#fff" : "#bbb")
-  .attr("stroke-width", 1.5)
+  .attr("stroke", "#fff")
+  .attr("stroke-width", (d) => d.imports > 1 ? 1 : 0.25)
   .attr("cx", 0)
   .attr("cy", 0)
   .attr("r", (d) => Math.sqrt(d.imports + 1) * 3);

@@ -34,9 +34,11 @@ const tree: Record<string, string[]> = await fetch(
 const xOrigin = (folder: number) =>
   width * (folder / (folders.length + 1)) + width / 6;
 const yOrigin = (size: number) =>
-  height * (
-    0.18 + 0.54 *
-      (1 - size / maxImports)
+  Math.round(
+    height * (
+      0.18 + 0.54 *
+        (1 - size / maxImports)
+    ),
   );
 
 const _range = (arr: number[]) =>
