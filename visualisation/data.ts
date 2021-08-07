@@ -1,17 +1,20 @@
-import { SimulationNodeDatum } from "https://cdn.skypack.dev/-/d3-force@v3.0.0-cshj62qMoyIGNIXoil9u/dist=es2020,mode=types/index";
-import { height, width } from "./directed-graph.js";
+import {
+  SimulationLinkDatum,
+  SimulationNodeDatum,
+} from "https://cdn.skypack.dev/d3-force@3?dts";
+import { height, width } from "./directed-graph.ts";
 
-type Link = {
-  source: string;
-  target: string;
+interface Link extends SimulationLinkDatum<Node> {
+  source: string | Node;
+  target: string | Node;
   value?: number;
-};
-type Node = SimulationNodeDatum & {
+}
+interface Node extends SimulationNodeDatum {
   id: string;
   group: number;
   folder: number;
   imports: number;
-};
+}
 
 type Data = {
   nodes: Node[];

@@ -43,7 +43,7 @@ node
   .attr("r", (d) => Math.sqrt(d.imports + 1) * 3);
 
 node.append("title")
-  .text((d) => d.id)
+  .text((d) => d.id);
 
 node
   .append("text")
@@ -70,16 +70,15 @@ node.on("mouseover", (_, n) => {
 });
 
 node.on("mouseout", () => {
-  link.style("stroke-width", l => l.value).style("stroke-dasharray", null);
+  link.style("stroke-width", (l) => l.value ?? null).style(
+    "stroke-dasharray",
+    null,
+  );
   node.style("opacity", null);
 });
 
 simulation.on("tick", () => {
-  link
-    .attr("x1", (d) => d.source.x)
-    .attr("y1", (d) => d.source.y)
-    .attr("x2", (d) => d.target.x)
-    .attr("y2", (d) => d.target.y);
+  link;
 
   node
     // .data(d => (d.fx = d.group * 30))

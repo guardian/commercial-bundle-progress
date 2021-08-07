@@ -8,39 +8,41 @@ import {
   forceY,
   Simulation,
 } from "https://cdn.skypack.dev/d3-force@3?dts";
-import { drag } from "https://cdn.skypack.dev/d3-drag@3?dts";
-import { data, Node, xOrigin, yOrigin } from "./data.ts";
+import { drag, DragBehavior } from "https://cdn.skypack.dev/d3-drag@3?dts";
+import { data, Link, Node, xOrigin, yOrigin } from "./data.ts";
 // import { height, width } from "./directed-graph.js";
 
 const { links, nodes } = data;
 
-const simulation = forceSimulation(nodes)
+const simulation = forceSimulation<Node, Link>(nodes)
   .force(
     "link",
-    forceLink(links)
-      .id((n) => (n as Node).id)
+    forceLink<Node, Link>(links)
+      .id((n) => n.id)
       .strength(0),
   )
   .force("charge", forceManyBody())
   .force(
     "collide",
-    forceCollide((n) => Math.sqrt(Math.max((n as Node).imports, 1)) * 4),
+    forceCollide((n: Node) => Math.sqrt(Math.max(n.imports, 1)) * 4),
   )
   // .force("center", forceCenter(width / 2, height / 2))
   .force(
     "x",
-    forceX().x((n) => xOrigin((n as Node).folder)),
+    forceX<Node>().x((n: Node) => xOrigin(n.folder)),
   )
   .force(
     "y",
-    forceY()
-      .y((n) => yOrigin((n as Node).imports)),
+    forceY<Node>()
+      .y((n) => yOrigin(n.imports)),
     // .strength(0.15),
   );
 
 simulation.nodes(nodes);
 
-const dragging = (simulation: Simulation<Node, undefined>) => {
+const dragging = (
+  simulation: Simulation<any, Link>,
+): DragBehavior<Node, Node, unknown> => {
   // deno-lint-ignore no-explicit-any
   function dragStarted(event: any) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -61,7 +63,7 @@ const dragging = (simulation: Simulation<Node, undefined>) => {
     event.subject.fy = null;
   }
 
-  return drag()
+  return drag<Node, Node>()
     .on("start", dragStarted)
     .on("drag", dragged)
     .on("end", dragEnded);
