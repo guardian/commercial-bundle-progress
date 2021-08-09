@@ -8,7 +8,7 @@ import { dragging, simulation } from "./simulation.ts";
  *      Constants     *
  **********************/
 
-export const [width, height] = [1200, 600];
+const [width, height] = [1200, 600];
 
 const { links, nodes } = data;
 const svg = create("svg").attr("viewBox", [0, 0, width, height].join(" "));
@@ -85,4 +85,4 @@ simulation.on("tick", () => {
     .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
 });
 
-export { svg };
+export { height, svg, width };
