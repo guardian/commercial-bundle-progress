@@ -1,5 +1,6 @@
+// deno-lint-ignore-file no-explicit-any -- it’s D3
 import {
-  forceCenter,
+  // forceCenter,
   forceCollide,
   forceLink,
   forceManyBody,
@@ -42,28 +43,25 @@ simulation.nodes(nodes);
 
 const dragging = (
   simulation: Simulation<any, Link>,
-): DragBehavior<Node, Node, unknown> => {
-  // deno-lint-ignore no-explicit-any
+): DragBehavior<any, Node, unknown> => {
   function dragStarted(event: any) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
     event.subject.fx = event.subject.x;
     event.subject.fy = event.subject.y;
   }
 
-  // deno-lint-ignore no-explicit-any
   function dragged(event: any) {
     event.subject.fx = event.x;
     event.subject.fy = event.y;
   }
 
-  // deno-lint-ignore no-explicit-any
   function dragEnded(event: any) {
     if (!event.active) simulation.alphaTarget(0);
     event.subject.fx = null;
     event.subject.fy = null;
   }
 
-  return drag<Node, Node>()
+  return drag<any, Node>()
     .on("start", dragStarted)
     .on("drag", dragged)
     .on("end", dragEnded);
