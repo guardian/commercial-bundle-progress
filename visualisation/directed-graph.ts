@@ -22,7 +22,7 @@ const link = svg
   .selectAll("line")
   .data(links)
   .join("line")
-  .attr("stroke-width", (d) => Math.sqrt(d.value ?? 0));
+  .attr("stroke-width", (l) => l.value ?? null);
 
 const node = svg
   .append("g")
@@ -54,12 +54,14 @@ node
   .attr("y", 3);
 
 node.on("mouseover", (_, n) => {
-  link.style("stroke-width", (l) => {
-    return n === l.source ? 1 : n === l.target ? 0.25 : 0;
-  });
-  link.style("stroke-dasharray", (l) => {
-    return n === l.target ? 2 : null;
-  });
+  console.log(link);
+  link
+    .attr("stroke-width", (l) => {
+      return n === l.source ? 1 : n === l.target ? 0.25 : 0;
+    })
+    .style("stroke-dasharray", (l) => {
+      return n === l.target ? 2 : null;
+    });
 
   node.style("opacity", (d) => {
     const linked = links
@@ -70,15 +72,21 @@ node.on("mouseover", (_, n) => {
 });
 
 node.on("mouseout", () => {
-  link.style("stroke-width", (l) => l.value ?? null).style(
-    "stroke-dasharray",
-    null,
-  );
+  link
+    .attr("stroke-width", (l) => l.value ?? null)
+    .style(
+      "stroke-dasharray",
+      null,
+    );
   node.style("opacity", null);
 });
 
 simulation.on("tick", () => {
-  link;
+  link
+    .attr("x1", (l) => l.source.x)
+    .attr("y1", (l) => l.source.y)
+    .attr("x2", (l) => l.target.x)
+    .attr("y2", (l) => l.target.y);
 
   node
     // .data(d => (d.fx = d.group * 30))
