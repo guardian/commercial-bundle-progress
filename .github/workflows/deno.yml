@@ -27,8 +27,8 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Move to visualisation folder
-        run: cd visualisation
+      #- name: Move to visualisation folder
+      #  run: cd visualisation
 
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       # - name: Verify formatting
