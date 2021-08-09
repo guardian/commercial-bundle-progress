@@ -1,3 +1,3 @@
-import { svg } from "./directed-graph.js";
+import { svg } from "./directed-graph.ts";
 
 document.body.appendChild(svg.node());
