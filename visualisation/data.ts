@@ -4,6 +4,11 @@ import {
 } from "https://cdn.skypack.dev/d3-force@3?dts";
 import { height, width } from "./directed-graph.ts";
 
+const repo = "guardian/frontend";
+const branch = "mxdvl/universal-commercial-bundle";
+const path =
+  "tools/__tasks__/commercial/graph/output/standalone.commercial.ts.json";
+const url = `https://raw.githubusercontent.com/${repo}/${branch}/${path}`;
 interface Link extends SimulationLinkDatum<Node> {
   source: string | Node;
   target: string | Node;
@@ -31,7 +36,7 @@ enum Groups {
 const folders = ["lib", "projects/commercial", "projects/common"];
 
 const tree: Record<string, string[]> = await fetch(
-  "https://raw.githubusercontent.com/guardian/frontend/mxdvl/universal-commercial-bundle/tools/__tasks__/commercial/graph/output/commercial.standalone.ts.json",
+  url,
 ).then((r) => r.json());
 
 const xOrigin = (folder: number) =>
