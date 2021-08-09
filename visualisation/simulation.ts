@@ -22,7 +22,7 @@ const simulation = forceSimulation<Node, Link>(nodes)
       .id((n) => n.id)
       .strength(0),
   )
-  .force("charge", forceManyBody())
+  .force("charge", forceManyBody<Node>())
   .force(
     "collide",
     forceCollide((n: Node) => Math.sqrt(Math.max(n.imports, 1)) * 4),
@@ -45,7 +45,7 @@ const dragging = (
   simulation: Simulation<any, Link>,
 ): DragBehavior<any, Node, unknown> => {
   function dragStarted(event: any) {
-    if (!event.active) simulation.alphaTarget(0.3).restart();
+    if (!event.active) simulation.alphaTarget(0.1).restart();
     event.subject.fx = event.subject.x;
     event.subject.fy = event.subject.y;
   }
