@@ -31,9 +31,15 @@ enum Groups {
   Typescript,
   Javascript,
   Tests,
+  Packages,
 }
 
-const folders = ["lib", "projects/commercial", "projects/common"];
+const folders = [
+  "node_modules",
+  "lib",
+  "projects/commercial",
+  "projects/common",
+];
 
 const tree: Record<string, string[]> = await fetch(
   url,
@@ -60,10 +66,22 @@ const maxImports = Object.entries(tree).reduce<number>((max, value) => {
   return Math.max(max, links.length);
 }, 0);
 
+// Add node modules
+Object.entries(tree).forEach((value) => {
+  const [, links] = value;
+  links.forEach((link) => {
+    if (link.includes("node_modules")) {
+      tree[link] = [];
+    }
+  });
+});
+
 const nodes: Node[] = Object.entries(tree).map<Node>((value) => {
   const [id, links] = value;
-  const group = id.includes("commercial.")
+  const group: Groups = id.includes("commercial.")
     ? Groups.Entry
+    : id.includes("node_modules")
+    ? Groups.Packages
     : id.includes(".ts")
     ? Groups.Typescript
     : Groups.Javascript;
@@ -87,6 +105,7 @@ const nodes: Node[] = Object.entries(tree).map<Node>((value) => {
   node.y = yOrigin(node.imports);
   return node;
 });
+// .concat(packages);
 
 const links: Link[] = Object.entries(tree).reduce((links: Link[], branch) => {
   const [source, targets] = branch;
