@@ -36,7 +36,7 @@ enum Groups {
 
 const folders = [
   "node_modules",
-  "lib",
+  "../lib",
   "projects/commercial",
   "projects/common",
 ];
