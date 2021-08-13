@@ -65,10 +65,10 @@ node.on("mouseover", (_, n) => {
   console.log(link);
   link
     .attr("stroke-width", (l) => {
-      return n === l.source ? 1 : n === l.target ? 0.25 : 0;
+      return n === l.source ? 1.2 : n === l.target ? 1 : 0;
     })
     .style("stroke-dasharray", (l) => {
-      return n === l.target ? 2 : null;
+      return n === l.target ? "5 3" : null;
     });
 
   node.style("opacity", (d) => {
