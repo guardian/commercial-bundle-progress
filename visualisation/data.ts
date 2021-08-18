@@ -5,7 +5,7 @@ import {
 import { height, width } from "./directed-graph.ts";
 
 const repo = "guardian/frontend";
-const branch = "mxdvl/universal-commercial-bundle";
+const branch = "main";
 const path =
   "tools/__tasks__/commercial/graph/output/standalone.commercial.ts.json";
 const url = `https://raw.githubusercontent.com/${repo}/${branch}/${path}`;
