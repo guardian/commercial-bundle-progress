@@ -1,12 +1,8 @@
-import {
-  create,
-  Selection,
-  ValueFn,
-} from "https://cdn.skypack.dev/d3-selection@3?dts";
+import { create } from "https://cdn.skypack.dev/d3-selection@3?dts";
 import { transition } from "https://cdn.skypack.dev/d3-transition@3?dts";
 import { schemeCategory10 } from "https://cdn.skypack.dev/d3-scale-chromatic@3?dts";
 import { scaleOrdinal } from "https://cdn.skypack.dev/d3-scale@4?dts";
-import { Data, Groups, Link, Node, xOrigin, yOrigin } from "./data.ts";
+import { Data, Link, Node, xOrigin, yOrigin } from "./data.ts";
 import { Simulation } from "https://cdn.skypack.dev/-/d3-force@v3.0.0-cshj62qMoyIGNIXoil9u/dist=es2020,mode=types/index";
 import { dragging } from "./simulation.ts";
 
@@ -33,7 +29,7 @@ const nodeGroup = svg.append("g")
 // So it gets imported correctly
 const _t = transition();
 
-const radius = (d: Node) => Math.sqrt(d.imports + 1) * 3;
+const radius = (d: Node) => Math.sqrt(d.imports + 1) * 3 + 4;
 
 const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
   const { links, nodes } = data;
@@ -41,16 +37,30 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
   // @ts-expect-error -- actually typeof d is Link
   const link = linkGroup
     .selectAll("line")
-    .data(links, (d: Link) => `${d.source}--${d.target}`)
-    .join("line")
-    .attr("stroke-width", (l) => l.value ?? null);
+    .data(links, (d: Link) => {
+      const s = isNode(d.source) ? d.source.id : d.source;
+      const t = isNode(d.target) ? d.target.id : d.target;
+      return `${s}--${t}`;
+    })
+    .join((enter) =>
+      enter
+        .append("line")
+        .attr("stroke-width", 4)
+        .call((t) =>
+          // @ts-expect-error -- issue with types https://github.com/DefinitelyTyped/DefinitelyTyped/issues/16176
+          t.transition().duration(450)
+            .attr("stroke-width", (l: Link) => l.value ?? null)
+        )
+    );
 
   link.exit().remove();
 
   const node = nodeGroup
-    .selectAll("g")
-    // @ts-expect-error -- actually typeof d is Node
-    .data(nodes, (d) => d.id)
+    .selectAll<Window, Node>("g")
+    .data(
+      nodes,
+      (d) => d.id,
+    )
     .join(
       (enter) => {
         const newNode = enter.append("g")
@@ -81,14 +91,21 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
         newNode
           .append("text")
           .text((d) => {
-            if (d.id.includes("node_modules")) {
-              return d.id.replace(
-                /^.+node_modules\/((@(guardian|types)\/)?.+?)(\/.+)/g,
-                "$1",
-              );
-            }
-            return d.id.split("/").slice(-1)[0];
+            return d.id.split("/")
+              .slice(-1)[0]
+              .split("-").map((t) => t.substring(0, 1))
+              .join("");
           })
+          .attr("pointer-events", "none")
+          .attr("font-size", 8)
+          .attr("fill", "white")
+          .attr("text-anchor", "middle")
+          .attr("x", 0)
+          .attr("y", 2);
+
+        newNode
+          .append("text")
+          .text((d) => d.id.split("/").slice(-1)[0])
           .attr("pointer-events", "none")
           .attr("font-size", 9)
           .attr("x", (d) => Math.sqrt(d.imports + 1) * 3 + 5)

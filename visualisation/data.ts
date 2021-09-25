@@ -63,7 +63,10 @@ const yOrigin = (size: number, max = maximum) =>
     ),
   );
 
-const clean = (s: string): string => s.replace(/(\.d)?\.(j|t)s$/, "");
+const STRIP_NODES = /^.+(node_modules\/)((@(guardian|types)\/)?.+?)(\/.+)/g;
+
+const clean = (s: string): string =>
+  s.replace(/(\.d)?\.(j|t)s$/, "").replace(STRIP_NODES, "$1$2 ");
 
 const simpleHash = (s: string): number =>
   s.split("").reduce((p, c) => p + (c.codePointAt(0) ?? 9), 0);
@@ -93,6 +96,8 @@ const getDataforHash = async (sha = branch) => {
       }
     });
   });
+
+  console.log(tree);
 
   const nodes: Node[] = Object.entries(tree).map<Node>((value) => {
     const [id, links] = value;
@@ -129,8 +134,8 @@ const getDataforHash = async (sha = branch) => {
     const [source, targets] = branch;
 
     const newLinks: Link[] = targets.map((target) => ({
-      source: clean(source),
       target: clean(target),
+      source: clean(source),
       value: targets.length > 0 ? 0.5 : 0.25,
     }));
 

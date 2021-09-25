@@ -24,7 +24,7 @@ const simulation = forceSimulation<Node, Link>()
   .force("charge", forceManyBody<Node>())
   .force(
     "collide",
-    forceCollide((n: Node) => Math.sqrt(Math.max(n.imports, 1)) * 4),
+    forceCollide((n: Node) => Math.sqrt(Math.max(n.imports, 1)) * 6),
   )
   // .force("center", forceCenter(width / 2, height / 2))
   .force(
