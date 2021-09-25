@@ -107,9 +107,9 @@ const getDataforHash = async (sha = branch) => {
     };
 
     return node;
-  }).map((node) => {
-    node.x = xOrigin(node.folder);
-    node.y = yOrigin(node.imports, maxImports);
+  }).map((node, i) => {
+    node.x = xOrigin(node.folder) + Math.random() * 10 + i % 10;
+    node.y = yOrigin(node.imports, maxImports) - Math.random() * 10 + i % 10;
     return node;
   });
   // .concat(packages);
@@ -145,13 +145,13 @@ setTimeout(async () => {
   // nodes.push(...newNodes);
   // links.push(...newLinks);
 
-  const data = await getDataforHash("2d7947a74dcd595fd303a092a5ecd34a03a0e038");
+  const data = await getDataforHash("287ac0a948594e2f95d0fe0e5791d6dce959456c");
 
   // nodes.splice(30, 60);
 
   updateSimulationData(data);
   updateSvgData(data, simulation);
-}, 1200);
+}, 3600);
 
 const data = await getDataforHash();
 const simulation = updateSimulationData(data);
