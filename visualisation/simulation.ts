@@ -34,16 +34,30 @@ const simulation = forceSimulation<Node, Link>()
   .force(
     "y",
     forceY<Node>()
-      .y((n) => yOrigin(n.imports)),
-    // .strength(0.15),
+      .y((n) => yOrigin(n.imports))
+      .strength(0.15),
   );
 
 const updateSimulationData = (data: Data) => {
   const { nodes, links } = data;
 
+  const oldNodes = simulation.nodes();
+
+  // keep old current location if it exists
+  oldNodes.forEach((oldNode) => {
+    const newNode = nodes.find((n) => n.id == oldNode.id);
+    if (!newNode) return;
+    newNode.x = oldNode.x;
+    newNode.y = oldNode.y;
+
+    oldNode.group !== newNode.group
+      ? newNode.converted = true
+      : newNode.converted = false;
+  });
+
   simulation.nodes(nodes);
   simulation.force<ForceLink<Node, Link>>("link")?.links(links);
-  simulation.alpha(1).restart();
+  simulation.alpha(0.8).restart();
 
   return simulation;
 };

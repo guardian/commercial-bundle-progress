@@ -1,10 +1,14 @@
-import { create, Selection } from "https://cdn.skypack.dev/d3-selection@3?dts";
-import { transition } from "https://cdn.skypack.dev/d3-transition@3.0.1?dts";
+import {
+  create,
+  Selection,
+  ValueFn,
+} from "https://cdn.skypack.dev/d3-selection@3?dts";
+import { transition } from "https://cdn.skypack.dev/d3-transition@3?dts";
 import { schemeCategory10 } from "https://cdn.skypack.dev/d3-scale-chromatic@3?dts";
 import { scaleOrdinal } from "https://cdn.skypack.dev/d3-scale@4?dts";
-import { Data, Link, Node, xOrigin, yOrigin } from "./data.ts";
-import { dragging, updateSimulationData } from "./simulation.ts";
+import { Data, Groups, Link, Node, xOrigin, yOrigin } from "./data.ts";
 import { Simulation } from "https://cdn.skypack.dev/-/d3-force@v3.0.0-cshj62qMoyIGNIXoil9u/dist=es2020,mode=types/index";
+import { dragging } from "./simulation.ts";
 
 /** ********************
  *      Constants     *
@@ -26,20 +30,25 @@ const linkGroup = svg.append("g")
 const nodeGroup = svg.append("g")
   .attr("class", "nodes");
 
-const t = transition().duration(1200);
+// So it gets imported correctly
+const _t = transition();
 
 const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
   const { links, nodes } = data;
 
+  // @ts-expect-error -- actually typeof d is Link
   const link = linkGroup
     .selectAll("line")
-    .data(links)
+    .data(links, (d: Link) => `${d.source}--${d.target}`)
     .join("line")
     .attr("stroke-width", (l) => l.value ?? null);
 
+  link.exit().remove();
+
   const node = nodeGroup
     .selectAll("g")
-    .data(nodes)
+    // @ts-expect-error -- actually typeof d is Node
+    .data(nodes, (d) => d.id)
     .join(
       (enter) => {
         const newNode = enter.append("g")
@@ -49,14 +58,12 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
             n.transition().duration(600)
               .attr("fill", (d: Node) => scale(String(d.group)))
           )
-          .attr(
-            "data-imports",
-            (d) => d.imports,
-          )
+          .attr("data-imports", (d) => d.imports)
           .attr(
             "data-origin",
             (d) => `${xOrigin(d.imports)},${yOrigin(d.imports)}`,
-          );
+          )
+          .call(dragging(simulation));
 
         newNode
           .append("circle")
@@ -84,19 +91,29 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
           .attr("font-size", 9)
           .attr("x", (d) => Math.sqrt(d.imports + 1) * 3 + 5)
           .attr("y", 3);
+
         return newNode;
       },
       (update) => {
-        const updatedNodes = update;
-        // .attr("fill", (d: Node) => scale(String(d.group)));
+        update
+          .attr("fill", (d: Node) => scale(String(d.group)));
 
-        return updatedNodes;
+        const updatedNodes = update
+          .filter((d) => (d as Node).converted ?? false);
+
+        updatedNodes.selectAll("circle")
+          .attr("transform", "scale(4)")
+          .attr("converted", "converted")
+          .call((c) =>
+            // @ts-expect-error -- transition
+            c.transition().duration(600)
+              .attr("transform", "scale(1)")
+          );
+
+        return update.merge(updatedNodes);
       },
       (exit) => exit.remove(),
     );
-
-  node.exit().remove();
-  link.exit().remove();
 
   // node.join((enter) => {
   //   console.log(enter);
@@ -138,7 +155,6 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
       .attr("y2", (l) => (isNode(l.target) && l.target.y) ?? 0);
 
     node
-      // .data(d => (d.fx = d.group * 30))
       .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
   });
 };
