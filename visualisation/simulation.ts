@@ -1,7 +1,8 @@
-// deno-lint-ignore-file no-explicit-any -- it’s D3
+// deno-lint-ignore-file no-explicit-any
 import {
   // forceCenter,
   forceCollide,
+  ForceLink,
   forceLink,
   forceManyBody,
   forceSimulation,
@@ -10,15 +11,13 @@ import {
   Simulation,
 } from "https://cdn.skypack.dev/d3-force@3?dts";
 import { drag, DragBehavior } from "https://cdn.skypack.dev/d3-drag@3?dts";
-import { data, Link, Node, xOrigin, yOrigin } from "./data.ts";
+import { Data, Link, Node, xOrigin, yOrigin } from "./data.ts";
 // import { height, width } from "./directed-graph.js";
 
-const { links, nodes } = data;
-
-const simulation = forceSimulation<Node, Link>(nodes)
+const simulation = forceSimulation<Node, Link>()
   .force(
     "link",
-    forceLink<Node, Link>(links)
+    forceLink<Node, Link>()
       .id((n) => n.id)
       .strength(0),
   )
@@ -39,27 +38,35 @@ const simulation = forceSimulation<Node, Link>(nodes)
     // .strength(0.15),
   );
 
-simulation.nodes(nodes);
+const updateSimulationData = (data: Data) => {
+  const { nodes, links } = data;
+
+  simulation.nodes(nodes);
+  simulation.force<ForceLink<Node, Link>>("link")?.links(links);
+  simulation.alpha(1).restart();
+
+  return simulation;
+};
 
 const dragging = (
   simulation: Simulation<any, Link>,
 ): DragBehavior<any, Node, unknown> => {
-  function dragStarted(event: any) {
+  const dragStarted = (event: any) => {
     if (!event.active) simulation.alphaTarget(0.1).restart();
     event.subject.fx = event.subject.x;
     event.subject.fy = event.subject.y;
-  }
+  };
 
-  function dragged(event: any) {
+  const dragged = (event: any) => {
     event.subject.fx = event.x;
     event.subject.fy = event.y;
-  }
+  };
 
-  function dragEnded(event: any) {
+  const dragEnded = (event: any) => {
     if (!event.active) simulation.alphaTarget(0);
     event.subject.fx = null;
     event.subject.fy = null;
-  }
+  };
 
   return drag<any, Node>()
     .on("start", dragStarted)
@@ -67,4 +74,4 @@ const dragging = (
     .on("end", dragEnded);
 };
 
-export { dragging, simulation };
+export { dragging, updateSimulationData };

@@ -2,13 +2,15 @@ import {
   SimulationLinkDatum,
   SimulationNodeDatum,
 } from "https://cdn.skypack.dev/d3-force@3?dts";
-import { height, width } from "./directed-graph.ts";
+import { height, updateSvgData, width } from "./directed-graph.ts";
+import { updateSimulationData } from "./simulation.ts";
 
 const repo = "guardian/frontend";
 const branch = "main";
 const path =
   "tools/__tasks__/commercial/graph/output/standalone.commercial.ts.json";
-const url = `https://raw.githubusercontent.com/${repo}/${branch}/${path}`;
+const url = (sha = branch) =>
+  `https://raw.githubusercontent.com/${repo}/${sha}/${path}`;
 interface Link extends SimulationLinkDatum<Node> {
   source: string | Node;
   target: string | Node;
@@ -41,19 +43,19 @@ const folders = [
   "projects/common",
 ];
 
-const tree: Record<string, string[]> = await fetch(
-  url,
-).then((r) => r.json());
-
 const xOrigin = (folder: number) =>
   width * (folder / (folders.length + 1)) + width / 6;
-const yOrigin = (size: number) =>
+
+let maximum = 0;
+const yOrigin = (size: number, max = maximum) =>
   Math.round(
     height * (
       0.18 + 0.54 *
-        (1 - size / maxImports)
+        (1 - size / max)
     ),
   );
+
+const clean = (s: string): string => s.replace(/(\.d)?\.(j|t)s$/, "");
 
 const _range = (arr: number[]) =>
   arr.reduce<[number, number]>((prev, curr) => {
@@ -61,65 +63,100 @@ const _range = (arr: number[]) =>
     return [Math.min(low, curr), Math.max(high, curr)];
   }, [arr[0], arr[0]]);
 
-const maxImports = Object.entries(tree).reduce<number>((max, value) => {
-  const [_, links] = value;
-  return Math.max(max, links.length);
-}, 0);
+const getDataforHash = async (sha = branch) => {
+  const graph = await fetch(url(sha));
+  const tree: Record<string, string[]> = await graph.json();
 
-// Add node modules
-Object.entries(tree).forEach((value) => {
-  const [, links] = value;
-  links.forEach((link) => {
-    if (link.includes("node_modules")) {
-      tree[link] = [];
-    }
-  });
-});
-
-const nodes: Node[] = Object.entries(tree).map<Node>((value) => {
-  const [id, links] = value;
-  const group: Groups = id.includes("commercial.")
-    ? Groups.Entry
-    : id.includes("node_modules")
-    ? Groups.Packages
-    : id.includes(".ts")
-    ? Groups.Typescript
-    : Groups.Javascript;
-
-  const folder = folders.reduce((prev, current, index) => {
-    return id.includes(current) ? index : prev;
+  const maxImports = Object.entries(tree).reduce<number>((max, value) => {
+    const [_, links] = value;
+    return Math.max(max, links.length);
   }, 0);
+  maximum = maxImports;
 
-  const imports = links.length;
+  // Add node modules
+  Object.entries(tree).forEach((value) => {
+    const [, links] = value;
+    links.forEach((link) => {
+      if (link.includes("node_modules")) {
+        tree[clean(link)] = [];
+      }
+    });
+  });
 
-  const node: Node = {
-    id,
-    group,
-    folder,
-    imports,
-  };
+  const nodes: Node[] = Object.entries(tree).map<Node>((value) => {
+    const [id, links] = value;
+    const group: Groups = id.includes("commercial.")
+      ? Groups.Entry
+      : id.includes("node_modules")
+      ? Groups.Packages
+      : id.includes(".ts")
+      ? Groups.Typescript
+      : Groups.Javascript;
 
-  return node;
-}).map((node) => {
-  node.x = xOrigin(node.folder);
-  node.y = yOrigin(node.imports);
-  return node;
-});
-// .concat(packages);
+    const folder = folders.reduce((prev, current, index) => {
+      return id.includes(current) ? index : prev;
+    }, 0);
 
-const links: Link[] = Object.entries(tree).reduce((links: Link[], branch) => {
-  const [source, targets] = branch;
+    const imports = links.length;
 
-  const newLinks: Link[] = targets.map((target) => ({
-    source,
-    target,
-    value: targets.length > 0 ? 0.5 : 0.25,
-  }));
+    const node: Node = {
+      id: clean(id),
+      group,
+      folder,
+      imports,
+    };
 
-  return [...links, ...newLinks];
-}, []);
+    return node;
+  }).map((node) => {
+    node.x = xOrigin(node.folder);
+    node.y = yOrigin(node.imports, maxImports);
+    return node;
+  });
+  // .concat(packages);
 
-const data: Data = { links, nodes };
+  const links: Link[] = Object.entries(tree).reduce((links: Link[], branch) => {
+    const [source, targets] = branch;
 
-export { data, folders, xOrigin, yOrigin };
+    const newLinks: Link[] = targets.map((target) => ({
+      source: clean(source),
+      target: clean(target),
+      value: targets.length > 0 ? 0.5 : 0.25,
+    }));
+
+    return [...links, ...newLinks];
+  }, []);
+
+  return { nodes, links };
+};
+
+setTimeout(async () => {
+  // const newNodes: Node[] = Array(10).fill(null).map((_, i) => ({
+  //   id: "something-" + i,
+  //   group: Groups.Entry,
+  //   folder: 2,
+  //   imports: 9,
+  // }));
+
+  // const newLinks: Link[] = Array(10).fill(null).map((_, i) => ({
+  //   source: clean("standalone.commercial.ts"),
+  //   target: "something-" + i,
+  // }));
+
+  // nodes.push(...newNodes);
+  // links.push(...newLinks);
+
+  const data = await getDataforHash("2d7947a74dcd595fd303a092a5ecd34a03a0e038");
+
+  // nodes.splice(30, 60);
+
+  updateSimulationData(data);
+  updateSvgData(data, simulation);
+}, 1200);
+
+const data = await getDataforHash();
+const simulation = updateSimulationData(data);
+
+updateSvgData(data, simulation);
+
+export { folders, getDataforHash, xOrigin, yOrigin };
 export type { Data, Link, Node };
