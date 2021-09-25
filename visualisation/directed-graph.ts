@@ -80,7 +80,6 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
         newNode
           .append("circle")
           .attr("stroke", "#fff")
-          .attr("stroke-width", (d) => d.imports > 1 ? 1 : 0.25)
           .attr("cx", 0)
           .attr("cy", 0)
           .attr("r", radius);
@@ -109,7 +108,8 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
           .attr("pointer-events", "none")
           .attr("font-size", 9)
           .attr("x", (d) => Math.sqrt(d.imports + 1) * 3 + 5)
-          .attr("y", 3);
+          .attr("y", 3)
+          .attr("class", "label");
 
         return newNode;
       },
@@ -142,6 +142,8 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
   // }).append("path").attr("d", "M1 H1");
 
   node.on("mouseover", (_, n) => {
+    svg.attr("class", "hover");
+
     link
       .attr("stroke-width", (l) => {
         return n === l.source ? 1.2 : n === l.target ? 1 : 0;
@@ -150,22 +152,31 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
         return n === l.target ? "5 3" : null;
       });
 
-    node.style("opacity", (d) => {
+    const linked = (d: Node) => {
       const linked = links
         .filter((l) => l.source === n || l.target === n)
         .some((l) => l.source === d || l.target === d);
-      return d === n || linked ? 1 : 0.06;
-    });
+      return d === n || linked;
+    };
+
+    node
+      .attr("class", (d) => linked(d) ? "active" : null);
+    // .style("opacity", (d) => linked(d) ? 1 : 0.06)
+    // .style("visibility", (d) => linked(d) ? "visible" : "hidden");
   });
 
   node.on("mouseout", () => {
+    svg.attr("class", null);
+
     link
       .attr("stroke-width", (l) => l.value ?? null)
       .style(
         "stroke-dasharray",
         null,
       );
-    node.style("opacity", null);
+    node
+      .attr("class", null)
+      .style("opacity", null);
   });
 
   simulation.on("tick", () => {
