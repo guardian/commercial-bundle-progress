@@ -57,7 +57,7 @@ const updateSimulationData = (data: Data) => {
 
   simulation.nodes(nodes);
   simulation.force<ForceLink<Node, Link>>("link")?.links(links);
-  simulation.alpha(0.8).restart();
+  simulation.alpha(0.3).restart();
 
   return simulation;
 };
