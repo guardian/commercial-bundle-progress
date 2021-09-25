@@ -175,7 +175,7 @@ const hashes = [
   "main",
 ];
 
-const launch = async () => {
+const _launch = async () => {
   for (const hash of hashes) {
     const data = await getDataforHash(hash);
     const simulation = updateSimulationData(data);
@@ -187,7 +187,7 @@ const launch = async () => {
   }
 };
 
-launch();
+// launch();
 
 export { folders, getDataforHash, xOrigin, yOrigin };
 export type { Data, Link, Node };

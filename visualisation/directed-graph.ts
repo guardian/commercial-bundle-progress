@@ -33,6 +33,8 @@ const nodeGroup = svg.append("g")
 // So it gets imported correctly
 const _t = transition();
 
+const radius = (d: Node) => Math.sqrt(d.imports + 1) * 3;
+
 const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
   const { links, nodes } = data;
 
@@ -71,7 +73,7 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
           .attr("stroke-width", (d) => d.imports > 1 ? 1 : 0.25)
           .attr("cx", 0)
           .attr("cy", 0)
-          .attr("r", (d) => Math.sqrt(d.imports + 1) * 3);
+          .attr("r", radius);
 
         newNode.append("title")
           .text((d) => d.id);
@@ -98,12 +100,14 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
         update
           .attr("fill", (d: Node) => scale(String(d.group)));
 
-        const updatedNodes = update
-          .filter((d) => (d as Node).converted ?? false);
+        update.select("circle")
+          .attr("r", radius);
 
-        updatedNodes.selectAll("circle")
+        const updatedNodes = update
+          .filter((d) => d.converted ?? false);
+
+        updatedNodes.select("circle")
           .attr("transform", "scale(4)")
-          .attr("converted", "converted")
           .call((c) =>
             // @ts-expect-error -- transition
             c.transition().duration(600)
