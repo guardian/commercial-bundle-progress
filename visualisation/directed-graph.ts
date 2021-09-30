@@ -2,7 +2,7 @@ import { create } from "https://cdn.skypack.dev/d3-selection@3?dts";
 import { transition } from "https://cdn.skypack.dev/d3-transition@3?dts";
 import { schemeCategory10 } from "https://cdn.skypack.dev/d3-scale-chromatic@3?dts";
 import { scaleOrdinal } from "https://cdn.skypack.dev/d3-scale@4?dts";
-import { Data, Link, Node, xOrigin, yOrigin } from "./data.ts";
+import { Data, folders, Link, Node, xOrigin, yOrigin } from "./data.ts";
 import { Simulation } from "https://cdn.skypack.dev/-/d3-force@v3.0.0-cshj62qMoyIGNIXoil9u/dist=es2020,mode=types/index";
 import { dragging } from "./simulation.ts";
 
@@ -17,6 +17,17 @@ const svg = create("svg").attr("viewBox", [0, 0, width, height].join(" "));
 const scale = scaleOrdinal(schemeCategory10);
 
 const isNode = (n: string | Node): n is Node => typeof n !== "string";
+
+svg.append("g")
+  .attr("class", "folders")
+  .selectAll<Window, string>("text")
+  .data(folders)
+  .join("text")
+  .text((d) => d)
+  .attr("font-size", 10)
+  .attr("text-anchor", "middle")
+  .attr("y", 540)
+  .attr("x", (d) => xOrigin(folders.indexOf(d)));
 
 const linkGroup = svg.append("g")
   .attr("class", "links")
@@ -140,7 +151,6 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
   //   console.log(enter);
   //   return enter;
   // }).append("path").attr("d", "M1 H1");
-
   node.on("mouseover", (_, n) => {
     svg.attr("class", "hover");
 
@@ -191,4 +201,4 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
   });
 };
 
-export { height, svg, updateSvgData, width };
+export { height, radius, svg, updateSvgData, width };

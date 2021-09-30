@@ -1,7 +1,4 @@
-import {
-  SimulationLinkDatum,
-  SimulationNodeDatum,
-} from "https://cdn.skypack.dev/d3-force@3?dts";
+import { SimulationLinkDatum, SimulationNodeDatum } from "./d3.ts";
 import { height, updateSvgData, width } from "./directed-graph.ts";
 import { updateSimulationData } from "./simulation.ts";
 
@@ -35,12 +32,16 @@ export enum Groups {
   Javascript,
   Tests,
   Packages,
+  Hosted,
 }
 
 const folders = [
   "node_modules",
-  "../lib",
+  "/lib/",
   "projects/commercial",
+  // "/messenger/",
+  // "/dfp/",
+  "/hosted/",
   "projects/common",
 ];
 
@@ -51,14 +52,13 @@ const waitFor = (n = 600): Promise<void> =>
     }, n);
   });
 
-const xOrigin = (folder: number) =>
-  width * (folder / (folders.length + 1)) + width / 6;
+const xOrigin = (folder: number) => width * ((folder + 0.5) / folders.length);
 
 let maximum = 0;
 const yOrigin = (size: number, max = maximum) =>
   Math.round(
     height * (
-      0.18 + 0.54 *
+      0.18 + 0.48 *
         (1 - size / max)
     ),
   );
@@ -77,7 +77,7 @@ const _range = (arr: number[]) =>
     return [Math.min(low, curr), Math.max(high, curr)];
   }, [arr[0], arr[0]]);
 
-const getDataforHash = async (sha = branch) => {
+const getDataForHash = async (sha = branch) => {
   const graph = await fetch(url(sha));
   const tree: Record<string, string[]> = await graph.json();
 
@@ -182,7 +182,7 @@ const hashes = [
 
 const _launch = async () => {
   for (const hash of hashes) {
-    const data = await getDataforHash(hash);
+    const data = await getDataForHash(hash);
     const simulation = updateSimulationData(data);
 
     updateSvgData(data, simulation);
@@ -194,5 +194,5 @@ const _launch = async () => {
 
 // launch();
 
-export { folders, getDataforHash, xOrigin, yOrigin };
+export { folders, getDataForHash, xOrigin, yOrigin };
 export type { Data, Link, Node };

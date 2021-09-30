@@ -30,7 +30,7 @@ const hashes = [
 
 const updateGraph = async (hash) => {
 
-    const data = await getDataforHash(hash);
+    const data = await getDataForHash(hash);
     const simulation = updateSimulationData(data);
 
     updateSvgData(data, simulation);

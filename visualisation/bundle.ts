@@ -2,6 +2,10 @@ try {
   const { files, diagnostics } = await Deno.emit("./index.js", {
     bundle: "module",
     check: false,
+    // sources: {
+    //   "./d3.ts": "",
+    //   "./directed-graph.ts": "",
+    // },
   });
 
   if (diagnostics.length) {
@@ -10,9 +14,14 @@ try {
   }
 
   for (const [fileName, text] of Object.entries(files)) {
-    console.log(`emitted ${fileName} with a length of ${text.length}`);
+    const cleanName = fileName
+      .replace("deno:///", "")
+      .replace("https://", "external/");
+
+    console.log(`emitted ${cleanName} with a length of ${text.length}`);
     await Deno.writeTextFile(
-      "./public/build/" + fileName.replace("deno:///", ""),
+      "./public/build/" +
+        cleanName,
       text,
     );
   }
