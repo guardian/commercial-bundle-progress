@@ -1,5 +1,132 @@
 [
  {
+  "date": "2021-10-13 12:00:00 +0100",
+  "typed": 40,
+  "typedSize": 105808,
+  "untyped": 51,
+  "untypedSize": 119347,
+  "percentage": 0.7843137254901961,
+  "sha": "71d171f79144da76003f5d850de89083b0a3a3da",
+  "prLink": "https://github.com/guardian/frontend/pull/24260"
+ },
+ {
+  "date": "2021-10-12 00:00:00 +0100",
+  "typed": 40,
+  "typedSize": 105810,
+  "untyped": 51,
+  "untypedSize": 119347,
+  "percentage": 0.7843137254901961,
+  "sha": "c789dda9024cdcb62d77eea8e47cbf51f5e7826f"
+ },
+ {
+  "date": "2021-10-12 00:00:00 +0100",
+  "typed": 40,
+  "typedSize": 105246,
+  "untyped": 51,
+  "untypedSize": 119347,
+  "percentage": 0.7843137254901961,
+  "sha": "09a82d56786e143f376b2ad6e2c53ffdf56d6aa6"
+ },
+ {
+  "date": "2021-10-11 11:56:00 +0100",
+  "typed": 39,
+  "typedSize": 104258,
+  "untyped": 51,
+  "untypedSize": 119347,
+  "percentage": 0.7647058823529411,
+  "sha": "be7a297a6a313d5ec37fdf93e2ae0b6af55ed1ce"
+ },
+ {
+  "date": "2021-10-05 00:00:00 +0100",
+  "typed": 39,
+  "typedSize": 104557,
+  "untyped": 51,
+  "untypedSize": 142062,
+  "percentage": 0.7647058823529411,
+  "sha": "5b36d0edf6be857c16fb2c1c39399e1b70956bf6"
+ },
+ {
+  "date": "2021-10-04 00:00:00 +0100",
+  "typed": 38,
+  "typedSize": 104139,
+  "untyped": 51,
+  "untypedSize": 142062,
+  "percentage": 0.7450980392156863,
+  "sha": "e6af95d09d52105b8cc34e0a8758a8251a2fb0bd"
+ },
+ {
+  "date": "2021-10-04 00:00:00 +0100",
+  "typed": 38,
+  "typedSize": 104139,
+  "untyped": 51,
+  "untypedSize": 142062,
+  "percentage": 0.7450980392156863,
+  "sha": "ceaab828fb7e851c0413cbbe4f709eeaf7f7b4f7"
+ },
+ {
+  "date": "2021-09-28 00:00:00 +0100",
+  "typed": 37,
+  "typedSize": 100836,
+  "untyped": 52,
+  "untypedSize": 145365,
+  "percentage": 0.7115384615384616,
+  "sha": "93f6b71efba697735006e32c70e1b9ee5874cb6e"
+ },
+ {
+  "date": "2021-09-28 00:00:00 +0100",
+  "typed": 37,
+  "typedSize": 101033,
+  "untyped": 52,
+  "untypedSize": 145365,
+  "percentage": 0.7115384615384616,
+  "sha": "879404d7d271c10879ce6bb05e5a6c1a9f9f068a"
+ },
+ {
+  "date": "2021-09-27 00:00:00 +0100",
+  "typed": 36,
+  "typedSize": 100122,
+  "untyped": 53,
+  "untypedSize": 146157,
+  "percentage": 0.6792452830188679,
+  "sha": "a690f978a177b13ca1bcd71c8d7a86da8242cb16"
+ },
+ {
+  "date": "2021-09-23 00:00:00 +0100",
+  "typed": 33,
+  "typedSize": 96763,
+  "untyped": 57,
+  "untypedSize": 151040,
+  "percentage": 0.5789473684210527,
+  "sha": "b4af0030b85970e752f9f64b85e82b20f4487ed7"
+ },
+ {
+  "date": "2021-09-23 00:00:00 +0100",
+  "typed": 35,
+  "typedSize": 97661,
+  "untyped": 55,
+  "untypedSize": 150176,
+  "percentage": 0.6363636363636364,
+  "sha": "79b05f1b10ad0d33076fae4b772cc7ce5e00c48d"
+ },
+ {
+  "date": "2021-09-23 00:00:00 +0100",
+  "typed": 31,
+  "typedSize": 95322,
+  "untyped": 59,
+  "untypedSize": 152523,
+  "percentage": 0.5254237288135594,
+  "sha": "7317ca6d9a04a3126b231656821df1b1e7cf1381"
+ },
+ {
+  "date": "2021-09-23 00:00:00 +0100",
+  "typed": 32,
+  "typedSize": 96089,
+  "untyped": 58,
+  "untypedSize": 151741,
+  "percentage": 0.5517241379310345,
+  "sha": "626158617757fbd4c49da24aec73468c37467a56"
+ },
+ {
   "date": "2021-08-02 11:27:02 +0100",
   "typed": 27,
   "typedSize": 85869,
