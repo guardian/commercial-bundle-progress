@@ -33,6 +33,7 @@ const nodes = Object.keys(tree).map((id) => {
     : Groups.Javascript;
   return ({ id, group });
 });
+
 const links = Object.entries(tree).reduce(
   (links: Link[], branch) => {
     const [source, targets] = branch;
