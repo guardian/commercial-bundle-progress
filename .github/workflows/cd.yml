@@ -21,6 +21,7 @@ jobs:
       - name: Build gh-pages
         run: |
           deno --version
+          mkdir public/build
           deno bundle visualisation/index.js public/build/bundle.js --config=visualisation/tsconfig.json
 
       - name: Deploy gh-pages
