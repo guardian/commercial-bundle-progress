@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - mxdvl/visualisation # for testing
 
 jobs:
   build-and-deploy:
