@@ -64,9 +64,10 @@ const yOrigin = (size: number, max = maximum) =>
   );
 
 const STRIP_NODES = /^.+(node_modules\/)((@(guardian|types)\/)?.+?)(\/.+)/g;
+const STRIP_EXTENSION = /(\.d)?\.(j|t)s$/;
 
 const clean = (s: string): string =>
-  s.replace(/(\.d)?\.(j|t)s$/, "").replace(STRIP_NODES, "$1$2 ");
+  s.replace(STRIP_EXTENSION, "").replace(STRIP_NODES, "$1$2 ");
 
 const simpleHash = (s: string): number =>
   s.split("").reduce((p, c) => p + (c.codePointAt(0) ?? 9), 0);
@@ -80,6 +81,9 @@ const _range = (arr: number[]) =>
 const getDataForHash = async (sha = branch) => {
   const graph = await fetch(url(sha));
   const tree: Record<string, string[]> = await graph.json();
+
+  // config.d.ts can be safely ignored
+  delete tree["../lib/config.d.js"];
 
   const maxImports = Object.entries(tree).reduce<number>((max, value) => {
     const [_, links] = value;

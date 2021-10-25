@@ -15,6 +15,8 @@ import type { Data, Link, Node } from "./data.ts";
 import { xOrigin, yOrigin } from "./data.ts";
 import { radius } from "./directed-graph.ts";
 
+const ORIGIN_STRENGTH = 0.06; // default 0.1
+
 const simulation = forceSimulation<Node, Link>()
   .force(
     "link",
@@ -31,14 +33,14 @@ const simulation = forceSimulation<Node, Link>()
   .force(
     "x",
     forceX<Node>()
-      .x((n: Node) => xOrigin(n.folder)),
-    // .strength(0.3),
+      .x((n: Node) => xOrigin(n.folder))
+      .strength(ORIGIN_STRENGTH),
   )
   .force(
     "y",
     forceY<Node>()
-      .y((n) => yOrigin(n.imports)),
-    // .strength(0.15),
+      .y((n) => yOrigin(n.imports))
+      .strength(ORIGIN_STRENGTH),
   );
 
 const updateSimulationData = (data: Data) => {
