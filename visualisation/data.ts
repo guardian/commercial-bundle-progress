@@ -83,7 +83,7 @@ const getDataForHash = async (sha = branch) => {
   const tree: Record<string, string[]> = await graph.json();
 
   // config.d.ts can be safely ignored
-  delete tree["../lib/config.d.js"];
+  delete tree["../lib/config.d.ts"];
 
   const maxImports = Object.entries(tree).reduce<number>((max, value) => {
     const [_, links] = value;
