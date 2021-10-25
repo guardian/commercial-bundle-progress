@@ -53,7 +53,6 @@ updateGraph("main");
 
 for (const hash of hashes) {
   const button = document.createElement("button");
-
   button.innerText = hash.substring(0, 6);
   fragment.appendChild(button);
 

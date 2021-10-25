@@ -56,12 +56,7 @@ const xOrigin = (folder: number) => width * ((folder + 0.5) / folders.length);
 
 let maximum = 0;
 const yOrigin = (size: number, max = maximum) =>
-  Math.round(
-    height * (
-      0.18 + 0.48 *
-        (1 - size / max)
-    ),
-  );
+  Math.round(height * (0.18 + 0.48 * (1 - size / max)));
 
 const STRIP_NODES = /^.+(node_modules\/)((@(guardian|types)\/)?.+?)(\/.+)/g;
 const STRIP_EXTENSION = /(\.d)?\.(j|t)s$/;
@@ -73,10 +68,13 @@ const simpleHash = (s: string): number =>
   s.split("").reduce((p, c) => p + (c.codePointAt(0) ?? 9), 0);
 
 const _range = (arr: number[]) =>
-  arr.reduce<[number, number]>((prev, curr) => {
-    const [low, high] = prev;
-    return [Math.min(low, curr), Math.max(high, curr)];
-  }, [arr[0], arr[0]]);
+  arr.reduce<[number, number]>(
+    (prev, curr) => {
+      const [low, high] = prev;
+      return [Math.min(low, curr), Math.max(high, curr)];
+    },
+    [arr[0], arr[0]]
+  );
 
 const getDataForHash = async (sha = branch) => {
   const graph = await fetch(url(sha));
@@ -103,35 +101,38 @@ const getDataForHash = async (sha = branch) => {
 
   console.log(tree);
 
-  const nodes: Node[] = Object.entries(tree).map<Node>((value) => {
-    const [id, links] = value;
-    const group: Groups = id.includes("commercial.")
-      ? Groups.Entry
-      : id.includes("node_modules")
-      ? Groups.Packages
-      : id.includes(".ts")
-      ? Groups.Typescript
-      : Groups.Javascript;
+  const nodes: Node[] = Object.entries(tree)
+    .map<Node>((value) => {
+      const [id, links] = value;
+      const group: Groups = id.includes("commercial.")
+        ? Groups.Entry
+        : id.includes("node_modules")
+        ? Groups.Packages
+        : id.includes(".ts")
+        ? Groups.Typescript
+        : Groups.Javascript;
 
-    const folder = folders.reduce((prev, current, index) => {
-      return id.includes(current) ? index : prev;
-    }, 0);
+      const folder = folders.reduce((prev, current, index) => {
+        return id.includes(current) ? index : prev;
+      }, 0);
 
-    const imports = links.length;
+      const imports = links.length;
 
-    const node: Node = {
-      id: clean(id),
-      group,
-      folder,
-      imports,
-    };
+      const node: Node = {
+        id: clean(id),
+        group,
+        folder,
+        imports,
+      };
 
-    return node;
-  }).map((node) => {
-    node.x = xOrigin(node.folder) - simpleHash(node.id) % 31 + 15;
-    node.y = yOrigin(node.imports, maxImports) - simpleHash(node.id) % 29 + 15;
-    return node;
-  });
+      return node;
+    })
+    .map((node) => {
+      node.x = xOrigin(node.folder) - (simpleHash(node.id) % 31) + 15;
+      node.y =
+        yOrigin(node.imports, maxImports) - (simpleHash(node.id) % 29) + 15;
+      return node;
+    });
   // .concat(packages);
 
   const links: Link[] = Object.entries(tree).reduce((links: Link[], branch) => {
