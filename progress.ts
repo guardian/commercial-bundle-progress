@@ -55,6 +55,7 @@ type Progress = {
   date: string;
   prLink?: string;
   percentage: number;
+  percentageSize: number;
   typed: number;
   typedSize: number;
   untyped: number;
@@ -80,14 +81,19 @@ for await (const file of Deno.readDir(path)) {
 
       const sum = (p: number, c: File) => p + c.size;
 
+      const percentage = typed.length / (typed.length + untyped.length);
+      const typedSize = typed.reduce(sum, 0);
+      const untypedSize = untyped.reduce(sum, 0);
+
       const progress: Progress = {
         date: commitDates[sha],
-        typed: typed.length,
-        typedSize: typed.reduce(sum, 0),
-        untyped: untyped.length,
-        untypedSize: untyped.reduce(sum, 0),
-        percentage: typed.length / untyped.length,
         sha,
+        typed: typed.length,
+        typedSize,
+        untyped: untyped.length,
+        untypedSize,
+        percentage,
+        percentageSize: typedSize / (typedSize + untypedSize),
       };
 
       if (commitPrs[sha]) {
