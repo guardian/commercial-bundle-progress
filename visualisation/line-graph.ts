@@ -28,11 +28,19 @@ const xScale = scaleTime()
 // SVG methods //
 /**
  * Helper method to generate line paths
- * @param path a string for the d="" attribute
- * @param stroke colour of the stroke
+ * @param key the Progress key to report on
+ * @param options various options to generate the path
  */
-const path = (path: string | null, stroke = "black") =>
-  path ? `<path stroke="${stroke}" d="${path}" />` : "";
+const path = (
+  key: keyof Pick<Progress, "percentage" | "percentageSize">,
+  { typed = true, stroke = "black" },
+) =>
+  `<path stroke="${stroke}" d="${
+    line<Progress>(
+      (d) => xScale(Date.parse(d.date)),
+      (d) => yScale(typed ? d[key] : 1 - d[key]),
+    )(data)
+  }" />`;
 
 /**
  * The SVG as string, which we’ll save to a file.
@@ -42,45 +50,11 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
   width="${width}"
   height="${height}">
   <g class="lines" fill="none">
-    ${
-  path(
-    line<Progress>(
-      (d) => xScale(Date.parse(d.date)),
-      (d) => yScale(1 - d.percentage),
-    )(data),
-    "orange",
-  )
-}
-    ${
-  path(
-    line<Progress>(
-      (d) => xScale(Date.parse(d.date)),
-      (d) => yScale(1 - d.percentageSize),
-    )(data),
-    "darkorange",
-  )
-}
-
-
-
-    ${
-  path(
-    line<Progress>(
-      (d) => xScale(Date.parse(d.date)),
-      (d) => yScale(d.percentage),
-    )(data),
-    "darkblue",
-  )
-}
-    ${
-  path(
-    line<Progress>(
-      (d) => xScale(Date.parse(d.date)),
-      (d) => yScale(d.percentageSize),
-    )(data),
-    "blue",
-  )
-}
+    ${path("percentage", { stroke: "darkorange" })}
+    ${path("percentageSize", { stroke: "orange" })}
+    
+    ${path("percentage", { stroke: "darkblue", typed: false })}
+    ${path("percentageSize", { stroke: "blue", typed: false })}
   </g>
 </svg>`;
 
