@@ -1,5 +1,15 @@
 [
  {
+  "date": "2021-10-28 12:00:00 +0000",
+  "sha": "aa3dc8f462de94f261fe013489a9e9ee8c4c1214",
+  "typed": 49,
+  "typedSize": 123604,
+  "untyped": 42,
+  "untypedSize": 104949,
+  "percentage": 0.5384615384615384,
+  "percentageSize": 0.5408111028951709
+ },
+ {
   "date": "2021-10-25 10:52:00 +0000",
   "sha": "7282823f3d8c10c4b6eee9c87ba62560bb6392db",
   "typed": 47,
@@ -324,6 +334,16 @@
   "untypedSize": 228123,
   "percentage": 0.08791208791208792,
   "percentageSize": 0.0811643587326905
+ },
+ {
+  "date": "2021-04-12 00:00:00 +0000",
+  "sha": "00691d84f609105e876617beb791903c526a13d1",
+  "typed": 5,
+  "typedSize": 11509,
+  "untyped": 86,
+  "untypedSize": 236993,
+  "percentage": 0.054945054945054944,
+  "percentageSize": 0.04631351055524704
  },
  {
   "date": "2021-03-10 13:40:19 +0000",
