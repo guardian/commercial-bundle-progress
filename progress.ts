@@ -4,6 +4,7 @@ import type { File } from "./commercial-bundle.ts";
 // getFiles("main");
 
 const commitDates = {
+  "aa3dc8f462de94f261fe013489a9e9ee8c4c1214": "2021-10-28 12:00:00 +0000",
   "7282823f3d8c10c4b6eee9c87ba62560bb6392db": "2021-10-25 10:52:00 +0000",
   "71d171f79144da76003f5d850de89083b0a3a3da": "2021-10-13 12:00:00 +0100",
   "09a82d56786e143f376b2ad6e2c53ffdf56d6aa6": "2021-10-12 00:00:00 +0100",
@@ -52,7 +53,7 @@ const commitPrs: Partial<Record<Sha, number>> = {
 
 type Sha = keyof typeof commitDates;
 
-type Progress = {
+export type Progress = {
   date: string;
   prLink?: string;
   percentage: number;

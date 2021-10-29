@@ -5,6 +5,10 @@ export type {
   SimulationLinkDatum,
   SimulationNodeDatum,
 } from "https://cdn.skypack.dev/d3-force@3?dts";
+export { axisLeft } from "https://cdn.skypack.dev/d3-axis@3?dts";
+export { scaleLinear, scaleTime } from "https://cdn.skypack.dev/d3-scale@4?dts";
+export { line } from "https://cdn.skypack.dev/d3-shape@3?dts";
+
 export {
   // forceCenter,
   forceCollide,

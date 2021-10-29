@@ -9,7 +9,9 @@ dependencies in `common`.
 
 ## Add commit URLS
 
-Where `{hash}` is the hash of the merge commit, generate the tree.
+Where `{hash}` is the hash of [the merge commit][frontend], generate the tree.
+
+[frontend]: https://github.com/guardian/frontend/commits
 
 ```bash
 deno run -A commercial-bundle.ts {hash}
