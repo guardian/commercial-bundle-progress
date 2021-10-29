@@ -1,7 +1,4 @@
-// import { getFiles } from "./commercial-bundle.ts";
-import type { File } from "./commercial-bundle.ts";
-
-// getFiles("main");
+import type { File, Tree } from "./commercial-bundle.ts";
 
 const commitDates = {
   "aa3dc8f462de94f261fe013489a9e9ee8c4c1214": "2021-10-28 12:00:00 +0000",
@@ -29,6 +26,7 @@ const commitDates = {
   "3bb1f605a14bd8efc427667afa8418847830d252": "2021-07-13 10:15:37 +0100",
   "e45695f217cb50a6c649231fd41e5494f847b506": "2021-07-09 13:25:39 +0100",
   "b22a9e85ea4d7aec463c30c4d8d8eea19969c0ca": "2021-07-05 14:33:55 +0100",
+
   "e7bf10462e65f0e31021b2c57b3d2e1c9210c505": "2021-07-01 17:40:29 +0100",
   "19d404bcaf74091a7c5a40f0bd5a516fb847f1a1": "2021-06-28 13:33:32 +0100",
   "d6eaa9b433251f0b1d6e46b6aaf3b4d86e8ce12a": "2021-06-23 16:23:21 +0100",
@@ -69,22 +67,23 @@ export type Progress = {
 const progressArray: Progress[] = [];
 const path = "./trees";
 for await (const file of Deno.readDir(path)) {
-  const data: File[] | null = file.isFile
+  const data: Tree | null = file.isFile
     ? JSON.parse(await Deno.readTextFile(path + "/" + file.name))
     : null;
 
   if (data) {
-    const sha = file.name.replace(".json", "");
+    const { sha } = data;
 
     if (validSha(sha)) {
-      const files = data.filter((f) => !f.path.includes(".spec."));
-      const _tests = data.filter((f) => f.path.includes(".spec."));
+      const files = data.files.filter((f) => !f.path.includes(".spec."));
+      const _tests = data.files.filter((f) => f.path.includes(".spec."));
       const typed = files.filter((f) => f.path.includes(".ts"));
       const untyped = files.filter((f) => f.path.includes(".js"));
 
       const sum = (p: number, c: File) => p + c.size;
 
       const percentage = typed.length / (typed.length + untyped.length);
+
       const typedSize = typed.reduce(sum, 0);
       const untypedSize = untyped.reduce(sum, 0);
 
