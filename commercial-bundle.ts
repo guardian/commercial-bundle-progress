@@ -46,7 +46,7 @@ type File = {
 
 type CommitData = {
   sha: string;
-  node_id: string;
+  "node_id": string;
   commit: {
     author: {
       name: string;
