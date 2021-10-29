@@ -1,5 +1,6 @@
 import type { Progress } from "../progress.ts";
 import { line } from "../d3/shape.ts";
+// import { axisBottom, axisLeft } from "../d3/axis.ts";
 import { scaleLinear, scaleTime } from "../d3/scale.ts";
 
 // Remote data from JSON //
@@ -19,7 +20,7 @@ const height = 400;
 
 const yScale = scaleLinear()
   .domain([0, 1])
-  .range([height, 0]); // note direction of y-axis in SVG
+  .range([height - 20, 0]); // note direction of y-axis in SVG
 
 const xScale = scaleTime()
   .domain([new Date(2021, 1, 1), new Date()])
@@ -42,6 +43,38 @@ const path = (
     )(data)
   }" />`;
 
+const xAxis = (): string => {
+  const dates: string[] = [
+    // "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    // "Nov",
+  ];
+
+  const ticks = dates.map((date, index) => {
+    const pos = xScale(Date.parse("1 " + date + " 2021"));
+    return `<g transform="translate(${pos}, 0)">
+      <text text-anchor="middle"
+      fill="black"
+      stroke="none"
+      transform="translate(0, 12)">${dates[index]}</text>
+      <path d="M0,0 v-5" />
+    </g>`;
+  });
+  return `
+  <path d="M0,0 h${width}" />
+  ${ticks.join("")}
+  `;
+};
+
+console.log(xAxis());
+
 /**
  * The SVG as string, which we’ll save to a file.
  */
@@ -49,12 +82,25 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 ${width} ${height}"
   width="${width}"
   height="${height}">
+  <style>
+    text {
+      font-family: \"Courier New\", Courier, monospace;
+      font-size: 12px;
+    }
+  </style>
   <g class="lines" fill="none">
     ${path("percentage", { stroke: "darkorange" })}
     ${path("percentageSize", { stroke: "orange" })}
     
     ${path("percentage", { stroke: "darkblue", typed: false })}
     ${path("percentageSize", { stroke: "blue", typed: false })}
+  </g>
+
+  <g
+    class="axis"
+    stroke="black" fill="none"
+    transform="translate(0, ${height - 20})">
+  ${xAxis()}
   </g>
 </svg>`;
 
