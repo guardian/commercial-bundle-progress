@@ -1,7 +1,7 @@
-import { create } from "https://cdn.skypack.dev/d3-selection@3?dts";
+import { create } from "./d3.ts";
 import { transition } from "https://cdn.skypack.dev/d3-transition@3?dts";
 import { schemeCategory10 } from "https://cdn.skypack.dev/d3-scale-chromatic@3?dts";
-import { scaleOrdinal } from "https://cdn.skypack.dev/d3-scale@4?dts";
+import { scaleOrdinal } from "./d3.ts";
 import { Data, folders, Link, Node, xOrigin, yOrigin } from "./data.ts";
 import { Simulation } from "https://cdn.skypack.dev/-/d3-force@v3.0.0-cshj62qMoyIGNIXoil9u/dist=es2020,mode=types/index";
 import { dragging } from "./simulation.ts";

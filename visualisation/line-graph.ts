@@ -1,13 +1,18 @@
 import type { Progress } from "../progress.ts";
-import { axisLeft, domain, line, range, scaleLinear, scaleTime } from "./d3.ts";
+import { axisLeft, line, scaleLinear, scaleTime } from "./d3.ts";
 
-const data: Progress[] = JSON.parse(Deno.readTextFileSync("../progress.json"));
+// https://stackoverflow.com/a/61829368
+const dir = new URL(".", import.meta.url).pathname;
 
-const max = <T extends number | Date>(array: T[]): T =>
-  arr.reduce((curr, prev) => curr > prev ? curr : prev);
+const data: Progress[] = JSON.parse(
+  Deno.readTextFileSync(dir + "/../progress.json"),
+);
 
-const min = <T extends number | Date>(array: T[]): T =>
-  arr.reduce((curr, prev) => curr < prev ? curr : prev);
+const _max = <T extends number | Date>(array: T[]): T =>
+  array.reduce((curr, prev) => curr > prev ? curr : prev);
+
+const _min = <T extends number | Date>(array: T[]): T =>
+  array.reduce((curr, prev) => curr < prev ? curr : prev);
 
 const RANGE = [0, 300];
 
@@ -27,7 +32,13 @@ const xScale = scaleTime()
   ])
   .range([0, 600]);
 
-const line = line().x((d: Progress) => xScale());
+const linePath = line<Progress>()
+  .x((d) => xScale(Date.parse(d.date)))
+  .y((d) => yScale(d.percentage));
+
+console.log(linePath);
+
+// deno run --no-check --allow-read visualisation/line-graph.ts
 
 /*
 
