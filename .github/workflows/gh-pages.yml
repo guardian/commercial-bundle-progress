@@ -17,6 +17,9 @@ jobs:
         with:
           deno-version: v1.15.2
 
+      - name: Build static SVG graph
+        run: deno run --allow-read --allow-write visualisation/line-graph.ts
+
       - name: Build gh-pages
         run: |
           deno --version
