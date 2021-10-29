@@ -73,7 +73,15 @@ const xAxis = (): string => {
   `;
 };
 
-console.log(xAxis());
+const yAxis = (sections: number): string => {
+  const marks = Array(sections - 1).fill(yScale.domain()[1])
+    .map((max, count) => {
+      const y = yScale((count + 1) * max / sections);
+      return `<path d="M 0,${Math.round(y)} h${width}" />`;
+    });
+
+  return marks.join("");
+};
 
 /**
  * The SVG as string, which we’ll save to a file.
@@ -95,9 +103,12 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
     ${path("percentage", { stroke: "darkblue", typed: false })}
     ${path("percentageSize", { stroke: "blue", typed: false })}
   </g>
-
+  
+  <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6">
+    ${yAxis(4)}
+  </g>
   <g
-    class="axis"
+    class="axis x"
     stroke="black" fill="none"
     transform="translate(0, ${height - 20})">
   ${xAxis()}
