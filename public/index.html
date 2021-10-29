@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Commercial Bundle Visualisation</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-        }
-        
-        svg {
-            font-weight: 600;
-        }
+      body {
+        font-family: "Courier New", Courier, monospace;
+      }
 
-        svg.hover g g:not(.active) {
-            opacity: 0.06;
-        }
+      svg {
+        font-weight: 600;
+      }
 
-        .label {
-            visibility: hidden;
-        }
-        .active .label {
-            visibility: visible;
-        }
+      svg.hover g g:not(.active) {
+        opacity: 0.06;
+      }
+
+      .label {
+        visibility: hidden;
+      }
+      .active .label {
+        visibility: visible;
+      }
     </style>
     <h1>Commercial Bundle Visualisation</h1>
     <script type="module" src="build/bundle.js"></script>
-</body>
+    <div id="directed-graph"></div>
+
+    <h2>TypeScript conversion progress</h2>
+    <img src="./progress.svg" />
+  </body>
 </html>
