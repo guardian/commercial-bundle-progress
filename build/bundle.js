@@ -1538,6 +1538,78 @@ Local.prototype = local.prototype = {
         return this._;
     }
 };
+function sourceEvent(event) {
+    let sourceEvent2;
+    while(sourceEvent2 = event.sourceEvent)event = sourceEvent2;
+    return event;
+}
+function pointer(event, node) {
+    event = sourceEvent(event);
+    if (node === void 0) node = event.currentTarget;
+    if (node) {
+        var svg = node.ownerSVGElement || node;
+        if (svg.createSVGPoint) {
+            var point = svg.createSVGPoint();
+            point.x = event.clientX, point.y = event.clientY;
+            point = point.matrixTransform(node.getScreenCTM().inverse());
+            return [
+                point.x,
+                point.y
+            ];
+        }
+        if (node.getBoundingClientRect) {
+            var rect = node.getBoundingClientRect();
+            return [
+                event.clientX - rect.left - node.clientLeft,
+                event.clientY - rect.top - node.clientTop
+            ];
+        }
+    }
+    return [
+        event.pageX,
+        event.pageY
+    ];
+}
+const nonpassive = {
+    passive: false
+};
+const nonpassivecapture = {
+    capture: true,
+    passive: false
+};
+function nopropagation(event) {
+    event.stopImmediatePropagation();
+}
+function noevent(event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+}
+function nodrag(view) {
+    var root = view.document.documentElement, selection = select(view).on("dragstart.drag", noevent, nonpassivecapture);
+    if ("onselectstart" in root) {
+        selection.on("selectstart.drag", noevent, nonpassivecapture);
+    } else {
+        root.__noselect = root.style.MozUserSelect;
+        root.style.MozUserSelect = "none";
+    }
+}
+function yesdrag(view, noclick) {
+    var root = view.document.documentElement, selection = select(view).on("dragstart.drag", null);
+    if (noclick) {
+        selection.on("click.drag", noevent, nonpassivecapture);
+        setTimeout(function() {
+            selection.on("click.drag", null);
+        }, 0);
+    }
+    if ("onselectstart" in root) {
+        selection.on("selectstart.drag", null);
+    } else {
+        root.style.MozUserSelect = root.__noselect;
+        delete root.__noselect;
+    }
+}
+var constant2 = (x)=>()=>x
+;
 function DragEvent(type, { sourceEvent , subject , target , identifier , active , x , y , dx , dy , dispatch: dispatch2  }) {
     Object.defineProperties(this, {
         type: {
@@ -1599,6 +1671,147 @@ DragEvent.prototype.on = function() {
     var value = this._.on.apply(this._, arguments);
     return value === this._ ? this : value;
 };
+function defaultFilter(event) {
+    return !event.ctrlKey && !event.button;
+}
+function defaultContainer() {
+    return this.parentNode;
+}
+function defaultSubject(event, d) {
+    return d == null ? {
+        x: event.x,
+        y: event.y
+    } : d;
+}
+function defaultTouchable() {
+    return navigator.maxTouchPoints || "ontouchstart" in this;
+}
+function drag() {
+    var filter = defaultFilter, container = defaultContainer, subject = defaultSubject, touchable = defaultTouchable, gestures = {
+    }, listeners = dispatch("start", "drag", "end"), active = 0, mousedownx, mousedowny, mousemoving, touchending, clickDistance2 = 0;
+    function drag2(selection) {
+        selection.on("mousedown.drag", mousedowned).filter(touchable).on("touchstart.drag", touchstarted).on("touchmove.drag", touchmoved, nonpassive).on("touchend.drag touchcancel.drag", touchended).style("touch-action", "none").style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
+    }
+    function mousedowned(event, d) {
+        if (touchending || !filter.call(this, event, d)) return;
+        var gesture = beforestart(this, container.call(this, event, d), event, d, "mouse");
+        if (!gesture) return;
+        select(event.view).on("mousemove.drag", mousemoved, nonpassivecapture).on("mouseup.drag", mouseupped, nonpassivecapture);
+        nodrag(event.view);
+        nopropagation(event);
+        mousemoving = false;
+        mousedownx = event.clientX;
+        mousedowny = event.clientY;
+        gesture("start", event);
+    }
+    function mousemoved(event) {
+        noevent(event);
+        if (!mousemoving) {
+            var dx = event.clientX - mousedownx, dy = event.clientY - mousedowny;
+            mousemoving = dx * dx + dy * dy > clickDistance2;
+        }
+        gestures.mouse("drag", event);
+    }
+    function mouseupped(event) {
+        select(event.view).on("mousemove.drag mouseup.drag", null);
+        yesdrag(event.view, mousemoving);
+        noevent(event);
+        gestures.mouse("end", event);
+    }
+    function touchstarted(event, d) {
+        if (!filter.call(this, event, d)) return;
+        var touches = event.changedTouches, c = container.call(this, event, d), n = touches.length, i, gesture;
+        for(i = 0; i < n; ++i){
+            if (gesture = beforestart(this, c, event, d, touches[i].identifier, touches[i])) {
+                nopropagation(event);
+                gesture("start", event, touches[i]);
+            }
+        }
+    }
+    function touchmoved(event) {
+        var touches = event.changedTouches, n = touches.length, i, gesture;
+        for(i = 0; i < n; ++i){
+            if (gesture = gestures[touches[i].identifier]) {
+                noevent(event);
+                gesture("drag", event, touches[i]);
+            }
+        }
+    }
+    function touchended(event) {
+        var touches = event.changedTouches, n = touches.length, i, gesture;
+        if (touchending) clearTimeout(touchending);
+        touchending = setTimeout(function() {
+            touchending = null;
+        }, 500);
+        for(i = 0; i < n; ++i){
+            if (gesture = gestures[touches[i].identifier]) {
+                nopropagation(event);
+                gesture("end", event, touches[i]);
+            }
+        }
+    }
+    function beforestart(that, container2, event, d, identifier, touch) {
+        var dispatch2 = listeners.copy(), p = pointer(touch || event, container2), dx, dy, s;
+        if ((s = subject.call(that, new DragEvent("beforestart", {
+            sourceEvent: event,
+            target: drag2,
+            identifier,
+            active,
+            x: p[0],
+            y: p[1],
+            dx: 0,
+            dy: 0,
+            dispatch: dispatch2
+        }), d)) == null) return;
+        dx = s.x - p[0] || 0;
+        dy = s.y - p[1] || 0;
+        return function gesture(type, event2, touch2) {
+            var p0 = p, n;
+            switch(type){
+                case "start":
+                    gestures[identifier] = gesture, n = active++;
+                    break;
+                case "end":
+                    delete gestures[identifier], --active;
+                case "drag":
+                    p = pointer(touch2 || event2, container2), n = active;
+                    break;
+            }
+            dispatch2.call(type, that, new DragEvent(type, {
+                sourceEvent: event2,
+                subject: s,
+                target: drag2,
+                identifier,
+                active: n,
+                x: p[0] + dx,
+                y: p[1] + dy,
+                dx: p[0] - p0[0],
+                dy: p[1] - p0[1],
+                dispatch: dispatch2
+            }), d);
+        };
+    }
+    drag2.filter = function(_) {
+        return arguments.length ? (filter = typeof _ === "function" ? _ : constant2(!!_), drag2) : filter;
+    };
+    drag2.container = function(_) {
+        return arguments.length ? (container = typeof _ === "function" ? _ : constant2(_), drag2) : container;
+    };
+    drag2.subject = function(_) {
+        return arguments.length ? (subject = typeof _ === "function" ? _ : constant2(_), drag2) : subject;
+    };
+    drag2.touchable = function(_) {
+        return arguments.length ? (touchable = typeof _ === "function" ? _ : constant2(!!_), drag2) : touchable;
+    };
+    drag2.on = function() {
+        var value = listeners.on.apply(listeners, arguments);
+        return value === listeners ? drag2 : value;
+    };
+    drag2.clickDistance = function(_) {
+        return arguments.length ? (clickDistance2 = (_ = +_) * _, drag2) : Math.sqrt(clickDistance2);
+    };
+    return drag2;
+}
 function define(constructor, factory, prototype) {
     constructor.prototype = factory.prototype = prototype;
     prototype.constructor = constructor;
@@ -2060,7 +2273,7 @@ function basisClosed(values) {
         return basis((t - i / n) * n, v0, v1, v2, v3);
     };
 }
-var constant2 = (x)=>()=>x
+var constant3 = (x)=>()=>x
 ;
 function linear(a, d) {
     return function(t) {
@@ -2074,16 +2287,16 @@ function exponential(a, b, y) {
 }
 function hue(a, b) {
     var d = b - a;
-    return d ? linear(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant2(isNaN(a) ? b : a);
+    return d ? linear(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant3(isNaN(a) ? b : a);
 }
 function gamma(y) {
     return (y = +y) === 1 ? nogamma : function(a, b) {
-        return b - a ? exponential(a, b, y) : constant2(isNaN(a) ? b : a);
+        return b - a ? exponential(a, b, y) : constant3(isNaN(a) ? b : a);
     };
 }
 function nogamma(a, b) {
     var d = b - a;
-    return d ? linear(a, d) : constant2(isNaN(a) ? b : a);
+    return d ? linear(a, d) : constant3(isNaN(a) ? b : a);
 }
 var rgb1 = function rgbGamma(y) {
     var color2 = gamma(y);
@@ -2218,7 +2431,7 @@ function string(a, b) {
 }
 function value(a, b) {
     var t = typeof b, c;
-    return b == null || t === "boolean" ? constant2(b) : (t === "number" ? number : t === "string" ? (c = color(b)) ? (b = c, rgb1) : string : b instanceof color ? rgb1 : b instanceof Date ? date : isNumberArray(b) ? numberArray : Array.isArray(b) ? genericArray : typeof b.valueOf !== "function" && typeof b.toString !== "function" || isNaN(b) ? object : number)(a, b);
+    return b == null || t === "boolean" ? constant3(b) : (t === "number" ? number : t === "string" ? (c = color(b)) ? (b = c, rgb1) : string : b instanceof color ? rgb1 : b instanceof Date ? date : isNumberArray(b) ? numberArray : Array.isArray(b) ? genericArray : typeof b.valueOf !== "function" && typeof b.toString !== "function" || isNaN(b) ? object : number)(a, b);
 }
 var degrees1 = 180 / Math.PI;
 var identity = {
@@ -4658,7 +4871,9 @@ const svg = create("svg").attr("viewBox", [
     width,
     height
 ].join(" "));
-ordinal(category10);
+const scale = ordinal(category10);
+const isNode = (n)=>typeof n !== "string"
+;
 const branch = "main";
 const path = "tools/__tasks__/commercial/graph/output/standalone.commercial.ts.json";
 const url = (sha = branch)=>`https://raw.githubusercontent.com/${repo}/${sha}/${path}`
@@ -4685,19 +4900,124 @@ const xOrigin = (folder)=>width * ((folder + 0.5) / folders.length)
 svg.append("g").attr("class", "folders").selectAll("text").data(folders).join("text").text((d)=>d
 ).attr("font-size", 10).attr("text-anchor", "middle").attr("y", 540).attr("x", (d)=>xOrigin(folders.indexOf(d))
 );
-svg.append("g").attr("class", "links").attr("stroke", "#999").attr("stroke-opacity", 0.6);
-svg.append("g").attr("class", "nodes");
+const linkGroup = svg.append("g").attr("class", "links").attr("stroke", "#999").attr("stroke-opacity", 0.6);
+const nodeGroup = svg.append("g").attr("class", "nodes");
 transition();
 const radius = (d)=>Math.sqrt(d.imports + 1) * 3 + 4
 ;
 let maximum = 0;
 const yOrigin = (size, max = maximum)=>Math.round(height * (0.18 + 0.48 * (1 - size / max)))
 ;
-simulation().force("link", link().id((n)=>n.id
+const simulation1 = simulation().force("link", link().id((n)=>n.id
 ).strength(0)).force("collide", collide((d)=>radius(d) + 6
 )).force("x", x$2().x((n)=>xOrigin(n.folder)
 )).force("y", y$2().y((n)=>yOrigin(n.imports)
 ));
+const updateSimulationData = (data)=>{
+    const { nodes , links  } = data;
+    const oldNodes = simulation1.nodes();
+    oldNodes.forEach((oldNode)=>{
+        const newNode = nodes.find((n)=>n.id == oldNode.id
+        );
+        if (!newNode) return;
+        newNode.x = oldNode.x;
+        newNode.y = oldNode.y;
+        oldNode.group !== newNode.group ? newNode.converted = true : newNode.converted = false;
+    });
+    simulation1.nodes(nodes);
+    simulation1.force("link")?.links(links);
+    simulation1.alpha(0.3).restart();
+    return simulation1;
+};
+const dragging = (simulation)=>{
+    const dragStarted = (event)=>{
+        if (!event.active) simulation.alphaTarget(0.1).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    };
+    const dragged = (event)=>{
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    };
+    const dragEnded = (event)=>{
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    };
+    return drag().on("start", dragStarted).on("drag", dragged).on("end", dragEnded);
+};
+const updateSvgData = (data, simulation)=>{
+    const { links , nodes  } = data;
+    const link = linkGroup.selectAll("line").data(links, (d)=>{
+        const s = isNode(d.source) ? d.source.id : d.source;
+        const t = isNode(d.target) ? d.target.id : d.target;
+        return `${s}--${t}`;
+    }).join((enter)=>enter.append("line").attr("stroke-width", 4).call((t)=>t.transition().duration(450).attr("stroke-width", (l)=>l.value ?? null
+            )
+        )
+    );
+    link.exit().remove();
+    const node = nodeGroup.selectAll("g").data(nodes, (d)=>d.id
+    ).join((enter)=>{
+        const newNode = enter.append("g").attr("fill", "purple").call((n)=>n.transition().duration(600).attr("fill", (d)=>scale(String(d.group))
+            )
+        ).attr("data-imports", (d)=>d.imports
+        ).attr("data-origin", (d)=>`${xOrigin(d.imports)},${yOrigin(d.imports)}`
+        ).call(dragging(simulation));
+        newNode.append("circle").attr("stroke", "#fff").attr("cx", 0).attr("cy", 0).attr("r", radius);
+        newNode.append("title").text((d)=>d.id
+        );
+        newNode.append("text").text((d)=>{
+            return d.id.split("/").slice(-1)[0].split("-").map((t)=>t.substring(0, 1)
+            ).join("");
+        }).attr("pointer-events", "none").attr("font-size", 8).attr("fill", "white").attr("text-anchor", "middle").attr("x", 0).attr("y", 2);
+        newNode.append("text").text((d)=>d.id.split("/").slice(-1)[0]
+        ).attr("pointer-events", "none").attr("font-size", 9).attr("x", (d)=>Math.sqrt(d.imports + 1) * 3 + 5
+        ).attr("y", 3).attr("class", "label");
+        return newNode;
+    }, (update)=>{
+        update.attr("fill", (d)=>scale(String(d.group))
+        );
+        update.select("circle").attr("r", radius);
+        const updatedNodes = update.filter((d)=>d.converted ?? false
+        );
+        updatedNodes.select("circle").attr("transform", "scale(4)").call((c)=>c.transition().duration(600).attr("transform", "scale(1)")
+        );
+        return update.merge(updatedNodes);
+    }, (exit)=>exit.remove()
+    );
+    node.on("mouseover", (_, n)=>{
+        svg.attr("class", "hover");
+        link.attr("stroke-width", (l)=>{
+            return n === l.source ? 1.2 : n === l.target ? 1 : 0;
+        }).style("stroke-dasharray", (l)=>{
+            return n === l.target ? "5 3" : null;
+        });
+        const linked = (d)=>{
+            const linked = links.filter((l)=>l.source === n || l.target === n
+            ).some((l)=>l.source === d || l.target === d
+            );
+            return d === n || linked;
+        };
+        node.attr("class", (d)=>linked(d) ? "active" : null
+        );
+    });
+    node.on("mouseout", ()=>{
+        svg.attr("class", null);
+        link.attr("stroke-width", (l)=>l.value ?? null
+        ).style("stroke-dasharray", null);
+        node.attr("class", null).style("opacity", null);
+    });
+    simulation.on("tick", ()=>{
+        link.attr("x1", (l)=>(isNode(l.source) && l.source.x) ?? 0
+        ).attr("y1", (l)=>(isNode(l.source) && l.source.y) ?? 0
+        ).attr("x2", (l)=>(isNode(l.target) && l.target.x) ?? 0
+        ).attr("y2", (l)=>(isNode(l.target) && l.target.y) ?? 0
+        );
+        node.attr("transform", (d)=>`translate(${d.x}, ${d.y})`
+        );
+    });
+};
 const STRIP_NODES = /^.+(node_modules\/)((@(guardian|types)\/)?.+?)(\/.+)/g;
 const clean = (s)=>s.replace(/(\.d)?\.(j|t)s$/, "").replace(STRIP_NODES, "$1$2 ")
 ;
@@ -4758,7 +5078,7 @@ const getDataForHash = async (sha = branch)=>{
         links
     };
 };
-document.body.appendChild(svg.node());
+const directedGraph = document.querySelector("#directed-graph");
 const fragment = document.createDocumentFragment();
 const hashes = [
     "287ac0a948594e2f95d0fe0e5791d6dce959456c",
@@ -4785,11 +5105,12 @@ const updateGraph = async (hash)=>{
 };
 updateGraph("main");
 for (const hash of hashes){
-    const button = document.createElement('button');
+    const button = document.createElement("button");
     button.innerText = hash.substring(0, 8);
     fragment.appendChild(button);
     button.addEventListener("click", ()=>{
         updateGraph(hash);
     });
 }
-document.body.appendChild(fragment);
+directedGraph.appendChild(svg.node());
+directedGraph.appendChild(fragment);
