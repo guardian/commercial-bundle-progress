@@ -97,11 +97,11 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
     }
   </style>
   <g class="lines" fill="none">
-    ${path("percentage", { stroke: "darkorange" })}
-    ${path("percentageSize", { stroke: "orange" })}
+    ${path("percentage", { stroke: "darkblue" })}
+    ${path("percentageSize", { stroke: "blue" })}
     
-    ${path("percentage", { stroke: "darkblue", typed: false })}
-    ${path("percentageSize", { stroke: "blue", typed: false })}
+    ${path("percentage", { stroke: "darkorange", typed: false })}
+    ${path("percentageSize", { stroke: "orange", typed: false })}
   </g>
   
   <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6">
