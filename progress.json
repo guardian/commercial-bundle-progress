@@ -24,6 +24,18 @@
     "totalSize": 228553
   },
   {
+    "date": "2021-10-27T15:52:19Z",
+    "author": "Peter Colley",
+    "sha": "4b447fea156b6f470b3233354e8fd622a8d8a038",
+    "typed": 49,
+    "typedSize": 123604,
+    "untyped": 42,
+    "untypedSize": 104971,
+    "percentage": 0.5384615384615384,
+    "percentageSize": 0.5407590506398338,
+    "totalSize": 228575
+  },
+  {
     "date": "2021-10-25T09:52:44Z",
     "author": "Ravi",
     "sha": "7282823f3d8c10c4b6eee9c87ba62560bb6392db",
@@ -73,6 +85,18 @@
     "totalSize": 224593
   },
   {
+    "date": "2021-10-12T15:20:26Z",
+    "author": "Max Duval",
+    "sha": "09a82d56786e143f376b2ad6e2c53ffdf56d6aa6",
+    "typed": 40,
+    "typedSize": 105246,
+    "untyped": 51,
+    "untypedSize": 119347,
+    "percentage": 0.43956043956043955,
+    "percentageSize": 0.46860765918795333,
+    "totalSize": 224593
+  },
+  {
     "date": "2021-10-11T10:56:41Z",
     "author": "Ashish Puliyel",
     "sha": "be7a297a6a313d5ec37fdf93e2ae0b6af55ed1ce",
@@ -100,6 +124,18 @@
     "date": "2021-10-04T12:03:28Z",
     "author": "Chris Jones",
     "sha": "ceaab828fb7e851c0413cbbe4f709eeaf7f7b4f7",
+    "typed": 38,
+    "typedSize": 104139,
+    "untyped": 51,
+    "untypedSize": 142062,
+    "percentage": 0.42696629213483145,
+    "percentageSize": 0.42298365969269014,
+    "totalSize": 246201
+  },
+  {
+    "date": "2021-10-04T11:17:03Z",
+    "author": "Ravi",
+    "sha": "e6af95d09d52105b8cc34e0a8758a8251a2fb0bd",
     "typed": 38,
     "typedSize": 104139,
     "untyped": 51,
