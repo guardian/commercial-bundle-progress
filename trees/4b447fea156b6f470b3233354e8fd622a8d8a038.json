@@ -1,7 +1,7 @@
 {
-  "sha": "a56f0adc12282729743aef3e8b0c12931ef7e6fa",
-  "author": "Max Duval",
-  "date": "2021-11-01T08:56:21Z",
+  "sha": "4b447fea156b6f470b3233354e8fd622a8d8a038",
+  "author": "Peter Colley",
+  "date": "2021-10-27T15:52:19Z",
   "files": [
     {
       "path": "adblock-ask.spec.ts",
@@ -95,9 +95,9 @@
       "path": "modules/brazeBanner.js",
       "mode": "100644",
       "type": "blob",
-      "sha": "f0dfd646fb13393e46501d3460ca4002338b6d4c",
-      "size": 8054,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f0dfd646fb13393e46501d3460ca4002338b6d4c"
+      "sha": "218dfd72ccdc82e502e78c318af983f4f58d092a",
+      "size": 8076,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/218dfd72ccdc82e502e78c318af983f4f58d092a"
     },
     {
       "path": "modules/brazeBanner.spec.js",

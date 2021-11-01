@@ -1,1 +1,1103 @@
-{"sha":"c789dda9024cdcb62d77eea8e47cbf51f5e7826f","author":"Max Duval","date":"2021-10-12T15:39:40Z","files":[{"path":"adblock-ask.spec.ts","mode":"100644","type":"blob","sha":"2929f4f491fae903bc9fd2de279dde4f32e42533","size":1675,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/2929f4f491fae903bc9fd2de279dde4f32e42533"},{"path":"adblock-ask.ts","mode":"100644","type":"blob","sha":"d3884cd0f3b767d24767e607d6257351aa9054fe","size":1453,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d3884cd0f3b767d24767e607d6257351aa9054fe"},{"path":"commercial-metrics.ts","mode":"100644","type":"blob","sha":"3bc376df3abfe7bd96e2ec0e8227f9dde945685a","size":1393,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/3bc376df3abfe7bd96e2ec0e8227f9dde945685a"},{"path":"detect-adblock.ts","mode":"100644","type":"blob","sha":"7ef4a233e86334eaaaa578f1a66a9fcb0a923c0c","size":988,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/7ef4a233e86334eaaaa578f1a66a9fcb0a923c0c"},{"path":"modules/ad-free-slot-remove.ts","mode":"100644","type":"blob","sha":"9d7efbb6bb562698d7a38fe430f86f94a95c0f8d","size":1966,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/9d7efbb6bb562698d7a38fe430f86f94a95c0f8d"},{"path":"modules/ad-verification/prepare-ad-verification.spec.ts","mode":"100644","type":"blob","sha":"fb38df6b62a561dc3487d851d38c25a20bcf23e0","size":3713,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/fb38df6b62a561dc3487d851d38c25a20bcf23e0"},{"path":"modules/ad-verification/prepare-ad-verification.ts","mode":"100644","type":"blob","sha":"5b4141eb54820d93a48479174c0fbd1273dbe2fd","size":2935,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/5b4141eb54820d93a48479174c0fbd1273dbe2fd"},{"path":"modules/article-aside-adverts.spec.js","mode":"100644","type":"blob","sha":"639ab39c2adceda1c09651f8866b65d0caf07a79","size":6184,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/639ab39c2adceda1c09651f8866b65d0caf07a79"},{"path":"modules/article-aside-adverts.ts","mode":"100644","type":"blob","sha":"c8678ed535da3c1cbcfa3e710ede32242d1704f5","size":3604,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c8678ed535da3c1cbcfa3e710ede32242d1704f5"},{"path":"modules/article-body-adverts.js","mode":"100644","type":"blob","sha":"0559d24ee5a5a0ddd8f5b4eec96abe3ae1741a3b","size":6286,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/0559d24ee5a5a0ddd8f5b4eec96abe3ae1741a3b"},{"path":"modules/article-body-adverts.spec.js","mode":"100644","type":"blob","sha":"c01907469fd7010443969923bfe4b0a75fcf4dd9","size":2019,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c01907469fd7010443969923bfe4b0a75fcf4dd9"},{"path":"modules/brazeBanner.js","mode":"100644","type":"blob","sha":"4f30d8d5d00e2a8117d409f77753eb6168bae8b2","size":7891,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/4f30d8d5d00e2a8117d409f77753eb6168bae8b2"},{"path":"modules/brazeBanner.spec.js","mode":"100644","type":"blob","sha":"be8752d5386e293a0ab53783e8b28356940165ac","size":1684,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/be8752d5386e293a0ab53783e8b28356940165ac"},{"path":"modules/carrot-traffic-driver.ts","mode":"100644","type":"blob","sha":"fc6d01e9a72e8b37f2f871d66efcb5f531d31112","size":3392,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/fc6d01e9a72e8b37f2f871d66efcb5f531d31112"},{"path":"modules/comment-adverts.spec.ts","mode":"100644","type":"blob","sha":"e71035975b6b0265538a90e9cf2a4d4123e411f7","size":11323,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/e71035975b6b0265538a90e9cf2a4d4123e411f7"},{"path":"modules/comment-adverts.ts","mode":"100644","type":"blob","sha":"fc93192225f0575463e9d673a8524f7ff47dab3c","size":4248,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/fc93192225f0575463e9d673a8524f7ff47dab3c"},{"path":"modules/comscore.js","mode":"100644","type":"blob","sha":"b9ec6e9ffdc8221575fd9c8715a8652de2ca90ef","size":1768,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b9ec6e9ffdc8221575fd9c8715a8652de2ca90ef"},{"path":"modules/comscore.spec.js","mode":"100644","type":"blob","sha":"833236a0fb873fa099c9befac27bc87007b3549b","size":4961,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/833236a0fb873fa099c9befac27bc87007b3549b"},{"path":"modules/creatives/page-skin.ts","mode":"100644","type":"blob","sha":"c846a630a5a9887150644c30b8eb529967335966","size":4497,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c846a630a5a9887150644c30b8eb529967335966"},{"path":"modules/dfp/Advert.spec.ts","mode":"100644","type":"blob","sha":"b2e6336c91a22c8c401f2ce29ab57e1b955f758d","size":4397,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b2e6336c91a22c8c401f2ce29ab57e1b955f758d"},{"path":"modules/dfp/Advert.ts","mode":"100644","type":"blob","sha":"16e7e87e00ff253fff7710b7d1c88c0817144597","size":4137,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/16e7e87e00ff253fff7710b7d1c88c0817144597"},{"path":"modules/dfp/add-slot.ts","mode":"100644","type":"blob","sha":"c784b4e2ad97e926f6c18d69dadb297f8ca96b45","size":763,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c784b4e2ad97e926f6c18d69dadb297f8ca96b45"},{"path":"modules/dfp/breakpoint-name-to-attribute.test.ts","mode":"100644","type":"blob","sha":"0757cf2aca60130634b07aa76f2c7d36af9d10cd","size":504,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/0757cf2aca60130634b07aa76f2c7d36af9d10cd"},{"path":"modules/dfp/breakpoint-name-to-attribute.ts","mode":"100644","type":"blob","sha":"1ef8046c3b57b1d61bfe03d78e540219542fedb8","size":395,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/1ef8046c3b57b1d61bfe03d78e540219542fedb8"},{"path":"modules/dfp/create-slots.js","mode":"100644","type":"blob","sha":"0445ca33cce63b10409dfbd10c8789942fb51104","size":4859,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/0445ca33cce63b10409dfbd10c8789942fb51104"},{"path":"modules/dfp/create-slots.spec.ts","mode":"100644","type":"blob","sha":"ee7b3b00095c4a8335efb2ad0c14a0c8fbd70ebe","size":2268,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/ee7b3b00095c4a8335efb2ad0c14a0c8fbd70ebe"},{"path":"modules/dfp/define-slot.js","mode":"100644","type":"blob","sha":"9c299bb9fb1e3fdbe3898605482900080a44f926","size":6241,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/9c299bb9fb1e3fdbe3898605482900080a44f926"},{"path":"modules/dfp/define-slot.spec.js","mode":"100644","type":"blob","sha":"c6d233d8942d4fdcf08a3d1f48ecc5fc4582647d","size":1497,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c6d233d8942d4fdcf08a3d1f48ecc5fc4582647d"},{"path":"modules/dfp/dfp-api.spec.ts","mode":"100644","type":"blob","sha":"7a6614e45e90c15889c1393d630d08b0b6214606","size":16451,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/7a6614e45e90c15889c1393d630d08b0b6214606"},{"path":"modules/dfp/dfp-env.ts","mode":"100644","type":"blob","sha":"c87cdbfd4672ee7c8f0a92928a0e99e4257fc398","size":2261,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c87cdbfd4672ee7c8f0a92928a0e99e4257fc398"},{"path":"modules/dfp/display-ads.ts","mode":"100644","type":"blob","sha":"279dac235c856a4c71f9b87e13d8b48e571307a7","size":674,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/279dac235c856a4c71f9b87e13d8b48e571307a7"},{"path":"modules/dfp/display-lazy-ads.ts","mode":"100644","type":"blob","sha":"1ca0cd282732b32569ea9ffd30275c7b97287983","size":714,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/1ca0cd282732b32569ea9ffd30275c7b97287983"},{"path":"modules/dfp/empty-advert.ts","mode":"100644","type":"blob","sha":"03f083f47c009ffea3dfa71757ce7ce3285c36fd","size":721,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/03f083f47c009ffea3dfa71757ce7ce3285c36fd"},{"path":"modules/dfp/fill-advert-slots.ts","mode":"100644","type":"blob","sha":"8145239fce8c466a376da98b70b5dcc64278f911","size":2180,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/8145239fce8c466a376da98b70b5dcc64278f911"},{"path":"modules/dfp/get-ad-iframe.ts","mode":"100644","type":"blob","sha":"1fa6db6f6e23876372dece5fc1fbc644ef903b38","size":1364,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/1fa6db6f6e23876372dece5fc1fbc644ef903b38"},{"path":"modules/dfp/get-advert-by-id.ts","mode":"100644","type":"blob","sha":"ab80189887759d44c2137ab307b2e7d6953cb801","size":228,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/ab80189887759d44c2137ab307b2e7d6953cb801"},{"path":"modules/dfp/lazy-load.js","mode":"100644","type":"blob","sha":"f0942b0059b162b4bb5589c3d6ea64dbc760c270","size":1089,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/f0942b0059b162b4bb5589c3d6ea64dbc760c270"},{"path":"modules/dfp/lazy-load.spec.js","mode":"100644","type":"blob","sha":"cba03633bfe72cc288a04f1a50ae381623f47a7a","size":1892,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/cba03633bfe72cc288a04f1a50ae381623f47a7a"},{"path":"modules/dfp/load-advert.js","mode":"100644","type":"blob","sha":"a14aad5f440e08f092c17cc81edd358c3d06c26f","size":2374,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/a14aad5f440e08f092c17cc81edd358c3d06c26f"},{"path":"modules/dfp/on-slot-load.js","mode":"100644","type":"blob","sha":"85fa3ca618b9a498ae0ce8e19f1c0aca7fae94be","size":1066,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/85fa3ca618b9a498ae0ce8e19f1c0aca7fae94be"},{"path":"modules/dfp/on-slot-render.ts","mode":"100644","type":"blob","sha":"4d15fc395295b20f74bd25f86192228943c7d2d8","size":2990,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/4d15fc395295b20f74bd25f86192228943c7d2d8"},{"path":"modules/dfp/on-slot-viewable.js","mode":"100644","type":"blob","sha":"c862e90eed35f1055068537b4320ffe87aaeb6cb","size":1250,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c862e90eed35f1055068537b4320ffe87aaeb6cb"},{"path":"modules/dfp/on-slot-visibility-changed.js","mode":"100644","type":"blob","sha":"bda4bd43a71212459bda9042fa30838af7c528f7","size":718,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/bda4bd43a71212459bda9042fa30838af7c528f7"},{"path":"modules/dfp/prepare-a9.js","mode":"100644","type":"blob","sha":"a5c336ad43cb80af8b6db9f18b3791af596aa600","size":1293,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/a5c336ad43cb80af8b6db9f18b3791af596aa600"},{"path":"modules/dfp/prepare-a9.spec.js","mode":"100644","type":"blob","sha":"84b00e5dc59233381acdd2e11e528f510993f7af","size":4694,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/84b00e5dc59233381acdd2e11e528f510993f7af"},{"path":"modules/dfp/prepare-googletag.ts","mode":"100644","type":"blob","sha":"fb5d1441646d5ddbb13071a18bcb16e8f46c5983","size":5873,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/fb5d1441646d5ddbb13071a18bcb16e8f46c5983"},{"path":"modules/dfp/prepare-permutive.js","mode":"100644","type":"blob","sha":"ff1782585a6536c48c3907a41f53f3c30c32a10e","size":4495,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/ff1782585a6536c48c3907a41f53f3c30c32a10e"},{"path":"modules/dfp/prepare-permutive.spec.js","mode":"100644","type":"blob","sha":"0352c14f4c37eccb89a6ee39b9a34a67954e94fe","size":9084,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/0352c14f4c37eccb89a6ee39b9a34a67954e94fe"},{"path":"modules/dfp/prepare-prebid.js","mode":"100644","type":"blob","sha":"66d1625b5a37beed8dcabe86fcc55d52c7c1600b","size":1459,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/66d1625b5a37beed8dcabe86fcc55d52c7c1600b"},{"path":"modules/dfp/prepare-prebid.spec.js","mode":"100644","type":"blob","sha":"a559ae62bc687db32c9baf5444776084e3b14657","size":7599,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/a559ae62bc687db32c9baf5444776084e3b14657"},{"path":"modules/dfp/queue-advert.ts","mode":"100644","type":"blob","sha":"5dc0a591be59876edf630d8aeed5ef9b1b0336f0","size":397,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/5dc0a591be59876edf630d8aeed5ef9b1b0336f0"},{"path":"modules/dfp/redplanet.js","mode":"100644","type":"blob","sha":"9a78b51711faa1095ba0b188e502d5e64cf5c369","size":1692,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/9a78b51711faa1095ba0b188e502d5e64cf5c369"},{"path":"modules/dfp/redplanet.spec.js","mode":"100644","type":"blob","sha":"5d6ef1ddd9c8ba29446177909e54ea1c067dc01b","size":4653,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/5d6ef1ddd9c8ba29446177909e54ea1c067dc01b"},{"path":"modules/dfp/refresh-on-resize.js","mode":"100644","type":"blob","sha":"e15f2be990e64f4312b0030f45dd6a66fdb5dc7f","size":1859,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/e15f2be990e64f4312b0030f45dd6a66fdb5dc7f"},{"path":"modules/dfp/render-advert-label.spec.ts","mode":"100644","type":"blob","sha":"7553d113b509110447deb6df658d5788d743a630","size":4612,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/7553d113b509110447deb6df658d5788d743a630"},{"path":"modules/dfp/render-advert-label.ts","mode":"100644","type":"blob","sha":"d125312166fe93ffde1eae3621576fc6643dde20","size":4112,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d125312166fe93ffde1eae3621576fc6643dde20"},{"path":"modules/dfp/render-advert.ts","mode":"100644","type":"blob","sha":"d6c11e5ee3556d94e1fc0e0153f647e0279d49eb","size":7203,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d6c11e5ee3556d94e1fc0e0153f647e0279d49eb"},{"path":"modules/dfp/track-ad-render.js","mode":"100644","type":"blob","sha":"a36c874ad0315e219d2ddd63abf2741f052277dc","size":137,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/a36c874ad0315e219d2ddd63abf2741f052277dc"},{"path":"modules/dfp/wait-for-advert.ts","mode":"100644","type":"blob","sha":"8108d79f8d76ff5a5afcd92e14625469c0af2855","size":501,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/8108d79f8d76ff5a5afcd92e14625469c0af2855"},{"path":"modules/hasCurrentBrazeUser.js","mode":"100644","type":"blob","sha":"fd5556e11a9bbef1e64e458adb0bb70efe3c69bb","size":346,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/fd5556e11a9bbef1e64e458adb0bb70efe3c69bb"},{"path":"modules/hasCurrentBrazeUser.test.js","mode":"100644","type":"blob","sha":"cf332033bab5053ffbe1298fd2b8dec968c83c42","size":683,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/cf332033bab5053ffbe1298fd2b8dec968c83c42"},{"path":"modules/header-bidding/a9/a9.js","mode":"100644","type":"blob","sha":"083c81ee39f48b0547cfde41520c8474a56b9dfc","size":1585,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/083c81ee39f48b0547cfde41520c8474a56b9dfc"},{"path":"modules/header-bidding/a9/a9.spec.js","mode":"100644","type":"blob","sha":"ce6888da639b9e0ef2fd44d668b77e7c84a11311","size":1781,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/ce6888da639b9e0ef2fd44d668b77e7c84a11311"},{"path":"modules/header-bidding/prebid/appnexus.js","mode":"100644","type":"blob","sha":"8525137da8db0f63ab47171cadaef0bb7a45f4ce","size":2824,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/8525137da8db0f63ab47171cadaef0bb7a45f4ce"},{"path":"modules/header-bidding/prebid/appnexus.spec.js","mode":"100644","type":"blob","sha":"eda270b2d4488feea103edc0819f09d8aea5378a","size":6800,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/eda270b2d4488feea103edc0819f09d8aea5378a"},{"path":"modules/header-bidding/prebid/bid-config.spec.ts","mode":"100644","type":"blob","sha":"37fdce2a9970abb1910d38b58a5e20e1c6fbf030","size":20868,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/37fdce2a9970abb1910d38b58a5e20e1c6fbf030"},{"path":"modules/header-bidding/prebid/bid-config.ts","mode":"100644","type":"blob","sha":"42a1f5afcb48de4c365da0e5eb27332eb62eadb7","size":12082,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/42a1f5afcb48de4c365da0e5eb27332eb62eadb7"},{"path":"modules/header-bidding/prebid/prebid.spec.ts","mode":"100644","type":"blob","sha":"7c8df0f2f65415dc68808884ab2f6b79324faf81","size":7983,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/7c8df0f2f65415dc68808884ab2f6b79324faf81"},{"path":"modules/header-bidding/prebid/prebid.ts","mode":"100644","type":"blob","sha":"d3666a2786da51866a0492cee3f97281e51b4873","size":9293,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d3666a2786da51866a0492cee3f97281e51b4873"},{"path":"modules/header-bidding/prebid/price-config.spec.ts","mode":"100644","type":"blob","sha":"f074a3a1500dfcd3fc1e2486323d08b536516a43","size":204,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/f074a3a1500dfcd3fc1e2486323d08b536516a43"},{"path":"modules/header-bidding/prebid/price-config.ts","mode":"100644","type":"blob","sha":"b3d2187afa4e12bef45e35e690ac55ea726704d1","size":275,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b3d2187afa4e12bef45e35e690ac55ea726704d1"},{"path":"modules/header-bidding/prebid/pubmatic.js","mode":"100644","type":"blob","sha":"4013fd2328773c3a35f52fefe3262d7d8c9ed90f","size":1247,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/4013fd2328773c3a35f52fefe3262d7d8c9ed90f"},{"path":"modules/header-bidding/slot-config.spec.js","mode":"100644","type":"blob","sha":"1b1e69d7d12df0a2e60b261c95093169166990c1","size":6258,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/1b1e69d7d12df0a2e60b261c95093169166990c1"},{"path":"modules/header-bidding/slot-config.ts","mode":"100644","type":"blob","sha":"d9224d017ff8e32184993430d7e34fb3ef74ba9b","size":3776,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d9224d017ff8e32184993430d7e34fb3ef74ba9b"},{"path":"modules/header-bidding/types.d.ts","mode":"100644","type":"blob","sha":"b202fc4bf9fbe3ce2a994d9430d6d6fd6c0b8ded","size":2040,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b202fc4bf9fbe3ce2a994d9430d6d6fd6c0b8ded"},{"path":"modules/header-bidding/utils.spec.ts","mode":"100644","type":"blob","sha":"12963ca4cdea707504ce0d912cfb301db4c76cc3","size":12023,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/12963ca4cdea707504ce0d912cfb301db4c76cc3"},{"path":"modules/header-bidding/utils.ts","mode":"100644","type":"blob","sha":"cc40adcd4c4b6a9ec82cea1dd2894fd8618b9361","size":5503,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/cc40adcd4c4b6a9ec82cea1dd2894fd8618b9361"},{"path":"modules/high-merch.js","mode":"100644","type":"blob","sha":"5264f2ce69aa90971b97bce8e328a6b5efe554a9","size":934,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/5264f2ce69aa90971b97bce8e328a6b5efe554a9"},{"path":"modules/hosted/about.spec.js","mode":"100644","type":"blob","sha":"d3ba5bcb84c694f474fdf33a81d193c9cdea607a","size":1286,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d3ba5bcb84c694f474fdf33a81d193c9cdea607a"},{"path":"modules/hosted/about.ts","mode":"100644","type":"blob","sha":"c4671235a486d51c1cacf6a1ccd015e0b7a8443a","size":2214,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c4671235a486d51c1cacf6a1ccd015e0b7a8443a"},{"path":"modules/hosted/gallery-html.js","mode":"100644","type":"blob","sha":"6ee9b5b157ada7e6f7e5058394ff6220975b53da","size":1988,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/6ee9b5b157ada7e6f7e5058394ff6220975b53da"},{"path":"modules/hosted/gallery.js","mode":"100644","type":"blob","sha":"e663abc58871d1af618c39dcf5fc2648055dbccd","size":15184,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/e663abc58871d1af618c39dcf5fc2648055dbccd"},{"path":"modules/hosted/gallery.spec.js","mode":"100644","type":"blob","sha":"65ee154643aaf1e26a5ea78f010123d780c5a20f","size":4150,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/65ee154643aaf1e26a5ea78f010123d780c5a20f"},{"path":"modules/hosted/next-video.js","mode":"100644","type":"blob","sha":"045049c4e85cca4b7c96eb959d7495123ecfffc7","size":692,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/045049c4e85cca4b7c96eb959d7495123ecfffc7"},{"path":"modules/hosted/next-video.spec.js","mode":"100644","type":"blob","sha":"02a37e994de7ea6435ccb5ce34aee1be86ca21e8","size":1060,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/02a37e994de7ea6435ccb5ce34aee1be86ca21e8"},{"path":"modules/hosted/onward-journey-carousel.spec.js","mode":"100644","type":"blob","sha":"6f0d4b4959e1f50dfecaee35235c19183b51521b","size":2992,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/6f0d4b4959e1f50dfecaee35235c19183b51521b"},{"path":"modules/hosted/onward-journey-carousel.ts","mode":"100644","type":"blob","sha":"7a679d9bca0f731e98f5c971070215c77d5e0f82","size":1840,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/7a679d9bca0f731e98f5c971070215c77d5e0f82"},{"path":"modules/hosted/onward.js","mode":"100644","type":"blob","sha":"e4d57d9a9d3b277e08061115f680e4788616562b","size":1333,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/e4d57d9a9d3b277e08061115f680e4788616562b"},{"path":"modules/hosted/onward.spec.js","mode":"100644","type":"blob","sha":"ed8cac6e175d24095dfcac5082da041b9e83b66e","size":1399,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/ed8cac6e175d24095dfcac5082da041b9e83b66e"},{"path":"modules/hosted/video.ts","mode":"100644","type":"blob","sha":"cebd77f223ca48c40c4fdd9eebf795fc1893d562","size":468,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/cebd77f223ca48c40c4fdd9eebf795fc1893d562"},{"path":"modules/hosted/youtube.ts","mode":"100644","type":"blob","sha":"08e0bd0456aea088faa30e3d36cb4988a0f6b554","size":2506,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/08e0bd0456aea088faa30e3d36cb4988a0f6b554"},{"path":"modules/ipsos-mori.js","mode":"100644","type":"blob","sha":"b29c6f1ada86439025197609771a5f1adf7fa4c4","size":966,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b29c6f1ada86439025197609771a5f1adf7fa4c4"},{"path":"modules/liveblog-adverts.js","mode":"100644","type":"blob","sha":"b5ae60695303af9b2de90e950fcc4b2607455454","size":3454,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b5ae60695303af9b2de90e950fcc4b2607455454"},{"path":"modules/liveblog-adverts.spec.js","mode":"100644","type":"blob","sha":"210da6118e0021932818dfd1bad6f3d8c2bded56","size":2388,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/210da6118e0021932818dfd1bad6f3d8c2bded56"},{"path":"modules/measure-timing.js","mode":"100644","type":"blob","sha":"518e7677cb9e2842a67923c89802005f083f1673","size":718,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/518e7677cb9e2842a67923c89802005f083f1673"},{"path":"modules/messenger.js","mode":"100644","type":"blob","sha":"8a81aefe3620eaae81b54acae64de05b2a608c4a","size":6314,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/8a81aefe3620eaae81b54acae64de05b2a608c4a"},{"path":"modules/messenger.spec.js","mode":"100644","type":"blob","sha":"b8f852aa880a37d161c29d5f9b0963dac290c0fc","size":5904,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b8f852aa880a37d161c29d5f9b0963dac290c0fc"},{"path":"modules/messenger/background.js","mode":"100644","type":"blob","sha":"8fb69f4a8051e93f5dd399641edd8b4b1b22942a","size":8177,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/8fb69f4a8051e93f5dd399641edd8b4b1b22942a"},{"path":"modules/messenger/background.spec.js","mode":"100644","type":"blob","sha":"daecb3ccf839ec1715c94452127a4a45b0e1dd86","size":2071,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/daecb3ccf839ec1715c94452127a4a45b0e1dd86"},{"path":"modules/messenger/click.js","mode":"100644","type":"blob","sha":"45715c6311533115a9be6e13786804c46ebd5f87","size":414,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/45715c6311533115a9be6e13786804c46ebd5f87"},{"path":"modules/messenger/click.spec.js","mode":"100644","type":"blob","sha":"2efffa0dfc97aa5c393811186b855fea3fafe5ea","size":833,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/2efffa0dfc97aa5c393811186b855fea3fafe5ea"},{"path":"modules/messenger/disable-refresh.js","mode":"100644","type":"blob","sha":"13aa25e08af6f33dcc61b45f394747f0dd64c75c","size":1150,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/13aa25e08af6f33dcc61b45f394747f0dd64c75c"},{"path":"modules/messenger/get-page-targeting.js","mode":"100644","type":"blob","sha":"c98f519c8e561a151083609e60a3a5b7760eeb0a","size":173,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c98f519c8e561a151083609e60a3a5b7760eeb0a"},{"path":"modules/messenger/get-page-url.js","mode":"100644","type":"blob","sha":"b41abac898637b24332af14a83e2598d9dec6caa","size":142,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/b41abac898637b24332af14a83e2598d9dec6caa"},{"path":"modules/messenger/get-stylesheet.js","mode":"100644","type":"blob","sha":"cbcf128571c439d5790c8a93cbd3f2ea5edbbc2a","size":823,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/cbcf128571c439d5790c8a93cbd3f2ea5edbbc2a"},{"path":"modules/messenger/get-stylesheet.spec.js","mode":"100644","type":"blob","sha":"67c68ebe3c34d340f5fbfd2cb1640f5388aaa1e2","size":2129,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/67c68ebe3c34d340f5fbfd2cb1640f5388aaa1e2"},{"path":"modules/messenger/measure-ad-load.js","mode":"100644","type":"blob","sha":"c2e0ef3e6ccc4cfa614fad591e92bc9b44c7510f","size":727,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/c2e0ef3e6ccc4cfa614fad591e92bc9b44c7510f"},{"path":"modules/messenger/post-message.js","mode":"100644","type":"blob","sha":"d501c21819aacccf4e34e1b9feaf83e1bdb779c2","size":146,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d501c21819aacccf4e34e1b9feaf83e1bdb779c2"},{"path":"modules/messenger/resize.js","mode":"100644","type":"blob","sha":"dbc5f5f59d83c4630a942970714175161b0ad127","size":1605,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/dbc5f5f59d83c4630a942970714175161b0ad127"},{"path":"modules/messenger/resize.spec.js","mode":"100644","type":"blob","sha":"251aabad60f5b8bce1387e3aa40894a47444051c","size":2235,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/251aabad60f5b8bce1387e3aa40894a47444051c"},{"path":"modules/messenger/scroll.js","mode":"100644","type":"blob","sha":"d3a2aa30b3471ddb14d315dbb1869b1c63a9ed40","size":3271,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d3a2aa30b3471ddb14d315dbb1869b1c63a9ed40"},{"path":"modules/messenger/scroll.spec.js","mode":"100644","type":"blob","sha":"3538d63be59f34c2df303a77ff51fdd44e26d3c7","size":4301,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/3538d63be59f34c2df303a77ff51fdd44e26d3c7"},{"path":"modules/messenger/send.js","mode":"100644","type":"blob","sha":"02d6c39f95ce1af533e172a88f801899235390da","size":346,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/02d6c39f95ce1af533e172a88f801899235390da"},{"path":"modules/messenger/send.spec.js","mode":"100644","type":"blob","sha":"a781b7702afdcf006a2c806a7fa6c163cc1e3c7c","size":618,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/a781b7702afdcf006a2c806a7fa6c163cc1e3c7c"},{"path":"modules/messenger/type.js","mode":"100644","type":"blob","sha":"8e29ce00eb7a4cfbac80ac2298405669b07e70f9","size":323,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/8e29ce00eb7a4cfbac80ac2298405669b07e70f9"},{"path":"modules/messenger/viewport.js","mode":"100644","type":"blob","sha":"992a3e307d98e6732e41abb121ab22141e0c1f55","size":1661,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/992a3e307d98e6732e41abb121ab22141e0c1f55"},{"path":"modules/messenger/viewport.spec.js","mode":"100644","type":"blob","sha":"3f7d52dab386b6f0f83fd3714c9a893a2874d0c7","size":1690,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/3f7d52dab386b6f0f83fd3714c9a893a2874d0c7"},{"path":"modules/mobile-sticky.js","mode":"100644","type":"blob","sha":"fee42172ba20e88be2fc43c1a46c33f15673c61d","size":1393,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/fee42172ba20e88be2fc43c1a46c33f15673c61d"},{"path":"modules/paid-containers.ts","mode":"100644","type":"blob","sha":"37b3b7ac320235317782b2cb98bb6527f2e9e670","size":1006,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/37b3b7ac320235317782b2cb98bb6527f2e9e670"},{"path":"modules/paidfor-band.js","mode":"100644","type":"blob","sha":"7116f6ba6a4c9941f3fa3d9586b8dc4d5fbf89b4","size":386,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/7116f6ba6a4c9941f3fa3d9586b8dc4d5fbf89b4"},{"path":"modules/paidfor-band.spec.js","mode":"100644","type":"blob","sha":"64ce4236df16829b463a14886ce6572bbc1742dc","size":674,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/64ce4236df16829b463a14886ce6572bbc1742dc"},{"path":"modules/remove-slots.spec.js","mode":"100644","type":"blob","sha":"3dcb9b53f54fc0d5797801ef3dcf89ee252842e3","size":2365,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/3dcb9b53f54fc0d5797801ef3dcf89ee252842e3"},{"path":"modules/remove-slots.ts","mode":"100644","type":"blob","sha":"ae58402ce6cfe108b7520a6ed7041359c40b46a8","size":956,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/ae58402ce6cfe108b7520a6ed7041359c40b46a8"},{"path":"modules/set-adtest-cookie.js","mode":"100644","type":"blob","sha":"0e3c44581025f77c0e8d36904559b42f9d15cdfa","size":386,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/0e3c44581025f77c0e8d36904559b42f9d15cdfa"},{"path":"modules/sticky-mpu.js","mode":"100644","type":"blob","sha":"64fb8b363676acd2ccb2eac9f1ba6856c69eb723","size":2699,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/64fb8b363676acd2ccb2eac9f1ba6856c69eb723"},{"path":"modules/sticky-mpu.spec.js","mode":"100644","type":"blob","sha":"bfaf6ec49a4f112672a85881f4129c525515c896","size":2849,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/bfaf6ec49a4f112672a85881f4129c525515c896"},{"path":"modules/sticky-top-banner.js","mode":"100644","type":"blob","sha":"578cbee03f9e472621f399f6bb6a1ffe74d3c8a3","size":5326,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/578cbee03f9e472621f399f6bb6a1ffe74d3c8a3"},{"path":"modules/sticky-top-banner.spec.js","mode":"100644","type":"blob","sha":"fae2ae91a4fbe838c6ea76131ac5c4baf0373067","size":4709,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/fae2ae91a4fbe838c6ea76131ac5c4baf0373067"},{"path":"modules/third-party-tags.js","mode":"100644","type":"blob","sha":"a8209af350791705e786de5089c6120c110814fd","size":2968,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/a8209af350791705e786de5089c6120c110814fd"},{"path":"modules/third-party-tags.spec.js","mode":"100644","type":"blob","sha":"693b66935beaca0af00f658184dd0d01503a157b","size":6155,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/693b66935beaca0af00f658184dd0d01503a157b"},{"path":"modules/third-party-tags/imr-worldwide-legacy.js","mode":"100644","type":"blob","sha":"34bd17fb59fd5408e18ae41bacfb85835ee346ad","size":513,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/34bd17fb59fd5408e18ae41bacfb85835ee346ad"},{"path":"modules/third-party-tags/imr-worldwide-legacy.spec.js","mode":"100644","type":"blob","sha":"584c54d9406f6149138b0c1e81072c1ee81ddc5f","size":1048,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/584c54d9406f6149138b0c1e81072c1ee81ddc5f"},{"path":"modules/third-party-tags/imr-worldwide.js","mode":"100644","type":"blob","sha":"7fb807ae3fd79f0a3725db9efc6cb4ae1c455954","size":3973,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/7fb807ae3fd79f0a3725db9efc6cb4ae1c455954"},{"path":"modules/third-party-tags/imr-worldwide.spec.js","mode":"100644","type":"blob","sha":"26e810a52583022b431fcfc8b8d2ccbf438a7a8c","size":2218,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/26e810a52583022b431fcfc8b8d2ccbf438a7a8c"},{"path":"sentinel.spec.ts","mode":"100644","type":"blob","sha":"97492ac4013cd36a87cda3c59d3010a242d1972f","size":4105,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/97492ac4013cd36a87cda3c59d3010a242d1972f"},{"path":"sentinel.ts","mode":"100644","type":"blob","sha":"d82eeea6cfe3586ca627604e12be4097a17bff88","size":1737,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/d82eeea6cfe3586ca627604e12be4097a17bff88"},{"path":"types.d.ts","mode":"100644","type":"blob","sha":"ec7c48fa620962db99791d793a17092b1421915b","size":2621,"url":"https://api.github.com/repos/guardian/frontend/git/blobs/ec7c48fa620962db99791d793a17092b1421915b"}]}
+{
+  "sha": "c789dda9024cdcb62d77eea8e47cbf51f5e7826f",
+  "author": "Max Duval",
+  "date": "2021-10-12T15:39:40Z",
+  "files": [
+    {
+      "path": "adblock-ask.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2929f4f491fae903bc9fd2de279dde4f32e42533",
+      "size": 1675,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/2929f4f491fae903bc9fd2de279dde4f32e42533"
+    },
+    {
+      "path": "adblock-ask.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3884cd0f3b767d24767e607d6257351aa9054fe",
+      "size": 1453,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d3884cd0f3b767d24767e607d6257351aa9054fe"
+    },
+    {
+      "path": "commercial-metrics.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bc376df3abfe7bd96e2ec0e8227f9dde945685a",
+      "size": 1393,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3bc376df3abfe7bd96e2ec0e8227f9dde945685a"
+    },
+    {
+      "path": "detect-adblock.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ef4a233e86334eaaaa578f1a66a9fcb0a923c0c",
+      "size": 988,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7ef4a233e86334eaaaa578f1a66a9fcb0a923c0c"
+    },
+    {
+      "path": "modules/ad-free-slot-remove.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d7efbb6bb562698d7a38fe430f86f94a95c0f8d",
+      "size": 1966,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9d7efbb6bb562698d7a38fe430f86f94a95c0f8d"
+    },
+    {
+      "path": "modules/ad-verification/prepare-ad-verification.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb38df6b62a561dc3487d851d38c25a20bcf23e0",
+      "size": 3713,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fb38df6b62a561dc3487d851d38c25a20bcf23e0"
+    },
+    {
+      "path": "modules/ad-verification/prepare-ad-verification.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b4141eb54820d93a48479174c0fbd1273dbe2fd",
+      "size": 2935,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/5b4141eb54820d93a48479174c0fbd1273dbe2fd"
+    },
+    {
+      "path": "modules/article-aside-adverts.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "639ab39c2adceda1c09651f8866b65d0caf07a79",
+      "size": 6184,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/639ab39c2adceda1c09651f8866b65d0caf07a79"
+    },
+    {
+      "path": "modules/article-aside-adverts.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8678ed535da3c1cbcfa3e710ede32242d1704f5",
+      "size": 3604,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c8678ed535da3c1cbcfa3e710ede32242d1704f5"
+    },
+    {
+      "path": "modules/article-body-adverts.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0559d24ee5a5a0ddd8f5b4eec96abe3ae1741a3b",
+      "size": 6286,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0559d24ee5a5a0ddd8f5b4eec96abe3ae1741a3b"
+    },
+    {
+      "path": "modules/article-body-adverts.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c01907469fd7010443969923bfe4b0a75fcf4dd9",
+      "size": 2019,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c01907469fd7010443969923bfe4b0a75fcf4dd9"
+    },
+    {
+      "path": "modules/brazeBanner.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f30d8d5d00e2a8117d409f77753eb6168bae8b2",
+      "size": 7891,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4f30d8d5d00e2a8117d409f77753eb6168bae8b2"
+    },
+    {
+      "path": "modules/brazeBanner.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be8752d5386e293a0ab53783e8b28356940165ac",
+      "size": 1684,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/be8752d5386e293a0ab53783e8b28356940165ac"
+    },
+    {
+      "path": "modules/carrot-traffic-driver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc6d01e9a72e8b37f2f871d66efcb5f531d31112",
+      "size": 3392,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fc6d01e9a72e8b37f2f871d66efcb5f531d31112"
+    },
+    {
+      "path": "modules/comment-adverts.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e71035975b6b0265538a90e9cf2a4d4123e411f7",
+      "size": 11323,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e71035975b6b0265538a90e9cf2a4d4123e411f7"
+    },
+    {
+      "path": "modules/comment-adverts.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc93192225f0575463e9d673a8524f7ff47dab3c",
+      "size": 4248,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fc93192225f0575463e9d673a8524f7ff47dab3c"
+    },
+    {
+      "path": "modules/comscore.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9ec6e9ffdc8221575fd9c8715a8652de2ca90ef",
+      "size": 1768,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b9ec6e9ffdc8221575fd9c8715a8652de2ca90ef"
+    },
+    {
+      "path": "modules/comscore.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "833236a0fb873fa099c9befac27bc87007b3549b",
+      "size": 4961,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/833236a0fb873fa099c9befac27bc87007b3549b"
+    },
+    {
+      "path": "modules/creatives/page-skin.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c846a630a5a9887150644c30b8eb529967335966",
+      "size": 4497,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c846a630a5a9887150644c30b8eb529967335966"
+    },
+    {
+      "path": "modules/dfp/Advert.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2e6336c91a22c8c401f2ce29ab57e1b955f758d",
+      "size": 4397,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b2e6336c91a22c8c401f2ce29ab57e1b955f758d"
+    },
+    {
+      "path": "modules/dfp/Advert.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16e7e87e00ff253fff7710b7d1c88c0817144597",
+      "size": 4137,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/16e7e87e00ff253fff7710b7d1c88c0817144597"
+    },
+    {
+      "path": "modules/dfp/add-slot.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c784b4e2ad97e926f6c18d69dadb297f8ca96b45",
+      "size": 763,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c784b4e2ad97e926f6c18d69dadb297f8ca96b45"
+    },
+    {
+      "path": "modules/dfp/breakpoint-name-to-attribute.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0757cf2aca60130634b07aa76f2c7d36af9d10cd",
+      "size": 504,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0757cf2aca60130634b07aa76f2c7d36af9d10cd"
+    },
+    {
+      "path": "modules/dfp/breakpoint-name-to-attribute.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ef8046c3b57b1d61bfe03d78e540219542fedb8",
+      "size": 395,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1ef8046c3b57b1d61bfe03d78e540219542fedb8"
+    },
+    {
+      "path": "modules/dfp/create-slots.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0445ca33cce63b10409dfbd10c8789942fb51104",
+      "size": 4859,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0445ca33cce63b10409dfbd10c8789942fb51104"
+    },
+    {
+      "path": "modules/dfp/create-slots.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee7b3b00095c4a8335efb2ad0c14a0c8fbd70ebe",
+      "size": 2268,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ee7b3b00095c4a8335efb2ad0c14a0c8fbd70ebe"
+    },
+    {
+      "path": "modules/dfp/define-slot.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c299bb9fb1e3fdbe3898605482900080a44f926",
+      "size": 6241,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9c299bb9fb1e3fdbe3898605482900080a44f926"
+    },
+    {
+      "path": "modules/dfp/define-slot.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6d233d8942d4fdcf08a3d1f48ecc5fc4582647d",
+      "size": 1497,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c6d233d8942d4fdcf08a3d1f48ecc5fc4582647d"
+    },
+    {
+      "path": "modules/dfp/dfp-api.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a6614e45e90c15889c1393d630d08b0b6214606",
+      "size": 16451,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7a6614e45e90c15889c1393d630d08b0b6214606"
+    },
+    {
+      "path": "modules/dfp/dfp-env.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c87cdbfd4672ee7c8f0a92928a0e99e4257fc398",
+      "size": 2261,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c87cdbfd4672ee7c8f0a92928a0e99e4257fc398"
+    },
+    {
+      "path": "modules/dfp/display-ads.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "279dac235c856a4c71f9b87e13d8b48e571307a7",
+      "size": 674,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/279dac235c856a4c71f9b87e13d8b48e571307a7"
+    },
+    {
+      "path": "modules/dfp/display-lazy-ads.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca0cd282732b32569ea9ffd30275c7b97287983",
+      "size": 714,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1ca0cd282732b32569ea9ffd30275c7b97287983"
+    },
+    {
+      "path": "modules/dfp/empty-advert.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03f083f47c009ffea3dfa71757ce7ce3285c36fd",
+      "size": 721,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/03f083f47c009ffea3dfa71757ce7ce3285c36fd"
+    },
+    {
+      "path": "modules/dfp/fill-advert-slots.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8145239fce8c466a376da98b70b5dcc64278f911",
+      "size": 2180,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8145239fce8c466a376da98b70b5dcc64278f911"
+    },
+    {
+      "path": "modules/dfp/get-ad-iframe.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fa6db6f6e23876372dece5fc1fbc644ef903b38",
+      "size": 1364,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1fa6db6f6e23876372dece5fc1fbc644ef903b38"
+    },
+    {
+      "path": "modules/dfp/get-advert-by-id.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab80189887759d44c2137ab307b2e7d6953cb801",
+      "size": 228,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ab80189887759d44c2137ab307b2e7d6953cb801"
+    },
+    {
+      "path": "modules/dfp/lazy-load.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0942b0059b162b4bb5589c3d6ea64dbc760c270",
+      "size": 1089,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f0942b0059b162b4bb5589c3d6ea64dbc760c270"
+    },
+    {
+      "path": "modules/dfp/lazy-load.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cba03633bfe72cc288a04f1a50ae381623f47a7a",
+      "size": 1892,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cba03633bfe72cc288a04f1a50ae381623f47a7a"
+    },
+    {
+      "path": "modules/dfp/load-advert.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a14aad5f440e08f092c17cc81edd358c3d06c26f",
+      "size": 2374,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a14aad5f440e08f092c17cc81edd358c3d06c26f"
+    },
+    {
+      "path": "modules/dfp/on-slot-load.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85fa3ca618b9a498ae0ce8e19f1c0aca7fae94be",
+      "size": 1066,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/85fa3ca618b9a498ae0ce8e19f1c0aca7fae94be"
+    },
+    {
+      "path": "modules/dfp/on-slot-render.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d15fc395295b20f74bd25f86192228943c7d2d8",
+      "size": 2990,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4d15fc395295b20f74bd25f86192228943c7d2d8"
+    },
+    {
+      "path": "modules/dfp/on-slot-viewable.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c862e90eed35f1055068537b4320ffe87aaeb6cb",
+      "size": 1250,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c862e90eed35f1055068537b4320ffe87aaeb6cb"
+    },
+    {
+      "path": "modules/dfp/on-slot-visibility-changed.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda4bd43a71212459bda9042fa30838af7c528f7",
+      "size": 718,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/bda4bd43a71212459bda9042fa30838af7c528f7"
+    },
+    {
+      "path": "modules/dfp/prepare-a9.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5c336ad43cb80af8b6db9f18b3791af596aa600",
+      "size": 1293,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a5c336ad43cb80af8b6db9f18b3791af596aa600"
+    },
+    {
+      "path": "modules/dfp/prepare-a9.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84b00e5dc59233381acdd2e11e528f510993f7af",
+      "size": 4694,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/84b00e5dc59233381acdd2e11e528f510993f7af"
+    },
+    {
+      "path": "modules/dfp/prepare-googletag.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb5d1441646d5ddbb13071a18bcb16e8f46c5983",
+      "size": 5873,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fb5d1441646d5ddbb13071a18bcb16e8f46c5983"
+    },
+    {
+      "path": "modules/dfp/prepare-permutive.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff1782585a6536c48c3907a41f53f3c30c32a10e",
+      "size": 4495,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ff1782585a6536c48c3907a41f53f3c30c32a10e"
+    },
+    {
+      "path": "modules/dfp/prepare-permutive.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0352c14f4c37eccb89a6ee39b9a34a67954e94fe",
+      "size": 9084,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0352c14f4c37eccb89a6ee39b9a34a67954e94fe"
+    },
+    {
+      "path": "modules/dfp/prepare-prebid.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66d1625b5a37beed8dcabe86fcc55d52c7c1600b",
+      "size": 1459,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/66d1625b5a37beed8dcabe86fcc55d52c7c1600b"
+    },
+    {
+      "path": "modules/dfp/prepare-prebid.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a559ae62bc687db32c9baf5444776084e3b14657",
+      "size": 7599,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a559ae62bc687db32c9baf5444776084e3b14657"
+    },
+    {
+      "path": "modules/dfp/queue-advert.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dc0a591be59876edf630d8aeed5ef9b1b0336f0",
+      "size": 397,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/5dc0a591be59876edf630d8aeed5ef9b1b0336f0"
+    },
+    {
+      "path": "modules/dfp/redplanet.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a78b51711faa1095ba0b188e502d5e64cf5c369",
+      "size": 1692,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9a78b51711faa1095ba0b188e502d5e64cf5c369"
+    },
+    {
+      "path": "modules/dfp/redplanet.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d6ef1ddd9c8ba29446177909e54ea1c067dc01b",
+      "size": 4653,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/5d6ef1ddd9c8ba29446177909e54ea1c067dc01b"
+    },
+    {
+      "path": "modules/dfp/refresh-on-resize.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e15f2be990e64f4312b0030f45dd6a66fdb5dc7f",
+      "size": 1859,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e15f2be990e64f4312b0030f45dd6a66fdb5dc7f"
+    },
+    {
+      "path": "modules/dfp/render-advert-label.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7553d113b509110447deb6df658d5788d743a630",
+      "size": 4612,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7553d113b509110447deb6df658d5788d743a630"
+    },
+    {
+      "path": "modules/dfp/render-advert-label.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d125312166fe93ffde1eae3621576fc6643dde20",
+      "size": 4112,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d125312166fe93ffde1eae3621576fc6643dde20"
+    },
+    {
+      "path": "modules/dfp/render-advert.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6c11e5ee3556d94e1fc0e0153f647e0279d49eb",
+      "size": 7203,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d6c11e5ee3556d94e1fc0e0153f647e0279d49eb"
+    },
+    {
+      "path": "modules/dfp/track-ad-render.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a36c874ad0315e219d2ddd63abf2741f052277dc",
+      "size": 137,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a36c874ad0315e219d2ddd63abf2741f052277dc"
+    },
+    {
+      "path": "modules/dfp/wait-for-advert.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8108d79f8d76ff5a5afcd92e14625469c0af2855",
+      "size": 501,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8108d79f8d76ff5a5afcd92e14625469c0af2855"
+    },
+    {
+      "path": "modules/hasCurrentBrazeUser.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd5556e11a9bbef1e64e458adb0bb70efe3c69bb",
+      "size": 346,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fd5556e11a9bbef1e64e458adb0bb70efe3c69bb"
+    },
+    {
+      "path": "modules/hasCurrentBrazeUser.test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf332033bab5053ffbe1298fd2b8dec968c83c42",
+      "size": 683,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cf332033bab5053ffbe1298fd2b8dec968c83c42"
+    },
+    {
+      "path": "modules/header-bidding/a9/a9.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "083c81ee39f48b0547cfde41520c8474a56b9dfc",
+      "size": 1585,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/083c81ee39f48b0547cfde41520c8474a56b9dfc"
+    },
+    {
+      "path": "modules/header-bidding/a9/a9.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce6888da639b9e0ef2fd44d668b77e7c84a11311",
+      "size": 1781,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ce6888da639b9e0ef2fd44d668b77e7c84a11311"
+    },
+    {
+      "path": "modules/header-bidding/prebid/appnexus.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8525137da8db0f63ab47171cadaef0bb7a45f4ce",
+      "size": 2824,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8525137da8db0f63ab47171cadaef0bb7a45f4ce"
+    },
+    {
+      "path": "modules/header-bidding/prebid/appnexus.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda270b2d4488feea103edc0819f09d8aea5378a",
+      "size": 6800,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/eda270b2d4488feea103edc0819f09d8aea5378a"
+    },
+    {
+      "path": "modules/header-bidding/prebid/bid-config.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37fdce2a9970abb1910d38b58a5e20e1c6fbf030",
+      "size": 20868,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/37fdce2a9970abb1910d38b58a5e20e1c6fbf030"
+    },
+    {
+      "path": "modules/header-bidding/prebid/bid-config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42a1f5afcb48de4c365da0e5eb27332eb62eadb7",
+      "size": 12082,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/42a1f5afcb48de4c365da0e5eb27332eb62eadb7"
+    },
+    {
+      "path": "modules/header-bidding/prebid/prebid.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c8df0f2f65415dc68808884ab2f6b79324faf81",
+      "size": 7983,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7c8df0f2f65415dc68808884ab2f6b79324faf81"
+    },
+    {
+      "path": "modules/header-bidding/prebid/prebid.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3666a2786da51866a0492cee3f97281e51b4873",
+      "size": 9293,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d3666a2786da51866a0492cee3f97281e51b4873"
+    },
+    {
+      "path": "modules/header-bidding/prebid/price-config.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f074a3a1500dfcd3fc1e2486323d08b536516a43",
+      "size": 204,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f074a3a1500dfcd3fc1e2486323d08b536516a43"
+    },
+    {
+      "path": "modules/header-bidding/prebid/price-config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3d2187afa4e12bef45e35e690ac55ea726704d1",
+      "size": 275,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b3d2187afa4e12bef45e35e690ac55ea726704d1"
+    },
+    {
+      "path": "modules/header-bidding/prebid/pubmatic.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4013fd2328773c3a35f52fefe3262d7d8c9ed90f",
+      "size": 1247,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4013fd2328773c3a35f52fefe3262d7d8c9ed90f"
+    },
+    {
+      "path": "modules/header-bidding/slot-config.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b1e69d7d12df0a2e60b261c95093169166990c1",
+      "size": 6258,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1b1e69d7d12df0a2e60b261c95093169166990c1"
+    },
+    {
+      "path": "modules/header-bidding/slot-config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9224d017ff8e32184993430d7e34fb3ef74ba9b",
+      "size": 3776,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d9224d017ff8e32184993430d7e34fb3ef74ba9b"
+    },
+    {
+      "path": "modules/header-bidding/types.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b202fc4bf9fbe3ce2a994d9430d6d6fd6c0b8ded",
+      "size": 2040,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b202fc4bf9fbe3ce2a994d9430d6d6fd6c0b8ded"
+    },
+    {
+      "path": "modules/header-bidding/utils.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12963ca4cdea707504ce0d912cfb301db4c76cc3",
+      "size": 12023,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/12963ca4cdea707504ce0d912cfb301db4c76cc3"
+    },
+    {
+      "path": "modules/header-bidding/utils.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc40adcd4c4b6a9ec82cea1dd2894fd8618b9361",
+      "size": 5503,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cc40adcd4c4b6a9ec82cea1dd2894fd8618b9361"
+    },
+    {
+      "path": "modules/high-merch.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5264f2ce69aa90971b97bce8e328a6b5efe554a9",
+      "size": 934,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/5264f2ce69aa90971b97bce8e328a6b5efe554a9"
+    },
+    {
+      "path": "modules/hosted/about.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3ba5bcb84c694f474fdf33a81d193c9cdea607a",
+      "size": 1286,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d3ba5bcb84c694f474fdf33a81d193c9cdea607a"
+    },
+    {
+      "path": "modules/hosted/about.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4671235a486d51c1cacf6a1ccd015e0b7a8443a",
+      "size": 2214,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c4671235a486d51c1cacf6a1ccd015e0b7a8443a"
+    },
+    {
+      "path": "modules/hosted/gallery-html.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ee9b5b157ada7e6f7e5058394ff6220975b53da",
+      "size": 1988,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6ee9b5b157ada7e6f7e5058394ff6220975b53da"
+    },
+    {
+      "path": "modules/hosted/gallery.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e663abc58871d1af618c39dcf5fc2648055dbccd",
+      "size": 15184,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e663abc58871d1af618c39dcf5fc2648055dbccd"
+    },
+    {
+      "path": "modules/hosted/gallery.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65ee154643aaf1e26a5ea78f010123d780c5a20f",
+      "size": 4150,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/65ee154643aaf1e26a5ea78f010123d780c5a20f"
+    },
+    {
+      "path": "modules/hosted/next-video.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "045049c4e85cca4b7c96eb959d7495123ecfffc7",
+      "size": 692,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/045049c4e85cca4b7c96eb959d7495123ecfffc7"
+    },
+    {
+      "path": "modules/hosted/next-video.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02a37e994de7ea6435ccb5ce34aee1be86ca21e8",
+      "size": 1060,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/02a37e994de7ea6435ccb5ce34aee1be86ca21e8"
+    },
+    {
+      "path": "modules/hosted/onward-journey-carousel.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f0d4b4959e1f50dfecaee35235c19183b51521b",
+      "size": 2992,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6f0d4b4959e1f50dfecaee35235c19183b51521b"
+    },
+    {
+      "path": "modules/hosted/onward-journey-carousel.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a679d9bca0f731e98f5c971070215c77d5e0f82",
+      "size": 1840,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7a679d9bca0f731e98f5c971070215c77d5e0f82"
+    },
+    {
+      "path": "modules/hosted/onward.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4d57d9a9d3b277e08061115f680e4788616562b",
+      "size": 1333,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e4d57d9a9d3b277e08061115f680e4788616562b"
+    },
+    {
+      "path": "modules/hosted/onward.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed8cac6e175d24095dfcac5082da041b9e83b66e",
+      "size": 1399,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ed8cac6e175d24095dfcac5082da041b9e83b66e"
+    },
+    {
+      "path": "modules/hosted/video.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cebd77f223ca48c40c4fdd9eebf795fc1893d562",
+      "size": 468,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cebd77f223ca48c40c4fdd9eebf795fc1893d562"
+    },
+    {
+      "path": "modules/hosted/youtube.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08e0bd0456aea088faa30e3d36cb4988a0f6b554",
+      "size": 2506,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/08e0bd0456aea088faa30e3d36cb4988a0f6b554"
+    },
+    {
+      "path": "modules/ipsos-mori.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b29c6f1ada86439025197609771a5f1adf7fa4c4",
+      "size": 966,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b29c6f1ada86439025197609771a5f1adf7fa4c4"
+    },
+    {
+      "path": "modules/liveblog-adverts.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5ae60695303af9b2de90e950fcc4b2607455454",
+      "size": 3454,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b5ae60695303af9b2de90e950fcc4b2607455454"
+    },
+    {
+      "path": "modules/liveblog-adverts.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "210da6118e0021932818dfd1bad6f3d8c2bded56",
+      "size": 2388,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/210da6118e0021932818dfd1bad6f3d8c2bded56"
+    },
+    {
+      "path": "modules/measure-timing.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "518e7677cb9e2842a67923c89802005f083f1673",
+      "size": 718,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/518e7677cb9e2842a67923c89802005f083f1673"
+    },
+    {
+      "path": "modules/messenger.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a81aefe3620eaae81b54acae64de05b2a608c4a",
+      "size": 6314,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8a81aefe3620eaae81b54acae64de05b2a608c4a"
+    },
+    {
+      "path": "modules/messenger.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8f852aa880a37d161c29d5f9b0963dac290c0fc",
+      "size": 5904,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b8f852aa880a37d161c29d5f9b0963dac290c0fc"
+    },
+    {
+      "path": "modules/messenger/background.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fb69f4a8051e93f5dd399641edd8b4b1b22942a",
+      "size": 8177,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8fb69f4a8051e93f5dd399641edd8b4b1b22942a"
+    },
+    {
+      "path": "modules/messenger/background.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daecb3ccf839ec1715c94452127a4a45b0e1dd86",
+      "size": 2071,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/daecb3ccf839ec1715c94452127a4a45b0e1dd86"
+    },
+    {
+      "path": "modules/messenger/click.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45715c6311533115a9be6e13786804c46ebd5f87",
+      "size": 414,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/45715c6311533115a9be6e13786804c46ebd5f87"
+    },
+    {
+      "path": "modules/messenger/click.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2efffa0dfc97aa5c393811186b855fea3fafe5ea",
+      "size": 833,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/2efffa0dfc97aa5c393811186b855fea3fafe5ea"
+    },
+    {
+      "path": "modules/messenger/disable-refresh.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13aa25e08af6f33dcc61b45f394747f0dd64c75c",
+      "size": 1150,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/13aa25e08af6f33dcc61b45f394747f0dd64c75c"
+    },
+    {
+      "path": "modules/messenger/get-page-targeting.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c98f519c8e561a151083609e60a3a5b7760eeb0a",
+      "size": 173,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c98f519c8e561a151083609e60a3a5b7760eeb0a"
+    },
+    {
+      "path": "modules/messenger/get-page-url.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b41abac898637b24332af14a83e2598d9dec6caa",
+      "size": 142,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b41abac898637b24332af14a83e2598d9dec6caa"
+    },
+    {
+      "path": "modules/messenger/get-stylesheet.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbcf128571c439d5790c8a93cbd3f2ea5edbbc2a",
+      "size": 823,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cbcf128571c439d5790c8a93cbd3f2ea5edbbc2a"
+    },
+    {
+      "path": "modules/messenger/get-stylesheet.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67c68ebe3c34d340f5fbfd2cb1640f5388aaa1e2",
+      "size": 2129,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/67c68ebe3c34d340f5fbfd2cb1640f5388aaa1e2"
+    },
+    {
+      "path": "modules/messenger/measure-ad-load.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2e0ef3e6ccc4cfa614fad591e92bc9b44c7510f",
+      "size": 727,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c2e0ef3e6ccc4cfa614fad591e92bc9b44c7510f"
+    },
+    {
+      "path": "modules/messenger/post-message.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d501c21819aacccf4e34e1b9feaf83e1bdb779c2",
+      "size": 146,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d501c21819aacccf4e34e1b9feaf83e1bdb779c2"
+    },
+    {
+      "path": "modules/messenger/resize.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbc5f5f59d83c4630a942970714175161b0ad127",
+      "size": 1605,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/dbc5f5f59d83c4630a942970714175161b0ad127"
+    },
+    {
+      "path": "modules/messenger/resize.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "251aabad60f5b8bce1387e3aa40894a47444051c",
+      "size": 2235,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/251aabad60f5b8bce1387e3aa40894a47444051c"
+    },
+    {
+      "path": "modules/messenger/scroll.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3a2aa30b3471ddb14d315dbb1869b1c63a9ed40",
+      "size": 3271,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d3a2aa30b3471ddb14d315dbb1869b1c63a9ed40"
+    },
+    {
+      "path": "modules/messenger/scroll.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3538d63be59f34c2df303a77ff51fdd44e26d3c7",
+      "size": 4301,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3538d63be59f34c2df303a77ff51fdd44e26d3c7"
+    },
+    {
+      "path": "modules/messenger/send.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02d6c39f95ce1af533e172a88f801899235390da",
+      "size": 346,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/02d6c39f95ce1af533e172a88f801899235390da"
+    },
+    {
+      "path": "modules/messenger/send.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a781b7702afdcf006a2c806a7fa6c163cc1e3c7c",
+      "size": 618,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a781b7702afdcf006a2c806a7fa6c163cc1e3c7c"
+    },
+    {
+      "path": "modules/messenger/type.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e29ce00eb7a4cfbac80ac2298405669b07e70f9",
+      "size": 323,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8e29ce00eb7a4cfbac80ac2298405669b07e70f9"
+    },
+    {
+      "path": "modules/messenger/viewport.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "992a3e307d98e6732e41abb121ab22141e0c1f55",
+      "size": 1661,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/992a3e307d98e6732e41abb121ab22141e0c1f55"
+    },
+    {
+      "path": "modules/messenger/viewport.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f7d52dab386b6f0f83fd3714c9a893a2874d0c7",
+      "size": 1690,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3f7d52dab386b6f0f83fd3714c9a893a2874d0c7"
+    },
+    {
+      "path": "modules/mobile-sticky.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee42172ba20e88be2fc43c1a46c33f15673c61d",
+      "size": 1393,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fee42172ba20e88be2fc43c1a46c33f15673c61d"
+    },
+    {
+      "path": "modules/paid-containers.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37b3b7ac320235317782b2cb98bb6527f2e9e670",
+      "size": 1006,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/37b3b7ac320235317782b2cb98bb6527f2e9e670"
+    },
+    {
+      "path": "modules/paidfor-band.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7116f6ba6a4c9941f3fa3d9586b8dc4d5fbf89b4",
+      "size": 386,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7116f6ba6a4c9941f3fa3d9586b8dc4d5fbf89b4"
+    },
+    {
+      "path": "modules/paidfor-band.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64ce4236df16829b463a14886ce6572bbc1742dc",
+      "size": 674,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/64ce4236df16829b463a14886ce6572bbc1742dc"
+    },
+    {
+      "path": "modules/remove-slots.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dcb9b53f54fc0d5797801ef3dcf89ee252842e3",
+      "size": 2365,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3dcb9b53f54fc0d5797801ef3dcf89ee252842e3"
+    },
+    {
+      "path": "modules/remove-slots.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae58402ce6cfe108b7520a6ed7041359c40b46a8",
+      "size": 956,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ae58402ce6cfe108b7520a6ed7041359c40b46a8"
+    },
+    {
+      "path": "modules/set-adtest-cookie.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e3c44581025f77c0e8d36904559b42f9d15cdfa",
+      "size": 386,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0e3c44581025f77c0e8d36904559b42f9d15cdfa"
+    },
+    {
+      "path": "modules/sticky-mpu.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64fb8b363676acd2ccb2eac9f1ba6856c69eb723",
+      "size": 2699,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/64fb8b363676acd2ccb2eac9f1ba6856c69eb723"
+    },
+    {
+      "path": "modules/sticky-mpu.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfaf6ec49a4f112672a85881f4129c525515c896",
+      "size": 2849,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/bfaf6ec49a4f112672a85881f4129c525515c896"
+    },
+    {
+      "path": "modules/sticky-top-banner.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "578cbee03f9e472621f399f6bb6a1ffe74d3c8a3",
+      "size": 5326,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/578cbee03f9e472621f399f6bb6a1ffe74d3c8a3"
+    },
+    {
+      "path": "modules/sticky-top-banner.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fae2ae91a4fbe838c6ea76131ac5c4baf0373067",
+      "size": 4709,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fae2ae91a4fbe838c6ea76131ac5c4baf0373067"
+    },
+    {
+      "path": "modules/third-party-tags.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8209af350791705e786de5089c6120c110814fd",
+      "size": 2968,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a8209af350791705e786de5089c6120c110814fd"
+    },
+    {
+      "path": "modules/third-party-tags.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "693b66935beaca0af00f658184dd0d01503a157b",
+      "size": 6155,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/693b66935beaca0af00f658184dd0d01503a157b"
+    },
+    {
+      "path": "modules/third-party-tags/imr-worldwide-legacy.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34bd17fb59fd5408e18ae41bacfb85835ee346ad",
+      "size": 513,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/34bd17fb59fd5408e18ae41bacfb85835ee346ad"
+    },
+    {
+      "path": "modules/third-party-tags/imr-worldwide-legacy.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "584c54d9406f6149138b0c1e81072c1ee81ddc5f",
+      "size": 1048,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/584c54d9406f6149138b0c1e81072c1ee81ddc5f"
+    },
+    {
+      "path": "modules/third-party-tags/imr-worldwide.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fb807ae3fd79f0a3725db9efc6cb4ae1c455954",
+      "size": 3973,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7fb807ae3fd79f0a3725db9efc6cb4ae1c455954"
+    },
+    {
+      "path": "modules/third-party-tags/imr-worldwide.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26e810a52583022b431fcfc8b8d2ccbf438a7a8c",
+      "size": 2218,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/26e810a52583022b431fcfc8b8d2ccbf438a7a8c"
+    },
+    {
+      "path": "sentinel.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97492ac4013cd36a87cda3c59d3010a242d1972f",
+      "size": 4105,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/97492ac4013cd36a87cda3c59d3010a242d1972f"
+    },
+    {
+      "path": "sentinel.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d82eeea6cfe3586ca627604e12be4097a17bff88",
+      "size": 1737,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d82eeea6cfe3586ca627604e12be4097a17bff88"
+    },
+    {
+      "path": "types.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec7c48fa620962db99791d793a17092b1421915b",
+      "size": 2621,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ec7c48fa620962db99791d793a17092b1421915b"
+    }
+  ]
+}

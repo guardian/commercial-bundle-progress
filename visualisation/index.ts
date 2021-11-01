@@ -28,10 +28,22 @@ const hashes = [
   "79b05f1b10ad0d33076fae4b772cc7ce5e00c48d",
   "410d5417877b0d6ca13860dda79606d133368389",
 
+  "2e82565dec2bf3d837536833b97e0813702796a9",
+  "09a82d56786e143f376b2ad6e2c53ffdf56d6aa6",
+  "c789dda9024cdcb62d77eea8e47cbf51f5e7826f",
+
+  "ddc8edd599704da7e0399b8d8bb9d2f95f766a1e",
+  "42889a8411b950581a650f7ed9253911d36d68eb",
+  "9fa01f89bef833452bfc1d24b0cdd5de5dfe0108",
+  "f6deab14f8ad595dd87e1641de320f150f4ef406",
+  "86a5b6766098fd7515b7b0e1715be9fdc5553165",
+  "7282823f3d8c10c4b6eee9c87ba62560bb6392db", // load-advert
+  "8908ed8fe13dc468a9738545009e7e6b92ea567b", // prepare-prebid
+
   "main",
 ];
 
-const updateGraph = async (hash) => {
+const updateGraph = async (hash: string) => {
   const data = await getDataForHash(hash);
   const simulation = updateSimulationData(data);
 
@@ -41,12 +53,16 @@ updateGraph("main");
 
 for (const hash of hashes) {
   const button = document.createElement("button");
-  button.innerText = hash.substring(0, 8);
+  button.innerText = hash.substring(0, 6);
   fragment.appendChild(button);
+
   button.addEventListener("click", () => {
     updateGraph(hash);
   });
 }
 
-directedGraph.appendChild(svg.node());
-directedGraph.appendChild(fragment);
+if (directedGraph) {
+  const node = svg.node();
+  node && directedGraph.appendChild(node);
+  directedGraph.appendChild(fragment);
+}
