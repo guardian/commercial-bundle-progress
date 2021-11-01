@@ -43,7 +43,7 @@ const hashes = [
   "main",
 ];
 
-const updateGraph = async (hash) => {
+const updateGraph = async (hash: string) => {
   const data = await getDataForHash(hash);
   const simulation = updateSimulationData(data);
 
@@ -61,5 +61,8 @@ for (const hash of hashes) {
   });
 }
 
-directedGraph.appendChild(svg.node());
-directedGraph.appendChild(fragment);
+if (directedGraph) {
+  const node = svg.node();
+  node && directedGraph.appendChild(node);
+  directedGraph.appendChild(fragment);
+}
