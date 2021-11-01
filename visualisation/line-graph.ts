@@ -1,5 +1,5 @@
 import type { Progress } from "../progress.ts";
-import { line } from "../d3/shape.ts";
+import { curveBundle, line } from "../d3/shape.ts";
 // import { axisBottom, axisLeft } from "../d3/axis.ts";
 import { scaleLinear, scaleTime } from "../d3/scale.ts";
 
@@ -40,7 +40,7 @@ const path = (
     line<Progress>(
       (d) => xScale(Date.parse(d.date)),
       (d) => yScale(typed ? d[key] : 1 - d[key]),
-    )(data)
+    ).curve(curveBundle)(data)
   }" />`;
 
 const xAxis = (): string => {
@@ -54,7 +54,7 @@ const xAxis = (): string => {
     "Aug",
     "Sep",
     "Oct",
-    // "Nov",
+    "Nov",
   ];
 
   const ticks = dates.map((date, index) => {
