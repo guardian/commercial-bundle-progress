@@ -1,4 +1,4 @@
-import { SimulationLinkDatum, SimulationNodeDatum } from "./d3.ts";
+import { SimulationLinkDatum, SimulationNodeDatum } from "../d3/force.ts";
 import { height, updateSvgData, width } from "./directed-graph.ts";
 import { updateSimulationData } from "./simulation.ts";
 

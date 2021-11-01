@@ -35,7 +35,7 @@ type Blob = {
   };
 };
 
-export type File = {
+type File = {
   path: string;
   mode: string;
   type: "blob" | "tree";
@@ -44,10 +44,23 @@ export type File = {
   url: string;
 };
 
+type CommitData = {
+  sha: string;
+  "node_id": string;
+  commit: {
+    author: {
+      name: string;
+      email: string;
+      date: string;
+    };
+  };
+};
+
 type Tree = {
   sha: string;
-  url: string;
-  tree: Array<File>;
+  author: string;
+  date: string;
+  files: File[];
 };
 
 const listRepo = async (
@@ -55,8 +68,12 @@ const listRepo = async (
 ): Promise<File[]> => {
   try {
     const files: File[] = [];
-    const rootFiles = await fetch(url)
-      .then((r) => r.json()) as Tree;
+    const rootFiles: {
+      sha: string;
+      url: string;
+      tree: File[];
+    } = await fetch(url)
+      .then((r) => r.json());
 
     for await (
       const file of rootFiles.tree
@@ -73,7 +90,7 @@ const listRepo = async (
   }
 };
 
-const getFiles = async (ref?: string): Promise<File[]> => {
+const getFiles = async (ref?: string): Promise<Tree> => {
   if (ref) {
     const path = `${Deno.cwd()}/trees/${ref}.json`;
 
@@ -81,7 +98,8 @@ const getFiles = async (ref?: string): Promise<File[]> => {
 
     if (localData) {
       console.log("Using local data:", path);
-      return JSON.parse(localData);
+      const tree: Tree = JSON.parse(localData);
+      return tree;
     }
 
     const initialTree = (await fetch(
@@ -90,36 +108,55 @@ const getFiles = async (ref?: string): Promise<File[]> => {
 
     console.log("Using tree:", initialTree);
 
-    const fileTree = await listRepo(
+    const files = await listRepo(
       initialTree[0].git_url +
         "?recursive=true",
     );
 
+    const data: CommitData = await fetch(
+      `${repo}/commits/${ref}`,
+    ).then((r) => r.json());
+
+    const tree: Tree = {
+      sha: data.sha,
+      author: data.commit.author.name,
+      date: data.commit.author.date,
+      files,
+    };
+
     Deno.writeTextFile(
       path,
-      JSON.stringify(fileTree),
+      JSON.stringify(tree),
     );
 
-    return fileTree;
+    return tree;
   } else {
+    // no ref
     const initialTree = (await fetch(
       repo + dir,
     ).then((r) => r.json()) as Blob[]).filter((e) => e.name === "commercial");
 
     console.log("Using tree:", initialTree);
 
-    return listRepo(
+    const files = await listRepo(
       initialTree[0].git_url +
         "?recursive=true",
     );
+
+    return {
+      date: "now",
+      author: "unknown",
+      sha: "main",
+      files,
+    };
   }
 };
 
-const projectFiles: File[] = await getFiles(Deno.args[0]);
+const tree: Tree = await getFiles(Deno.args[0]);
 
 console.log("\n");
 console.log(Colours.bold("File list:"));
-projectFiles.map((file) => {
+tree.files.map((file) => {
   if (!file.path.includes(".spec.")) {
     const extension = file.path.includes(".ts") ? "ts" : "js";
     const color = extension === "ts" ? Colours.green : Colours.yellow;
@@ -142,3 +179,4 @@ console.log("Total file sizes", sizes);
 // https://github.com/guardian/frontend/search?o=desc&p=1&q=merge%3Atrue&s=committer-date&type=Commits
 
 export { getFiles };
+export type { File, Tree };

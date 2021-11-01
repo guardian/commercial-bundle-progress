@@ -1,16 +1,16 @@
 // deno-lint-ignore-file no-explicit-any
 
-import type { ForceLink, Simulation } from "./d3.ts";
+import type { ForceLink, Simulation } from "../d3/force.ts";
 import {
   forceCollide,
   forceLink,
-  forceManyBody,
+  // forceManyBody,
   forceSimulation,
   forceX,
   forceY,
-} from "./d3.ts";
-import type { DragBehavior } from "./d3.ts";
-import { drag } from "./d3.ts";
+} from "../d3/force.ts";
+import type { DragBehavior } from "../d3/drag.ts";
+import { drag } from "../d3/drag.ts";
 import type { Data, Link, Node } from "./data.ts";
 import { xOrigin, yOrigin } from "./data.ts";
 import { radius } from "./directed-graph.ts";
