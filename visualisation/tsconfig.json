@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": [
+      "deno.ns",
       "dom",
       "ESNext"
     ]

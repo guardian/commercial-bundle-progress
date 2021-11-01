@@ -65,20 +65,20 @@ for await (const file of Deno.readDir(path)) {
     };
 
     if (commitPrs[sha]) {
-      progress.prLink =
-        "https://github.com/guardian/frontend/pull/" + commitPrs[sha];
+      progress.prLink = "https://github.com/guardian/frontend/pull/" +
+        commitPrs[sha];
     }
 
     progressArray.push(progress);
   }
 
   progressArray.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 
   await Deno.writeTextFile(
     `./progress.json`,
-    JSON.stringify(progressArray, null, " ")
+    JSON.stringify(progressArray, null, " "),
   );
 
   Deno.run({ cmd: ["deno", "fmt"] });
