@@ -73,7 +73,7 @@ const _range = (arr: number[]) =>
       const [low, high] = prev;
       return [Math.min(low, curr), Math.max(high, curr)];
     },
-    [arr[0], arr[0]]
+    [arr[0], arr[0]],
   );
 
 const getDataForHash = async (sha = branch) => {
@@ -129,8 +129,8 @@ const getDataForHash = async (sha = branch) => {
     })
     .map((node) => {
       node.x = xOrigin(node.folder) - (simpleHash(node.id) % 31) + 15;
-      node.y =
-        yOrigin(node.imports, maxImports) - (simpleHash(node.id) % 29) + 15;
+      node.y = yOrigin(node.imports, maxImports) - (simpleHash(node.id) % 29) +
+        15;
       return node;
     });
   // .concat(packages);

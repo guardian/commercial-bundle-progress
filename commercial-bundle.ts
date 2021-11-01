@@ -24,9 +24,9 @@ type Blob = {
   sha: string;
   size: number;
   url: string;
-  "html_url": string;
-  "git_url": string;
-  "download_url": string;
+  html_url: string;
+  git_url: string;
+  download_url: string;
   type: "file" | "dir";
   _links: {
     self: string;
@@ -46,7 +46,7 @@ type File = {
 
 type CommitData = {
   sha: string;
-  "node_id": string;
+  node_id: string;
   commit: {
     author: {
       name: string;
@@ -63,21 +63,16 @@ type Tree = {
   files: File[];
 };
 
-const listRepo = async (
-  url: string,
-): Promise<File[]> => {
+const listRepo = async (url: string): Promise<File[]> => {
   try {
     const files: File[] = [];
     const rootFiles: {
       sha: string;
       url: string;
       tree: File[];
-    } = await fetch(url)
-      .then((r) => r.json());
+    } = await fetch(url).then((r) => r.json());
 
-    for await (
-      const file of rootFiles.tree
-    ) {
+    for await (const file of rootFiles.tree) {
       if (file.type === "blob") files.push(file);
       // if (file.type === "tree") await listRepo(file.url);
     }
@@ -102,20 +97,17 @@ const getFiles = async (ref?: string): Promise<Tree> => {
       return tree;
     }
 
-    const initialTree = (await fetch(
-      repo + dir + "?ref=" + ref,
-    ).then((r) => r.json()) as Blob[]).filter((e) => e.name === "commercial");
+    const initialTree = (
+      (await fetch(repo + dir + "?ref=" + ref).then((r) => r.json())) as Blob[]
+    ).filter((e) => e.name === "commercial");
 
     console.log("Using tree:", initialTree);
 
-    const files = await listRepo(
-      initialTree[0].git_url +
-        "?recursive=true",
-    );
+    const files = await listRepo(initialTree[0].git_url + "?recursive=true");
 
-    const data: CommitData = await fetch(
-      `${repo}/commits/${ref}`,
-    ).then((r) => r.json());
+    const data: CommitData = await fetch(`${repo}/commits/${ref}`).then((r) =>
+      r.json()
+    );
 
     const tree: Tree = {
       sha: data.sha,
@@ -124,24 +116,18 @@ const getFiles = async (ref?: string): Promise<Tree> => {
       files,
     };
 
-    Deno.writeTextFile(
-      path,
-      JSON.stringify(tree),
-    );
+    Deno.writeTextFile(path, JSON.stringify(tree));
 
     return tree;
   } else {
     // no ref
-    const initialTree = (await fetch(
-      repo + dir,
-    ).then((r) => r.json()) as Blob[]).filter((e) => e.name === "commercial");
+    const initialTree = (
+      (await fetch(repo + dir).then((r) => r.json())) as Blob[]
+    ).filter((e) => e.name === "commercial");
 
     console.log("Using tree:", initialTree);
 
-    const files = await listRepo(
-      initialTree[0].git_url +
-        "?recursive=true",
-    );
+    const files = await listRepo(initialTree[0].git_url + "?recursive=true");
 
     return {
       date: "now",
@@ -165,9 +151,7 @@ tree.files.map((file) => {
     sizes[extension] = sizes[extension] + numLines;
     console.log(color(file.path));
   } else {
-    console.log(
-      Colours.dim(file.path),
-    );
+    console.log(Colours.dim(file.path));
   }
 });
 
