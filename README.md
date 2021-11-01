@@ -14,15 +14,5 @@ Where `{hash}` is the hash of [the merge commit][frontend], generate the tree.
 [frontend]: https://github.com/guardian/frontend/commits
 
 ```bash
-deno run -A commercial-bundle.ts {hash}
+./scripts/update.sh {hash}
 ```
-
-## Update progress report in `commercial` project
-
-Make sure you add the commit hashes above with a specific date.
-
-```bash
-deno run -A progress.ts
-```
-
-This will update `progress.json` accordingly.
