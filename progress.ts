@@ -80,25 +80,4 @@ for await (const file of Deno.readDir(path)) {
     `./progress.json`,
     JSON.stringify(progressArray, null, " "),
   );
-
-  Deno.run({ cmd: ["deno", "fmt"] });
 }
-
-// Object.keys(commitDates).forEach(async (sha) => {
-//   const cmd = Deno.run({
-//     cmd: [
-//       "git",
-//       //   "--no-pager",
-//       "show",
-//       "-s",
-//       "--format=%ci",
-//       sha,
-//     ],
-//     stdout: "piped",
-//   });
-
-//   const output = await cmd.output();
-//   const date = new TextDecoder().decode(output).replaceAll("\n", "");
-
-//   console.log(`"${sha}": "${date}",`);
-// });

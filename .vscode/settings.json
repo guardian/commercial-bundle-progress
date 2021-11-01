@@ -8,5 +8,8 @@
   "deno.suggest.imports.hosts": {
     "https://deno.land": true,
     "https://cdn.skypack.dev": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
   }
 }
