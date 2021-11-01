@@ -15,7 +15,7 @@ const data: Progress[] = JSON.parse(
 );
 
 // Dimensions //
-const width = 600;
+const width = 900;
 const height = 400;
 
 const yScale = scaleLinear()
@@ -59,7 +59,7 @@ const xAxis = (): string => {
 
   const ticks = dates.map((date, index) => {
     const pos = xScale(Date.parse("1 " + date + " 2021"));
-    return `<g transform="translate(${pos}, 0)">
+    return `<g transform="translate(${Math.round(pos)}, 0)">
       <text text-anchor="middle"
       fill="black"
       stroke="none"
