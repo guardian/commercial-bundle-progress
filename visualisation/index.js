@@ -37,7 +37,8 @@ const hashes = [
   "9fa01f89bef833452bfc1d24b0cdd5de5dfe0108",
   "f6deab14f8ad595dd87e1641de320f150f4ef406",
   "86a5b6766098fd7515b7b0e1715be9fdc5553165",
-  "7282823f3d8c10c4b6eee9c87ba62560bb6392db",
+  "7282823f3d8c10c4b6eee9c87ba62560bb6392db", // load-advert
+  "8908ed8fe13dc468a9738545009e7e6b92ea567b", // prepare-prebid
 
   "main",
 ];
