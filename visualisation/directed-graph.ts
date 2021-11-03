@@ -2,7 +2,8 @@ import { create } from "../d3/selection.ts";
 import { transition } from "../d3/transition.ts";
 import { schemeCategory10 } from "https://cdn.skypack.dev/d3-scale-chromatic@3?dts";
 import { scaleOrdinal } from "../d3/scale.ts";
-import type { Data, Link, Node } from "./data.ts";
+import { Data, Link, Node } from "./data.ts";
+import { height, width } from "./data.ts";
 import { folders, xOrigin, yOrigin } from "./data.ts";
 import type { Simulation } from "../d3/force.ts";
 import { dragging } from "./simulation.ts";
@@ -10,8 +11,6 @@ import { dragging } from "./simulation.ts";
 /** ********************
  *      Constants     *
  * ******************** */
-
-const [width, height] = [1200, 600];
 
 const svg = create("svg").attr("viewBox", [0, 0, width, height].join(" "));
 

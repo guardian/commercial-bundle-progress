@@ -1,6 +1,4 @@
 import { SimulationLinkDatum, SimulationNodeDatum } from "../d3/force.ts";
-import { height, updateSvgData, width } from "./directed-graph.ts";
-import { updateSimulationData } from "./simulation.ts";
 
 const repo = "guardian/frontend";
 const branch = "main";
@@ -52,6 +50,8 @@ const waitFor = (n = 600): Promise<void> =>
     }, n);
   });
 
+const [width, height] = [1200, 600];
+
 const xOrigin = (folder: number) => width * ((folder + 0.5) / folders.length);
 
 let maximum = 0;
@@ -76,9 +76,14 @@ const _range = (arr: number[]) =>
     [arr[0], arr[0]],
   );
 
-const getDataForHash = async (sha = branch) => {
+const getTree = async (sha: string) => {
   const graph = await fetch(url(sha));
   const tree: Record<string, string[]> = await graph.json();
+  return tree;
+};
+
+const getDataForHash = async (sha = branch) => {
+  const tree = await getTree(sha);
 
   // config.d.ts can be safely ignored
   delete tree["../lib/config.d.ts"];
@@ -185,19 +190,5 @@ const hashes = [
   "main",
 ];
 
-const _launch = async () => {
-  for (const hash of hashes) {
-    const data = await getDataForHash(hash);
-    const simulation = updateSimulationData(data);
-
-    updateSvgData(data, simulation);
-
-    console.log(hash);
-    await waitFor(1200);
-  }
-};
-
-// launch();
-
-export { folders, getDataForHash, xOrigin, yOrigin };
+export { folders, getDataForHash, getTree, height, width, xOrigin, yOrigin };
 export type { Data, Link, Node };
