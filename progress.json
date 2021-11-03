@@ -1,5 +1,17 @@
 [
   {
+    "date": "2021-11-03T10:26:20Z",
+    "author": "Max Duval",
+    "sha": "efe1f464fb2cadec1d13859bf5e8ab0481c606fd",
+    "typed": 65,
+    "typedSize": 177889,
+    "untyped": 60,
+    "untypedSize": 136861,
+    "percentage": 0.52,
+    "percentageSize": 0.5651755361397934,
+    "totalSize": 314750
+  },
+  {
     "date": "2021-11-01T08:56:21Z",
     "author": "Max Duval",
     "sha": "a56f0adc12282729743aef3e8b0c12931ef7e6fa",
