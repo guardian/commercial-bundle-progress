@@ -7,6 +7,10 @@ dependencies in `common`.
 
 [result here]: https://flatgithub.com/mxdvl/commercial-bundle-progress?filename=progress.json&sha=7415c7bac675bf3b696c677c6af486761363d24c
 
+## Current TypeScript conversion progress
+
+![Progress graph](https://raw.githubusercontent.com/guardian/commercial-bundle-progress/gh-pages/progress.svg)
+
 ## Add commit URLS
 
 Where `{hash}` is the hash of [the merge commit][frontend], generate the tree.
