@@ -4,23 +4,207 @@
   "date": "2021-10-27T15:52:19Z",
   "files": [
     {
-      "path": "adblock-ask.spec.ts",
+      "path": "/bootstraps/standalone.commercial.ts",
       "mode": "100644",
       "type": "blob",
-      "sha": "2929f4f491fae903bc9fd2de279dde4f32e42533",
-      "size": 1675,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/2929f4f491fae903bc9fd2de279dde4f32e42533"
+      "sha": "7a2fa3db2e31829b9bab50556d9550af065e68c2",
+      "size": 7138,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7a2fa3db2e31829b9bab50556d9550af065e68c2"
     },
     {
-      "path": "adblock-ask.ts",
+      "path": "/bootstraps/types.ts",
       "mode": "100644",
       "type": "blob",
-      "sha": "d3884cd0f3b767d24767e607d6257351aa9054fe",
-      "size": 1453,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d3884cd0f3b767d24767e607d6257351aa9054fe"
+      "sha": "1d7402ab9f1fd34357997d1c311ec0940290fcd8",
+      "size": 78,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1d7402ab9f1fd34357997d1c311ec0940290fcd8"
     },
     {
-      "path": "commercial-metrics.ts",
+      "path": "/lib/$$.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69a93c8b86d1d01db8c72b71b734cf6e1e814732",
+      "size": 1626,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/69a93c8b86d1d01db8c72b71b734cf6e1e814732"
+    },
+    {
+      "path": "/lib/a9-apstag.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85929f6a9de6c4512fe9bd39799d03f805ae9e6d",
+      "size": 822,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/85929f6a9de6c4512fe9bd39799d03f805ae9e6d"
+    },
+    {
+      "path": "/lib/config.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74452c35eb4ebb225388588afefe0cd6b673d373",
+      "size": 720,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/74452c35eb4ebb225388588afefe0cd6b673d373"
+    },
+    {
+      "path": "/lib/config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9363392451215beaed8fdf67a7c773541261755",
+      "size": 2570,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e9363392451215beaed8fdf67a7c773541261755"
+    },
+    {
+      "path": "/lib/cookies.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf2b05de98a5b2a281c725f1b4983ac189602efd",
+      "size": 3920,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/bf2b05de98a5b2a281c725f1b4983ac189602efd"
+    },
+    {
+      "path": "/lib/detect.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd4678dfe0994ef6bc3bc13c932d1ca7f9086e2c",
+      "size": 9055,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fd4678dfe0994ef6bc3bc13c932d1ca7f9086e2c"
+    },
+    {
+      "path": "/lib/events.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc16c28ad5f078dce15cb96efbfa2cae9ea2c92",
+      "size": 1037,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cfc16c28ad5f078dce15cb96efbfa2cae9ea2c92"
+    },
+    {
+      "path": "/lib/fastdom-promise.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e51181896bba714a0233eff683b46605901b249c",
+      "size": 147,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e51181896bba714a0233eff683b46605901b249c"
+    },
+    {
+      "path": "/lib/fetch-json.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b13bf451b50e977c3a1ce3b7731cb8d3f28e117f",
+      "size": 1105,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b13bf451b50e977c3a1ce3b7731cb8d3f28e117f"
+    },
+    {
+      "path": "/lib/fsm.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cab04f14918c2d09185710b947c038d310d613e0",
+      "size": 2758,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cab04f14918c2d09185710b947c038d310d613e0"
+    },
+    {
+      "path": "/lib/geolocation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fc900021114f4495fef08d3827f245617aee383",
+      "size": 8686,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9fc900021114f4495fef08d3827f245617aee383"
+    },
+    {
+      "path": "/lib/launchpad.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "095ff6a8c3f7ab492d457c095a08c72a854f1329",
+      "size": 684,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/095ff6a8c3f7ab492d457c095a08c72a854f1329"
+    },
+    {
+      "path": "/lib/load-css-promise.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb02bfe6aa4d0e372026c285397b0c30da943cd",
+      "size": 281,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/efb02bfe6aa4d0e372026c285397b0c30da943cd"
+    },
+    {
+      "path": "/lib/mediator.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e65d95bc99889ac8c381f37840fb79762c581c4",
+      "size": 85,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9e65d95bc99889ac8c381f37840fb79762c581c4"
+    },
+    {
+      "path": "/lib/noop.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc6b342f96ba54ff33d91cacd7cb05b86d15d15c",
+      "size": 167,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cc6b342f96ba54ff33d91cacd7cb05b86d15d15c"
+    },
+    {
+      "path": "/lib/partition.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7117ce0916569184043193ee3ce3f8c663d72fd8",
+      "size": 291,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7117ce0916569184043193ee3ce3f8c663d72fd8"
+    },
+    {
+      "path": "/lib/raven.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc7600ebd00d52291316f50842c096868a65b82",
+      "size": 2835,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1dc7600ebd00d52291316f50842c096868a65b82"
+    },
+    {
+      "path": "/lib/report-error.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1fd7848db64477c1638b8843861f0bc37f7eac1",
+      "size": 675,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a1fd7848db64477c1638b8843861f0bc37f7eac1"
+    },
+    {
+      "path": "/lib/robust.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d50b5c11eb2f46b7ff1c952f139de6df7a21dbbb",
+      "size": 1071,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d50b5c11eb2f46b7ff1c952f139de6df7a21dbbb"
+    },
+    {
+      "path": "/lib/time-utils.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0d82c9db7d282d54034aaab530d018b8dee0298",
+      "size": 526,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d0d82c9db7d282d54034aaab530d018b8dee0298"
+    },
+    {
+      "path": "/lib/url.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e7994244cf136e9760c411aeafd7c0a5f418b13",
+      "size": 3864,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3e7994244cf136e9760c411aeafd7c0a5f418b13"
+    },
+    {
+      "path": "/lib/user-timing.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91ecf1171ba5bc7487d1fef5eb85e187068e909d",
+      "size": 943,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/91ecf1171ba5bc7487d1fef5eb85e187068e909d"
+    },
+    {
+      "path": "/lib/window-performance.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97ed6074b87f8f758a504bba26f647e03c143b61",
+      "size": 146,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/97ed6074b87f8f758a504bba26f647e03c143b61"
+    },
+    {
+      "path": "/projects/commercial/commercial-metrics.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "3bc376df3abfe7bd96e2ec0e8227f9dde945685a",
@@ -28,15 +212,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3bc376df3abfe7bd96e2ec0e8227f9dde945685a"
     },
     {
-      "path": "detect-adblock.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "7ef4a233e86334eaaaa578f1a66a9fcb0a923c0c",
-      "size": 988,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7ef4a233e86334eaaaa578f1a66a9fcb0a923c0c"
-    },
-    {
-      "path": "modules/ad-free-slot-remove.ts",
+      "path": "/projects/commercial/modules/ad-free-slot-remove.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "9d7efbb6bb562698d7a38fe430f86f94a95c0f8d",
@@ -44,15 +220,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9d7efbb6bb562698d7a38fe430f86f94a95c0f8d"
     },
     {
-      "path": "modules/ad-verification/prepare-ad-verification.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "f5a8689b7c2479a451a9c0e6804883a5c604e2e4",
-      "size": 2985,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f5a8689b7c2479a451a9c0e6804883a5c604e2e4"
-    },
-    {
-      "path": "modules/ad-verification/prepare-ad-verification.ts",
+      "path": "/projects/commercial/modules/ad-verification/prepare-ad-verification.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "a4a546edab38e6ed3d531db28f5bd3480ca44634",
@@ -60,15 +228,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a4a546edab38e6ed3d531db28f5bd3480ca44634"
     },
     {
-      "path": "modules/article-aside-adverts.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "639ab39c2adceda1c09651f8866b65d0caf07a79",
-      "size": 6184,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/639ab39c2adceda1c09651f8866b65d0caf07a79"
-    },
-    {
-      "path": "modules/article-aside-adverts.ts",
+      "path": "/projects/commercial/modules/article-aside-adverts.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "c8678ed535da3c1cbcfa3e710ede32242d1704f5",
@@ -76,7 +236,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c8678ed535da3c1cbcfa3e710ede32242d1704f5"
     },
     {
-      "path": "modules/article-body-adverts.js",
+      "path": "/projects/commercial/modules/article-body-adverts.js",
       "mode": "100644",
       "type": "blob",
       "sha": "0559d24ee5a5a0ddd8f5b4eec96abe3ae1741a3b",
@@ -84,31 +244,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0559d24ee5a5a0ddd8f5b4eec96abe3ae1741a3b"
     },
     {
-      "path": "modules/article-body-adverts.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "c01907469fd7010443969923bfe4b0a75fcf4dd9",
-      "size": 2019,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c01907469fd7010443969923bfe4b0a75fcf4dd9"
-    },
-    {
-      "path": "modules/brazeBanner.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "218dfd72ccdc82e502e78c318af983f4f58d092a",
-      "size": 8076,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/218dfd72ccdc82e502e78c318af983f4f58d092a"
-    },
-    {
-      "path": "modules/brazeBanner.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "be8752d5386e293a0ab53783e8b28356940165ac",
-      "size": 1684,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/be8752d5386e293a0ab53783e8b28356940165ac"
-    },
-    {
-      "path": "modules/carrot-traffic-driver.ts",
+      "path": "/projects/commercial/modules/carrot-traffic-driver.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "fc6d01e9a72e8b37f2f871d66efcb5f531d31112",
@@ -116,15 +252,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fc6d01e9a72e8b37f2f871d66efcb5f531d31112"
     },
     {
-      "path": "modules/comment-adverts.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "e71035975b6b0265538a90e9cf2a4d4123e411f7",
-      "size": 11323,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e71035975b6b0265538a90e9cf2a4d4123e411f7"
-    },
-    {
-      "path": "modules/comment-adverts.ts",
+      "path": "/projects/commercial/modules/comment-adverts.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "fc93192225f0575463e9d673a8524f7ff47dab3c",
@@ -132,7 +260,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fc93192225f0575463e9d673a8524f7ff47dab3c"
     },
     {
-      "path": "modules/comscore.js",
+      "path": "/projects/commercial/modules/comscore.js",
       "mode": "100644",
       "type": "blob",
       "sha": "b9ec6e9ffdc8221575fd9c8715a8652de2ca90ef",
@@ -140,15 +268,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b9ec6e9ffdc8221575fd9c8715a8652de2ca90ef"
     },
     {
-      "path": "modules/comscore.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "833236a0fb873fa099c9befac27bc87007b3549b",
-      "size": 4961,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/833236a0fb873fa099c9befac27bc87007b3549b"
-    },
-    {
-      "path": "modules/creatives/page-skin.ts",
+      "path": "/projects/commercial/modules/creatives/page-skin.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "c846a630a5a9887150644c30b8eb529967335966",
@@ -156,15 +276,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c846a630a5a9887150644c30b8eb529967335966"
     },
     {
-      "path": "modules/dfp/Advert.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "b2e6336c91a22c8c401f2ce29ab57e1b955f758d",
-      "size": 4397,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b2e6336c91a22c8c401f2ce29ab57e1b955f758d"
-    },
-    {
-      "path": "modules/dfp/Advert.ts",
+      "path": "/projects/commercial/modules/dfp/Advert.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "16e7e87e00ff253fff7710b7d1c88c0817144597",
@@ -172,7 +284,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/16e7e87e00ff253fff7710b7d1c88c0817144597"
     },
     {
-      "path": "modules/dfp/add-slot.ts",
+      "path": "/projects/commercial/modules/dfp/add-slot.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "c784b4e2ad97e926f6c18d69dadb297f8ca96b45",
@@ -180,15 +292,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c784b4e2ad97e926f6c18d69dadb297f8ca96b45"
     },
     {
-      "path": "modules/dfp/breakpoint-name-to-attribute.test.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "0757cf2aca60130634b07aa76f2c7d36af9d10cd",
-      "size": 504,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0757cf2aca60130634b07aa76f2c7d36af9d10cd"
-    },
-    {
-      "path": "modules/dfp/breakpoint-name-to-attribute.ts",
+      "path": "/projects/commercial/modules/dfp/breakpoint-name-to-attribute.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "1ef8046c3b57b1d61bfe03d78e540219542fedb8",
@@ -196,15 +300,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1ef8046c3b57b1d61bfe03d78e540219542fedb8"
     },
     {
-      "path": "modules/dfp/create-slots.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "ee7b3b00095c4a8335efb2ad0c14a0c8fbd70ebe",
-      "size": 2268,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ee7b3b00095c4a8335efb2ad0c14a0c8fbd70ebe"
-    },
-    {
-      "path": "modules/dfp/create-slots.ts",
+      "path": "/projects/commercial/modules/dfp/create-slots.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "8e40f0153723b6706f5e322a6dfdf5d726dcd5ef",
@@ -212,7 +308,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8e40f0153723b6706f5e322a6dfdf5d726dcd5ef"
     },
     {
-      "path": "modules/dfp/define-slot.js",
+      "path": "/projects/commercial/modules/dfp/define-slot.js",
       "mode": "100644",
       "type": "blob",
       "sha": "9c299bb9fb1e3fdbe3898605482900080a44f926",
@@ -220,23 +316,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9c299bb9fb1e3fdbe3898605482900080a44f926"
     },
     {
-      "path": "modules/dfp/define-slot.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "c6d233d8942d4fdcf08a3d1f48ecc5fc4582647d",
-      "size": 1497,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c6d233d8942d4fdcf08a3d1f48ecc5fc4582647d"
-    },
-    {
-      "path": "modules/dfp/dfp-api.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "94ee65e4f22375d607f02042cf23e11e4731d129",
-      "size": 15298,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/94ee65e4f22375d607f02042cf23e11e4731d129"
-    },
-    {
-      "path": "modules/dfp/dfp-env.ts",
+      "path": "/projects/commercial/modules/dfp/dfp-env.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "c87cdbfd4672ee7c8f0a92928a0e99e4257fc398",
@@ -244,7 +324,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c87cdbfd4672ee7c8f0a92928a0e99e4257fc398"
     },
     {
-      "path": "modules/dfp/display-ads.ts",
+      "path": "/projects/commercial/modules/dfp/display-ads.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "279dac235c856a4c71f9b87e13d8b48e571307a7",
@@ -252,7 +332,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/279dac235c856a4c71f9b87e13d8b48e571307a7"
     },
     {
-      "path": "modules/dfp/display-lazy-ads.ts",
+      "path": "/projects/commercial/modules/dfp/display-lazy-ads.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "1ca0cd282732b32569ea9ffd30275c7b97287983",
@@ -260,7 +340,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1ca0cd282732b32569ea9ffd30275c7b97287983"
     },
     {
-      "path": "modules/dfp/empty-advert.ts",
+      "path": "/projects/commercial/modules/dfp/empty-advert.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "03f083f47c009ffea3dfa71757ce7ce3285c36fd",
@@ -268,7 +348,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/03f083f47c009ffea3dfa71757ce7ce3285c36fd"
     },
     {
-      "path": "modules/dfp/fill-advert-slots.ts",
+      "path": "/projects/commercial/modules/dfp/fill-advert-slots.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "90c6500885f7a0df69abf94bcec048c8a06b00b1",
@@ -276,7 +356,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/90c6500885f7a0df69abf94bcec048c8a06b00b1"
     },
     {
-      "path": "modules/dfp/get-ad-iframe.ts",
+      "path": "/projects/commercial/modules/dfp/get-ad-iframe.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "1fa6db6f6e23876372dece5fc1fbc644ef903b38",
@@ -284,7 +364,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1fa6db6f6e23876372dece5fc1fbc644ef903b38"
     },
     {
-      "path": "modules/dfp/get-advert-by-id.ts",
+      "path": "/projects/commercial/modules/dfp/get-advert-by-id.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "ab80189887759d44c2137ab307b2e7d6953cb801",
@@ -292,15 +372,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ab80189887759d44c2137ab307b2e7d6953cb801"
     },
     {
-      "path": "modules/dfp/lazy-load.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "6a9f4428b503e67c86ddfc47c57056af8709d78b",
-      "size": 2073,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6a9f4428b503e67c86ddfc47c57056af8709d78b"
-    },
-    {
-      "path": "modules/dfp/lazy-load.ts",
+      "path": "/projects/commercial/modules/dfp/lazy-load.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "bcec92293585bea11612568ebaa37c6fb76276ef",
@@ -308,7 +380,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/bcec92293585bea11612568ebaa37c6fb76276ef"
     },
     {
-      "path": "modules/dfp/load-advert.ts",
+      "path": "/projects/commercial/modules/dfp/load-advert.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "4df736108dbde2cdd7f13dec26342d31f88c7425",
@@ -316,7 +388,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4df736108dbde2cdd7f13dec26342d31f88c7425"
     },
     {
-      "path": "modules/dfp/on-slot-load.ts",
+      "path": "/projects/commercial/modules/dfp/on-slot-load.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "4ef5486c65674b3a1e8cd79515c87f648381e86d",
@@ -324,7 +396,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4ef5486c65674b3a1e8cd79515c87f648381e86d"
     },
     {
-      "path": "modules/dfp/on-slot-render.ts",
+      "path": "/projects/commercial/modules/dfp/on-slot-render.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "4d15fc395295b20f74bd25f86192228943c7d2d8",
@@ -332,7 +404,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4d15fc395295b20f74bd25f86192228943c7d2d8"
     },
     {
-      "path": "modules/dfp/on-slot-viewable.ts",
+      "path": "/projects/commercial/modules/dfp/on-slot-viewable.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "65807ade96dd1d4aea9197dd9615a529935ab122",
@@ -340,7 +412,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/65807ade96dd1d4aea9197dd9615a529935ab122"
     },
     {
-      "path": "modules/dfp/on-slot-visibility-changed.js",
+      "path": "/projects/commercial/modules/dfp/on-slot-visibility-changed.js",
       "mode": "100644",
       "type": "blob",
       "sha": "bda4bd43a71212459bda9042fa30838af7c528f7",
@@ -348,7 +420,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/bda4bd43a71212459bda9042fa30838af7c528f7"
     },
     {
-      "path": "modules/dfp/prepare-a9.js",
+      "path": "/projects/commercial/modules/dfp/prepare-a9.js",
       "mode": "100644",
       "type": "blob",
       "sha": "a5c336ad43cb80af8b6db9f18b3791af596aa600",
@@ -356,15 +428,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a5c336ad43cb80af8b6db9f18b3791af596aa600"
     },
     {
-      "path": "modules/dfp/prepare-a9.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "84b00e5dc59233381acdd2e11e528f510993f7af",
-      "size": 4694,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/84b00e5dc59233381acdd2e11e528f510993f7af"
-    },
-    {
-      "path": "modules/dfp/prepare-googletag.ts",
+      "path": "/projects/commercial/modules/dfp/prepare-googletag.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "08e598862765e46b308300bb4cb1d1d44f97caae",
@@ -372,7 +436,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/08e598862765e46b308300bb4cb1d1d44f97caae"
     },
     {
-      "path": "modules/dfp/prepare-permutive.js",
+      "path": "/projects/commercial/modules/dfp/prepare-permutive.js",
       "mode": "100644",
       "type": "blob",
       "sha": "ff1782585a6536c48c3907a41f53f3c30c32a10e",
@@ -380,23 +444,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ff1782585a6536c48c3907a41f53f3c30c32a10e"
     },
     {
-      "path": "modules/dfp/prepare-permutive.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "0352c14f4c37eccb89a6ee39b9a34a67954e94fe",
-      "size": 9084,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0352c14f4c37eccb89a6ee39b9a34a67954e94fe"
-    },
-    {
-      "path": "modules/dfp/prepare-prebid.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "14a44233f0f0dec0b01736c0d98821ee219741bd",
-      "size": 8583,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/14a44233f0f0dec0b01736c0d98821ee219741bd"
-    },
-    {
-      "path": "modules/dfp/prepare-prebid.ts",
+      "path": "/projects/commercial/modules/dfp/prepare-prebid.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "f563634a396221d07c37dc4e7017119bdcbc2109",
@@ -404,7 +452,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f563634a396221d07c37dc4e7017119bdcbc2109"
     },
     {
-      "path": "modules/dfp/queue-advert.ts",
+      "path": "/projects/commercial/modules/dfp/queue-advert.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "5dc0a591be59876edf630d8aeed5ef9b1b0336f0",
@@ -412,7 +460,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/5dc0a591be59876edf630d8aeed5ef9b1b0336f0"
     },
     {
-      "path": "modules/dfp/redplanet.js",
+      "path": "/projects/commercial/modules/dfp/redplanet.js",
       "mode": "100644",
       "type": "blob",
       "sha": "9a78b51711faa1095ba0b188e502d5e64cf5c369",
@@ -420,15 +468,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/9a78b51711faa1095ba0b188e502d5e64cf5c369"
     },
     {
-      "path": "modules/dfp/redplanet.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "5d6ef1ddd9c8ba29446177909e54ea1c067dc01b",
-      "size": 4653,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/5d6ef1ddd9c8ba29446177909e54ea1c067dc01b"
-    },
-    {
-      "path": "modules/dfp/refresh-on-resize.js",
+      "path": "/projects/commercial/modules/dfp/refresh-on-resize.js",
       "mode": "100644",
       "type": "blob",
       "sha": "e15f2be990e64f4312b0030f45dd6a66fdb5dc7f",
@@ -436,15 +476,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e15f2be990e64f4312b0030f45dd6a66fdb5dc7f"
     },
     {
-      "path": "modules/dfp/render-advert-label.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "7553d113b509110447deb6df658d5788d743a630",
-      "size": 4612,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7553d113b509110447deb6df658d5788d743a630"
-    },
-    {
-      "path": "modules/dfp/render-advert-label.ts",
+      "path": "/projects/commercial/modules/dfp/render-advert-label.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "d125312166fe93ffde1eae3621576fc6643dde20",
@@ -452,7 +484,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d125312166fe93ffde1eae3621576fc6643dde20"
     },
     {
-      "path": "modules/dfp/render-advert.ts",
+      "path": "/projects/commercial/modules/dfp/render-advert.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "d6c11e5ee3556d94e1fc0e0153f647e0279d49eb",
@@ -460,7 +492,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d6c11e5ee3556d94e1fc0e0153f647e0279d49eb"
     },
     {
-      "path": "modules/dfp/track-ad-render.ts",
+      "path": "/projects/commercial/modules/dfp/track-ad-render.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "3fd212e9fd1a6041a78ecaba23e5ca62ae7cca8c",
@@ -468,7 +500,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3fd212e9fd1a6041a78ecaba23e5ca62ae7cca8c"
     },
     {
-      "path": "modules/dfp/wait-for-advert.ts",
+      "path": "/projects/commercial/modules/dfp/wait-for-advert.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "8108d79f8d76ff5a5afcd92e14625469c0af2855",
@@ -476,23 +508,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8108d79f8d76ff5a5afcd92e14625469c0af2855"
     },
     {
-      "path": "modules/hasCurrentBrazeUser.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "fd5556e11a9bbef1e64e458adb0bb70efe3c69bb",
-      "size": 346,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fd5556e11a9bbef1e64e458adb0bb70efe3c69bb"
-    },
-    {
-      "path": "modules/hasCurrentBrazeUser.test.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "cf332033bab5053ffbe1298fd2b8dec968c83c42",
-      "size": 683,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cf332033bab5053ffbe1298fd2b8dec968c83c42"
-    },
-    {
-      "path": "modules/header-bidding/a9/a9.js",
+      "path": "/projects/commercial/modules/header-bidding/a9/a9.js",
       "mode": "100644",
       "type": "blob",
       "sha": "083c81ee39f48b0547cfde41520c8474a56b9dfc",
@@ -500,15 +516,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/083c81ee39f48b0547cfde41520c8474a56b9dfc"
     },
     {
-      "path": "modules/header-bidding/a9/a9.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "ce6888da639b9e0ef2fd44d668b77e7c84a11311",
-      "size": 1781,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ce6888da639b9e0ef2fd44d668b77e7c84a11311"
-    },
-    {
-      "path": "modules/header-bidding/prebid/appnexus.js",
+      "path": "/projects/commercial/modules/header-bidding/prebid/appnexus.js",
       "mode": "100644",
       "type": "blob",
       "sha": "8525137da8db0f63ab47171cadaef0bb7a45f4ce",
@@ -516,23 +524,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8525137da8db0f63ab47171cadaef0bb7a45f4ce"
     },
     {
-      "path": "modules/header-bidding/prebid/appnexus.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "eda270b2d4488feea103edc0819f09d8aea5378a",
-      "size": 6800,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/eda270b2d4488feea103edc0819f09d8aea5378a"
-    },
-    {
-      "path": "modules/header-bidding/prebid/bid-config.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "37fdce2a9970abb1910d38b58a5e20e1c6fbf030",
-      "size": 20868,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/37fdce2a9970abb1910d38b58a5e20e1c6fbf030"
-    },
-    {
-      "path": "modules/header-bidding/prebid/bid-config.ts",
+      "path": "/projects/commercial/modules/header-bidding/prebid/bid-config.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "42a1f5afcb48de4c365da0e5eb27332eb62eadb7",
@@ -540,15 +532,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/42a1f5afcb48de4c365da0e5eb27332eb62eadb7"
     },
     {
-      "path": "modules/header-bidding/prebid/prebid.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "7c8df0f2f65415dc68808884ab2f6b79324faf81",
-      "size": 7983,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7c8df0f2f65415dc68808884ab2f6b79324faf81"
-    },
-    {
-      "path": "modules/header-bidding/prebid/prebid.ts",
+      "path": "/projects/commercial/modules/header-bidding/prebid/prebid.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "4ac2473ca95f16c5e3cd6ed293c3bdb6cd7ef965",
@@ -556,15 +540,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4ac2473ca95f16c5e3cd6ed293c3bdb6cd7ef965"
     },
     {
-      "path": "modules/header-bidding/prebid/price-config.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "f074a3a1500dfcd3fc1e2486323d08b536516a43",
-      "size": 204,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f074a3a1500dfcd3fc1e2486323d08b536516a43"
-    },
-    {
-      "path": "modules/header-bidding/prebid/price-config.ts",
+      "path": "/projects/commercial/modules/header-bidding/prebid/price-config.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "b3d2187afa4e12bef45e35e690ac55ea726704d1",
@@ -572,7 +548,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b3d2187afa4e12bef45e35e690ac55ea726704d1"
     },
     {
-      "path": "modules/header-bidding/prebid/pubmatic.js",
+      "path": "/projects/commercial/modules/header-bidding/prebid/pubmatic.js",
       "mode": "100644",
       "type": "blob",
       "sha": "4013fd2328773c3a35f52fefe3262d7d8c9ed90f",
@@ -580,15 +556,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/4013fd2328773c3a35f52fefe3262d7d8c9ed90f"
     },
     {
-      "path": "modules/header-bidding/slot-config.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "1b1e69d7d12df0a2e60b261c95093169166990c1",
-      "size": 6258,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1b1e69d7d12df0a2e60b261c95093169166990c1"
-    },
-    {
-      "path": "modules/header-bidding/slot-config.ts",
+      "path": "/projects/commercial/modules/header-bidding/slot-config.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "d9224d017ff8e32184993430d7e34fb3ef74ba9b",
@@ -596,23 +564,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d9224d017ff8e32184993430d7e34fb3ef74ba9b"
     },
     {
-      "path": "modules/header-bidding/types.d.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "b202fc4bf9fbe3ce2a994d9430d6d6fd6c0b8ded",
-      "size": 2040,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b202fc4bf9fbe3ce2a994d9430d6d6fd6c0b8ded"
-    },
-    {
-      "path": "modules/header-bidding/utils.spec.ts",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "cf5706b4552dbb107cf3e5f2f946ec7cdcfcf2b6",
-      "size": 12337,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cf5706b4552dbb107cf3e5f2f946ec7cdcfcf2b6"
-    },
-    {
-      "path": "modules/header-bidding/utils.ts",
+      "path": "/projects/commercial/modules/header-bidding/utils.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "cc40adcd4c4b6a9ec82cea1dd2894fd8618b9361",
@@ -620,7 +572,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cc40adcd4c4b6a9ec82cea1dd2894fd8618b9361"
     },
     {
-      "path": "modules/high-merch.ts",
+      "path": "/projects/commercial/modules/high-merch.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "80a46cc4c40b3efa6187244b8f05726cba4b0e7a",
@@ -628,15 +580,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/80a46cc4c40b3efa6187244b8f05726cba4b0e7a"
     },
     {
-      "path": "modules/hosted/about.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "d3ba5bcb84c694f474fdf33a81d193c9cdea607a",
-      "size": 1286,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d3ba5bcb84c694f474fdf33a81d193c9cdea607a"
-    },
-    {
-      "path": "modules/hosted/about.ts",
+      "path": "/projects/commercial/modules/hosted/about.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "c4671235a486d51c1cacf6a1ccd015e0b7a8443a",
@@ -644,15 +588,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c4671235a486d51c1cacf6a1ccd015e0b7a8443a"
     },
     {
-      "path": "modules/hosted/gallery-html.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "6ee9b5b157ada7e6f7e5058394ff6220975b53da",
-      "size": 1988,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6ee9b5b157ada7e6f7e5058394ff6220975b53da"
-    },
-    {
-      "path": "modules/hosted/gallery.js",
+      "path": "/projects/commercial/modules/hosted/gallery.js",
       "mode": "100644",
       "type": "blob",
       "sha": "e663abc58871d1af618c39dcf5fc2648055dbccd",
@@ -660,39 +596,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e663abc58871d1af618c39dcf5fc2648055dbccd"
     },
     {
-      "path": "modules/hosted/gallery.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "65ee154643aaf1e26a5ea78f010123d780c5a20f",
-      "size": 4150,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/65ee154643aaf1e26a5ea78f010123d780c5a20f"
-    },
-    {
-      "path": "modules/hosted/next-video.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "045049c4e85cca4b7c96eb959d7495123ecfffc7",
-      "size": 692,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/045049c4e85cca4b7c96eb959d7495123ecfffc7"
-    },
-    {
-      "path": "modules/hosted/next-video.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "02a37e994de7ea6435ccb5ce34aee1be86ca21e8",
-      "size": 1060,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/02a37e994de7ea6435ccb5ce34aee1be86ca21e8"
-    },
-    {
-      "path": "modules/hosted/onward-journey-carousel.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "6f0d4b4959e1f50dfecaee35235c19183b51521b",
-      "size": 2992,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6f0d4b4959e1f50dfecaee35235c19183b51521b"
-    },
-    {
-      "path": "modules/hosted/onward-journey-carousel.ts",
+      "path": "/projects/commercial/modules/hosted/onward-journey-carousel.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "7a679d9bca0f731e98f5c971070215c77d5e0f82",
@@ -700,7 +604,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7a679d9bca0f731e98f5c971070215c77d5e0f82"
     },
     {
-      "path": "modules/hosted/onward.js",
+      "path": "/projects/commercial/modules/hosted/onward.js",
       "mode": "100644",
       "type": "blob",
       "sha": "e4d57d9a9d3b277e08061115f680e4788616562b",
@@ -708,15 +612,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e4d57d9a9d3b277e08061115f680e4788616562b"
     },
     {
-      "path": "modules/hosted/onward.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "ed8cac6e175d24095dfcac5082da041b9e83b66e",
-      "size": 1399,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ed8cac6e175d24095dfcac5082da041b9e83b66e"
-    },
-    {
-      "path": "modules/hosted/video.ts",
+      "path": "/projects/commercial/modules/hosted/video.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "cebd77f223ca48c40c4fdd9eebf795fc1893d562",
@@ -724,7 +620,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cebd77f223ca48c40c4fdd9eebf795fc1893d562"
     },
     {
-      "path": "modules/hosted/youtube.ts",
+      "path": "/projects/commercial/modules/hosted/youtube.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "08e0bd0456aea088faa30e3d36cb4988a0f6b554",
@@ -732,7 +628,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/08e0bd0456aea088faa30e3d36cb4988a0f6b554"
     },
     {
-      "path": "modules/ipsos-mori.js",
+      "path": "/projects/commercial/modules/ipsos-mori.js",
       "mode": "100644",
       "type": "blob",
       "sha": "b29c6f1ada86439025197609771a5f1adf7fa4c4",
@@ -740,7 +636,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b29c6f1ada86439025197609771a5f1adf7fa4c4"
     },
     {
-      "path": "modules/liveblog-adverts.js",
+      "path": "/projects/commercial/modules/liveblog-adverts.js",
       "mode": "100644",
       "type": "blob",
       "sha": "b5ae60695303af9b2de90e950fcc4b2607455454",
@@ -748,23 +644,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b5ae60695303af9b2de90e950fcc4b2607455454"
     },
     {
-      "path": "modules/liveblog-adverts.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "210da6118e0021932818dfd1bad6f3d8c2bded56",
-      "size": 2388,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/210da6118e0021932818dfd1bad6f3d8c2bded56"
-    },
-    {
-      "path": "modules/measure-timing.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "518e7677cb9e2842a67923c89802005f083f1673",
-      "size": 718,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/518e7677cb9e2842a67923c89802005f083f1673"
-    },
-    {
-      "path": "modules/messenger.js",
+      "path": "/projects/commercial/modules/messenger.js",
       "mode": "100644",
       "type": "blob",
       "sha": "8a81aefe3620eaae81b54acae64de05b2a608c4a",
@@ -772,15 +652,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8a81aefe3620eaae81b54acae64de05b2a608c4a"
     },
     {
-      "path": "modules/messenger.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "b8f852aa880a37d161c29d5f9b0963dac290c0fc",
-      "size": 5904,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b8f852aa880a37d161c29d5f9b0963dac290c0fc"
-    },
-    {
-      "path": "modules/messenger/background.js",
+      "path": "/projects/commercial/modules/messenger/background.js",
       "mode": "100644",
       "type": "blob",
       "sha": "8fb69f4a8051e93f5dd399641edd8b4b1b22942a",
@@ -788,15 +660,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8fb69f4a8051e93f5dd399641edd8b4b1b22942a"
     },
     {
-      "path": "modules/messenger/background.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "daecb3ccf839ec1715c94452127a4a45b0e1dd86",
-      "size": 2071,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/daecb3ccf839ec1715c94452127a4a45b0e1dd86"
-    },
-    {
-      "path": "modules/messenger/click.js",
+      "path": "/projects/commercial/modules/messenger/click.js",
       "mode": "100644",
       "type": "blob",
       "sha": "45715c6311533115a9be6e13786804c46ebd5f87",
@@ -804,15 +668,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/45715c6311533115a9be6e13786804c46ebd5f87"
     },
     {
-      "path": "modules/messenger/click.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "2efffa0dfc97aa5c393811186b855fea3fafe5ea",
-      "size": 833,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/2efffa0dfc97aa5c393811186b855fea3fafe5ea"
-    },
-    {
-      "path": "modules/messenger/disable-refresh.js",
+      "path": "/projects/commercial/modules/messenger/disable-refresh.js",
       "mode": "100644",
       "type": "blob",
       "sha": "13aa25e08af6f33dcc61b45f394747f0dd64c75c",
@@ -820,7 +676,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/13aa25e08af6f33dcc61b45f394747f0dd64c75c"
     },
     {
-      "path": "modules/messenger/get-page-targeting.js",
+      "path": "/projects/commercial/modules/messenger/get-page-targeting.js",
       "mode": "100644",
       "type": "blob",
       "sha": "c98f519c8e561a151083609e60a3a5b7760eeb0a",
@@ -828,7 +684,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c98f519c8e561a151083609e60a3a5b7760eeb0a"
     },
     {
-      "path": "modules/messenger/get-page-url.js",
+      "path": "/projects/commercial/modules/messenger/get-page-url.js",
       "mode": "100644",
       "type": "blob",
       "sha": "b41abac898637b24332af14a83e2598d9dec6caa",
@@ -836,7 +692,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b41abac898637b24332af14a83e2598d9dec6caa"
     },
     {
-      "path": "modules/messenger/get-stylesheet.js",
+      "path": "/projects/commercial/modules/messenger/get-stylesheet.js",
       "mode": "100644",
       "type": "blob",
       "sha": "cbcf128571c439d5790c8a93cbd3f2ea5edbbc2a",
@@ -844,15 +700,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cbcf128571c439d5790c8a93cbd3f2ea5edbbc2a"
     },
     {
-      "path": "modules/messenger/get-stylesheet.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "67c68ebe3c34d340f5fbfd2cb1640f5388aaa1e2",
-      "size": 2129,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/67c68ebe3c34d340f5fbfd2cb1640f5388aaa1e2"
-    },
-    {
-      "path": "modules/messenger/measure-ad-load.js",
+      "path": "/projects/commercial/modules/messenger/measure-ad-load.js",
       "mode": "100644",
       "type": "blob",
       "sha": "c2e0ef3e6ccc4cfa614fad591e92bc9b44c7510f",
@@ -860,7 +708,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c2e0ef3e6ccc4cfa614fad591e92bc9b44c7510f"
     },
     {
-      "path": "modules/messenger/post-message.js",
+      "path": "/projects/commercial/modules/messenger/post-message.js",
       "mode": "100644",
       "type": "blob",
       "sha": "d501c21819aacccf4e34e1b9feaf83e1bdb779c2",
@@ -868,7 +716,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d501c21819aacccf4e34e1b9feaf83e1bdb779c2"
     },
     {
-      "path": "modules/messenger/resize.js",
+      "path": "/projects/commercial/modules/messenger/resize.js",
       "mode": "100644",
       "type": "blob",
       "sha": "dbc5f5f59d83c4630a942970714175161b0ad127",
@@ -876,15 +724,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/dbc5f5f59d83c4630a942970714175161b0ad127"
     },
     {
-      "path": "modules/messenger/resize.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "251aabad60f5b8bce1387e3aa40894a47444051c",
-      "size": 2235,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/251aabad60f5b8bce1387e3aa40894a47444051c"
-    },
-    {
-      "path": "modules/messenger/scroll.js",
+      "path": "/projects/commercial/modules/messenger/scroll.js",
       "mode": "100644",
       "type": "blob",
       "sha": "d3a2aa30b3471ddb14d315dbb1869b1c63a9ed40",
@@ -892,31 +732,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d3a2aa30b3471ddb14d315dbb1869b1c63a9ed40"
     },
     {
-      "path": "modules/messenger/scroll.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "3538d63be59f34c2df303a77ff51fdd44e26d3c7",
-      "size": 4301,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3538d63be59f34c2df303a77ff51fdd44e26d3c7"
-    },
-    {
-      "path": "modules/messenger/send.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "02d6c39f95ce1af533e172a88f801899235390da",
-      "size": 346,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/02d6c39f95ce1af533e172a88f801899235390da"
-    },
-    {
-      "path": "modules/messenger/send.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "a781b7702afdcf006a2c806a7fa6c163cc1e3c7c",
-      "size": 618,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a781b7702afdcf006a2c806a7fa6c163cc1e3c7c"
-    },
-    {
-      "path": "modules/messenger/type.js",
+      "path": "/projects/commercial/modules/messenger/type.js",
       "mode": "100644",
       "type": "blob",
       "sha": "8e29ce00eb7a4cfbac80ac2298405669b07e70f9",
@@ -924,7 +740,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8e29ce00eb7a4cfbac80ac2298405669b07e70f9"
     },
     {
-      "path": "modules/messenger/viewport.js",
+      "path": "/projects/commercial/modules/messenger/viewport.js",
       "mode": "100644",
       "type": "blob",
       "sha": "992a3e307d98e6732e41abb121ab22141e0c1f55",
@@ -932,15 +748,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/992a3e307d98e6732e41abb121ab22141e0c1f55"
     },
     {
-      "path": "modules/messenger/viewport.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "3f7d52dab386b6f0f83fd3714c9a893a2874d0c7",
-      "size": 1690,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3f7d52dab386b6f0f83fd3714c9a893a2874d0c7"
-    },
-    {
-      "path": "modules/mobile-sticky.ts",
+      "path": "/projects/commercial/modules/mobile-sticky.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "d156e4a74c8a11f9a7cc84f565946954e3a1a3ce",
@@ -948,7 +756,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d156e4a74c8a11f9a7cc84f565946954e3a1a3ce"
     },
     {
-      "path": "modules/paid-containers.ts",
+      "path": "/projects/commercial/modules/paid-containers.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "37b3b7ac320235317782b2cb98bb6527f2e9e670",
@@ -956,7 +764,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/37b3b7ac320235317782b2cb98bb6527f2e9e670"
     },
     {
-      "path": "modules/paidfor-band.js",
+      "path": "/projects/commercial/modules/paidfor-band.js",
       "mode": "100644",
       "type": "blob",
       "sha": "7116f6ba6a4c9941f3fa3d9586b8dc4d5fbf89b4",
@@ -964,23 +772,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7116f6ba6a4c9941f3fa3d9586b8dc4d5fbf89b4"
     },
     {
-      "path": "modules/paidfor-band.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "64ce4236df16829b463a14886ce6572bbc1742dc",
-      "size": 674,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/64ce4236df16829b463a14886ce6572bbc1742dc"
-    },
-    {
-      "path": "modules/remove-slots.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "3dcb9b53f54fc0d5797801ef3dcf89ee252842e3",
-      "size": 2365,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3dcb9b53f54fc0d5797801ef3dcf89ee252842e3"
-    },
-    {
-      "path": "modules/remove-slots.ts",
+      "path": "/projects/commercial/modules/remove-slots.ts",
       "mode": "100644",
       "type": "blob",
       "sha": "ae58402ce6cfe108b7520a6ed7041359c40b46a8",
@@ -988,7 +780,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ae58402ce6cfe108b7520a6ed7041359c40b46a8"
     },
     {
-      "path": "modules/set-adtest-cookie.js",
+      "path": "/projects/commercial/modules/set-adtest-cookie.js",
       "mode": "100644",
       "type": "blob",
       "sha": "0e3c44581025f77c0e8d36904559b42f9d15cdfa",
@@ -996,7 +788,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0e3c44581025f77c0e8d36904559b42f9d15cdfa"
     },
     {
-      "path": "modules/sticky-mpu.js",
+      "path": "/projects/commercial/modules/sticky-mpu.js",
       "mode": "100644",
       "type": "blob",
       "sha": "64fb8b363676acd2ccb2eac9f1ba6856c69eb723",
@@ -1004,15 +796,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/64fb8b363676acd2ccb2eac9f1ba6856c69eb723"
     },
     {
-      "path": "modules/sticky-mpu.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "bfaf6ec49a4f112672a85881f4129c525515c896",
-      "size": 2849,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/bfaf6ec49a4f112672a85881f4129c525515c896"
-    },
-    {
-      "path": "modules/sticky-top-banner.js",
+      "path": "/projects/commercial/modules/sticky-top-banner.js",
       "mode": "100644",
       "type": "blob",
       "sha": "578cbee03f9e472621f399f6bb6a1ffe74d3c8a3",
@@ -1020,15 +804,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/578cbee03f9e472621f399f6bb6a1ffe74d3c8a3"
     },
     {
-      "path": "modules/sticky-top-banner.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "fae2ae91a4fbe838c6ea76131ac5c4baf0373067",
-      "size": 4709,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fae2ae91a4fbe838c6ea76131ac5c4baf0373067"
-    },
-    {
-      "path": "modules/third-party-tags.js",
+      "path": "/projects/commercial/modules/third-party-tags.js",
       "mode": "100644",
       "type": "blob",
       "sha": "a8209af350791705e786de5089c6120c110814fd",
@@ -1036,15 +812,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/a8209af350791705e786de5089c6120c110814fd"
     },
     {
-      "path": "modules/third-party-tags.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "693b66935beaca0af00f658184dd0d01503a157b",
-      "size": 6155,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/693b66935beaca0af00f658184dd0d01503a157b"
-    },
-    {
-      "path": "modules/third-party-tags/imr-worldwide-legacy.js",
+      "path": "/projects/commercial/modules/third-party-tags/imr-worldwide-legacy.js",
       "mode": "100644",
       "type": "blob",
       "sha": "34bd17fb59fd5408e18ae41bacfb85835ee346ad",
@@ -1052,15 +820,7 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/34bd17fb59fd5408e18ae41bacfb85835ee346ad"
     },
     {
-      "path": "modules/third-party-tags/imr-worldwide-legacy.spec.js",
-      "mode": "100644",
-      "type": "blob",
-      "sha": "584c54d9406f6149138b0c1e81072c1ee81ddc5f",
-      "size": 1048,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/584c54d9406f6149138b0c1e81072c1ee81ddc5f"
-    },
-    {
-      "path": "modules/third-party-tags/imr-worldwide.js",
+      "path": "/projects/commercial/modules/third-party-tags/imr-worldwide.js",
       "mode": "100644",
       "type": "blob",
       "sha": "7fb807ae3fd79f0a3725db9efc6cb4ae1c455954",
@@ -1068,36 +828,268 @@
       "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7fb807ae3fd79f0a3725db9efc6cb4ae1c455954"
     },
     {
-      "path": "modules/third-party-tags/imr-worldwide.spec.js",
+      "path": "/projects/common/modules/analytics/forceSendMetrics.ts",
       "mode": "100644",
       "type": "blob",
-      "sha": "26e810a52583022b431fcfc8b8d2ccbf438a7a8c",
-      "size": 2218,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/26e810a52583022b431fcfc8b8d2ccbf438a7a8c"
+      "sha": "e8867dcdd41750fcf70672040d77b6408f90f565",
+      "size": 166,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e8867dcdd41750fcf70672040d77b6408f90f565"
     },
     {
-      "path": "sentinel.spec.ts",
+      "path": "/projects/common/modules/analytics/google.ts",
       "mode": "100644",
       "type": "blob",
-      "sha": "97492ac4013cd36a87cda3c59d3010a242d1972f",
-      "size": 4105,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/97492ac4013cd36a87cda3c59d3010a242d1972f"
+      "sha": "91a570b0cef72b88f3ef3ef2db3a598a0a426708",
+      "size": 6746,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/91a570b0cef72b88f3ef3ef2db3a598a0a426708"
     },
     {
-      "path": "sentinel.ts",
+      "path": "/projects/common/modules/analytics/interaction-tracking.js",
       "mode": "100644",
       "type": "blob",
-      "sha": "d82eeea6cfe3586ca627604e12be4097a17bff88",
-      "size": 1737,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d82eeea6cfe3586ca627604e12be4097a17bff88"
+      "sha": "8d9e1471837a1d873c87c89ea687ad8a289710e5",
+      "size": 2864,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8d9e1471837a1d873c87c89ea687ad8a289710e5"
     },
     {
-      "path": "types.d.ts",
+      "path": "/projects/common/modules/analytics/mvt-cookie.js",
       "mode": "100644",
       "type": "blob",
-      "sha": "ec7c48fa620962db99791d793a17092b1421915b",
-      "size": 2621,
-      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ec7c48fa620962db99791d793a17092b1421915b"
+      "sha": "206b7866a54337a7e969198286aa6965cc10c4c3",
+      "size": 1405,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/206b7866a54337a7e969198286aa6965cc10c4c3"
+    },
+    {
+      "path": "/projects/common/modules/analytics/shouldCaptureMetrics.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6701e8e8ee6aad9cc6e4be1410ff04c73f8433ce",
+      "size": 1104,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6701e8e8ee6aad9cc6e4be1410ff04c73f8433ce"
+    },
+    {
+      "path": "/projects/common/modules/article/space-filler.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb3090dd467480fbc0a0639ffb91733740d49d62",
+      "size": 1318,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/bb3090dd467480fbc0a0639ffb91733740d49d62"
+    },
+    {
+      "path": "/projects/common/modules/async-call-merger.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b442938adb538b7c4117614241610afb650e4ba5",
+      "size": 1616,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/b442938adb538b7c4117614241610afb650e4ba5"
+    },
+    {
+      "path": "/projects/common/modules/atoms/youtube-player.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1297a86c507b86f8c973a2e04e6b743197f922f",
+      "size": 7636,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e1297a86c507b86f8c973a2e04e6b743197f922f"
+    },
+    {
+      "path": "/projects/common/modules/atoms/youtube-tracking.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbe51bf9cab7d539f22487137b4a0f887b95e7c8",
+      "size": 2126,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/cbe51bf9cab7d539f22487137b4a0f887b95e7c8"
+    },
+    {
+      "path": "/projects/common/modules/commercial/build-page-targeting.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28a06cc5786f8d4b666ae98773b85ecd5d9ce347",
+      "size": 13434,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/28a06cc5786f8d4b666ae98773b85ecd5d9ce347"
+    },
+    {
+      "path": "/projects/common/modules/commercial/commercial-features.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e90732c78b4a42e3571deb83c4ae0144d5d86091",
+      "size": 3850,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e90732c78b4a42e3571deb83c4ae0144d5d86091"
+    },
+    {
+      "path": "/projects/common/modules/commercial/geo-utils.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47d559323b58c9144d066c66b385f2fe6a05c366",
+      "size": 811,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/47d559323b58c9144d066c66b385f2fe6a05c366"
+    },
+    {
+      "path": "/projects/common/modules/commercial/user-ad-targeting.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef189593d6bda64fdb8747888767f217bceb8bca",
+      "size": 1074,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ef189593d6bda64fdb8747888767f217bceb8bca"
+    },
+    {
+      "path": "/projects/common/modules/commercial/user-features.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59d231de5f29a7142f84fb0681146924bd1ce516",
+      "size": 11414,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/59d231de5f29a7142f84fb0681146924bd1ce516"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab-constants.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b999b55544c64856765948ac684a6c501fffa3a",
+      "size": 194,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6b999b55544c64856765948ac684a6c501fffa3a"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab-core.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdf2ea9d5ae2d0f3c95742640a66bf8708fb27d4",
+      "size": 3549,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fdf2ea9d5ae2d0f3c95742640a66bf8708fb27d4"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab-local-storage.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0873e99d7c3919af59eff1ce3d1f895be9a7ee18",
+      "size": 977,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/0873e99d7c3919af59eff1ce3d1f895be9a7ee18"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab-ophan.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4795cc419c595b0cd353cd595cb6d2c05c1292f",
+      "size": 3293,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f4795cc419c595b0cd353cd595cb6d2c05c1292f"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab-tests.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9dab3e978d2a73c0ed47788f6de2822e0dad03b",
+      "size": 611,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/f9dab3e978d2a73c0ed47788f6de2822e0dad03b"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab-url.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d85384dd8bb691c57a6af105bc90ae1e3a8eb43b",
+      "size": 1010,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/d85384dd8bb691c57a6af105bc90ae1e3a8eb43b"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab-utils.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "021ede2a0f02f2d337c76ff8db9be032571e1046",
+      "size": 1949,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/021ede2a0f02f2d337c76ff8db9be032571e1046"
+    },
+    {
+      "path": "/projects/common/modules/experiments/ab.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed0a0fa491cd6664fd99a25ffca7ba779e9c665e",
+      "size": 3166,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ed0a0fa491cd6664fd99a25ffca7ba779e9c665e"
+    },
+    {
+      "path": "/projects/common/modules/experiments/automatLog.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e454f664f9128172718d056351f3621d4f2c67e2",
+      "size": 307,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/e454f664f9128172718d056351f3621d4f2c67e2"
+    },
+    {
+      "path": "/projects/common/modules/experiments/tests/prebid-timeout.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3b5efdd1839ff00e2f4c1e59b953fe619c02d97",
+      "size": 747,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/c3b5efdd1839ff00e2f4c1e59b953fe619c02d97"
+    },
+    {
+      "path": "/projects/common/modules/experiments/tests/remote-header-test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6806e36c673c297976edf7ae30b3d5c6e124da76",
+      "size": 695,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/6806e36c673c297976edf7ae30b3d5c6e124da76"
+    },
+    {
+      "path": "/projects/common/modules/experiments/tests/sign-in-gate-main-control.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebaa5845f7eeec714c06cc3144906492728c004d",
+      "size": 1237,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/ebaa5845f7eeec714c06cc3144906492728c004d"
+    },
+    {
+      "path": "/projects/common/modules/experiments/tests/sign-in-gate-main-variant.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79b024e776813eca2975a44a5b616fea21ee538a",
+      "size": 1219,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/79b024e776813eca2975a44a5b616fea21ee538a"
+    },
+    {
+      "path": "/projects/common/modules/identity/api.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d5a846b1cc3fac6d63f6d787847f0bbf605b66e",
+      "size": 8402,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/8d5a846b1cc3fac6d63f6d787847f0bbf605b66e"
+    },
+    {
+      "path": "/projects/common/modules/identity/auth-component-event-params.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41dfedddd9094d2aa5d2701c1fc26210a90fcf54",
+      "size": 530,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/41dfedddd9094d2aa5d2701c1fc26210a90fcf54"
+    },
+    {
+      "path": "/projects/common/modules/spacefinder.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fa46b53af09a1864e374615b6563abba600cf86",
+      "size": 11341,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/3fa46b53af09a1864e374615b6563abba600cf86"
+    },
+    {
+      "path": "/projects/common/modules/ui/sticky.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da1f97b10cbb0e543ea470c3ca43e9e3abe7c95e",
+      "size": 2673,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/da1f97b10cbb0e543ea470c3ca43e9e3abe7c95e"
+    },
+    {
+      "path": "/projects/common/modules/user-prefs.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "259575f4ced5be924d122695a679e4e13a067192",
+      "size": 2586,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/259575f4ced5be924d122695a679e4e13a067192"
+    },
+    {
+      "path": "/projects/common/modules/video/ga-helper.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fccd8bc3ac56688c15fa52a30d65754a86101c58",
+      "size": 1328,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/fccd8bc3ac56688c15fa52a30d65754a86101c58"
     }
   ]
 }

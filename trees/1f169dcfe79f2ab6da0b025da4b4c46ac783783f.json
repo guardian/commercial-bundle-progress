@@ -4,6 +4,22 @@
   "date": "2021-11-04T08:19:03Z",
   "files": [
     {
+      "path": "/bootstraps/standalone.commercial.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b75f37796699161944100656b4fd30a7bf5e4fd",
+      "size": 6115,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/7b75f37796699161944100656b4fd30a7bf5e4fd"
+    },
+    {
+      "path": "/bootstraps/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d7402ab9f1fd34357997d1c311ec0940290fcd8",
+      "size": 78,
+      "url": "https://api.github.com/repos/guardian/frontend/git/blobs/1d7402ab9f1fd34357997d1c311ec0940290fcd8"
+    },
+    {
       "path": "/lib/$$.ts",
       "mode": "100644",
       "type": "blob",
