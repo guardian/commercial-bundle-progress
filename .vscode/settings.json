@@ -11,5 +11,6 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "svg.preview.background": "custom"
 }
