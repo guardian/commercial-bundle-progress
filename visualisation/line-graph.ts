@@ -18,12 +18,14 @@ const data: Progress[] = JSON.parse(
 const width = 900;
 const height = 400;
 
+const now = new Date();
+
 const yScale = scaleLinear()
   .domain([0, 1])
   .range([height - 20, 0]); // note direction of y-axis in SVG
 
 const xScale = scaleTime()
-  .domain([new Date(2021, 1, 1), new Date()])
+  .domain([new Date(2021, 1, 1), new Date(2021, now.getMonth() + 1, 5)])
   .range([0, width]);
 
 // SVG methods //
@@ -55,6 +57,7 @@ const xAxis = (): string => {
     "Sep",
     "Oct",
     "Nov",
+    "Dec",
   ];
 
   const ticks = dates.map((date, index) => {
