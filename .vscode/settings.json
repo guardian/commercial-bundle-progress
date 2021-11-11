@@ -12,5 +12,8 @@
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
-  "svg.preview.background": "custom"
+  "svg.preview.background": "white",
+  "files.watcherExclude": {
+    "**/target": true
+  }
 }

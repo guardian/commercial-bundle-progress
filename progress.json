@@ -1,5 +1,53 @@
 [
   {
+    "date": "2021-11-11T14:04:24Z",
+    "author": "Zeke Hunter-Green",
+    "sha": "edafeadc33d0b1ad17b91e2055232e62252c713d",
+    "typed": 70,
+    "typedSize": 185532,
+    "untyped": 57,
+    "untypedSize": 136293,
+    "percentage": 0.5511811023622047,
+    "percentageSize": 0.5764996504311349,
+    "totalSize": 321825
+  },
+  {
+    "date": "2021-11-10T14:06:04Z",
+    "author": "Frederick O'Brien",
+    "sha": "1e47ceddceb4e64cb5e70e73cc0f21acc9922e75",
+    "typed": 70,
+    "typedSize": 185675,
+    "untyped": 57,
+    "untypedSize": 136293,
+    "percentage": 0.5511811023622047,
+    "percentageSize": 0.5766877453659991,
+    "totalSize": 321968
+  },
+  {
+    "date": "2021-11-09T15:18:43Z",
+    "author": "Frederick O'Brien",
+    "sha": "633744df8396c01ebc93b5fab90e64dfb6793a2a",
+    "typed": 69,
+    "typedSize": 185448,
+    "untyped": 58,
+    "untypedSize": 136439,
+    "percentage": 0.5433070866141733,
+    "percentageSize": 0.576127647279946,
+    "totalSize": 321887
+  },
+  {
+    "date": "2021-11-09T11:43:05Z",
+    "author": "Ravi",
+    "sha": "1af7d5a09188d172a52bca34bad316961cf088d7",
+    "typed": 69,
+    "typedSize": 185332,
+    "untyped": 58,
+    "untypedSize": 136320,
+    "percentage": 0.5433070866141733,
+    "percentageSize": 0.5761879298123438,
+    "totalSize": 321652
+  },
+  {
     "date": "2021-11-05T10:44:22Z",
     "author": "Simon Byford",
     "sha": "12bebb6d991ecb93335241932a58753c68406055",
