@@ -1,4 +1,5 @@
 import * as Colours from "https://deno.land/std@0.102.0/fmt/colors.ts";
+import { getTree } from "./visualisation/data.ts";
 // import { expandGlob } from "https://deno.land/std@0.102.0/fs/mod.ts";
 
 const repo = "https://api.github.com/repos/guardian/frontend";
@@ -6,7 +7,7 @@ const repo = "https://api.github.com/repos/guardian/frontend";
 
 console.log("Using repo:", Colours.bold(repo));
 
-const dir = "/contents/static/src/javascripts/projects";
+const dir = "/contents/static/src/javascripts";
 
 const files = {
   ts: 0,
@@ -85,7 +86,40 @@ const listRepo = async (url: string): Promise<File[]> => {
   }
 };
 
+const getInitialTree = async (ref?: string) => {
+  const url = ref ? repo + dir + "?ref=" + ref : repo + dir;
+  const blobs: Blob[] = await fetch(url)
+    .then((r) => r.json());
+
+  return blobs.filter((blob) => blob.type === "dir");
+};
+
 const getFiles = async (ref?: string): Promise<Tree> => {
+  const initialTree = await getInitialTree(ref);
+  console.log("Using tree:", initialTree);
+
+  const bundleFiles = Object.keys(await getTree(ref ?? "main"))
+    .map((path) =>
+      path.startsWith("../") ? path.substring(2) : "bootstraps/" + path
+    );
+  const files: File[] = [];
+  for (const tree of initialTree) {
+    const extraFiles = await listRepo(tree.git_url + "?recursive=true");
+
+    console.log({ extraFiles, bundleFiles });
+
+    const filteredFiles = extraFiles.map((file) => {
+      return {
+        ...file,
+        path: "/" + tree.name + "/" + file.path,
+      };
+    }).filter((file) => bundleFiles.includes(file.path));
+
+    files.push(...filteredFiles);
+  }
+
+  console.log(files);
+
   if (ref) {
     const path = `${Deno.cwd()}/trees/${ref}.json`;
 
@@ -93,17 +127,9 @@ const getFiles = async (ref?: string): Promise<Tree> => {
 
     if (localData) {
       console.log("Using local data:", path);
-      const tree: Tree = JSON.parse(localData);
-      return tree;
+      const localTree: Tree = JSON.parse(localData);
+      return localTree;
     }
-
-    const initialTree = (
-      (await fetch(repo + dir + "?ref=" + ref).then((r) => r.json())) as Blob[]
-    ).filter((e) => e.name === "commercial");
-
-    console.log("Using tree:", initialTree);
-
-    const files = await listRepo(initialTree[0].git_url + "?recursive=true");
 
     const data: CommitData = await fetch(`${repo}/commits/${ref}`).then((r) =>
       r.json()
@@ -119,23 +145,14 @@ const getFiles = async (ref?: string): Promise<Tree> => {
     Deno.writeTextFile(path, JSON.stringify(tree));
 
     return tree;
-  } else {
-    // no ref
-    const initialTree = (
-      (await fetch(repo + dir).then((r) => r.json())) as Blob[]
-    ).filter((e) => e.name === "commercial");
-
-    console.log("Using tree:", initialTree);
-
-    const files = await listRepo(initialTree[0].git_url + "?recursive=true");
-
-    return {
-      date: "now",
-      author: "unknown",
-      sha: "main",
-      files,
-    };
   }
+
+  return {
+    date: "now",
+    author: "unknown",
+    sha: "main",
+    files,
+  };
 };
 
 const tree: Tree = await getFiles(Deno.args[0]);
