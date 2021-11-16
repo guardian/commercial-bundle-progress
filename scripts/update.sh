@@ -7,3 +7,5 @@ deno fmt ./trees
 
 deno run -A progress.ts
 deno fmt progress.json
+
+deno run --allow-read --allow-write visualisation/line-graph.ts

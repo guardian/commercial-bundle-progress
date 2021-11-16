@@ -96,17 +96,15 @@ const getInitialTree = async (ref?: string) => {
 
 const getFiles = async (ref?: string): Promise<Tree> => {
   const initialTree = await getInitialTree(ref);
-  console.log("Using tree:", initialTree);
 
   const bundleFiles = Object.keys(await getTree(ref ?? "main"))
     .map((path) =>
-      path.startsWith("../") ? path.substring(2) : "bootstraps/" + path
+      path.startsWith("../") ? path.substring(2) : "/bootstraps/" + path
     );
+
   const files: File[] = [];
   for (const tree of initialTree) {
     const extraFiles = await listRepo(tree.git_url + "?recursive=true");
-
-    console.log({ extraFiles, bundleFiles });
 
     const filteredFiles = extraFiles.map((file) => {
       return {
@@ -117,8 +115,6 @@ const getFiles = async (ref?: string): Promise<Tree> => {
 
     files.push(...filteredFiles);
   }
-
-  console.log(files);
 
   if (ref) {
     const path = `${Deno.cwd()}/trees/${ref}.json`;
@@ -162,7 +158,7 @@ console.log(Colours.bold("File list:"));
 tree.files.map((file) => {
   if (!file.path.includes(".spec.")) {
     const extension = file.path.includes(".ts") ? "ts" : "js";
-    const color = extension === "ts" ? Colours.green : Colours.yellow;
+    const color = extension === "ts" ? Colours.cyan : Colours.yellow;
     files[extension] = files[extension] + 1;
     const numLines = file.size;
     sizes[extension] = sizes[extension] + numLines;
