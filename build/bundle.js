@@ -1812,6 +1812,103 @@ function drag() {
     };
     return drag2;
 }
+const repo = "guardian/frontend";
+const branch = "main";
+const path = "tools/__tasks__/commercial/graph/output/standalone.commercial.ts.json";
+const url = (sha = branch)=>`https://raw.githubusercontent.com/${repo}/${sha}/${path}`
+;
+var Groups;
+(function(Groups) {
+    Groups[Groups["Entry"] = 0] = "Entry";
+    Groups[Groups["Typescript"] = 1] = "Typescript";
+    Groups[Groups["Javascript"] = 2] = "Javascript";
+    Groups[Groups["Tests"] = 3] = "Tests";
+    Groups[Groups["Packages"] = 4] = "Packages";
+    Groups[Groups["Hosted"] = 5] = "Hosted";
+})(Groups || (Groups = {
+}));
+const folders = [
+    "node_modules",
+    "/lib/",
+    "projects/commercial",
+    "/hosted/",
+    "projects/common", 
+];
+const [width, height] = [
+    1200,
+    600
+];
+const xOrigin = (folder)=>width * ((folder + 0.5) / folders.length)
+;
+let maximum = 0;
+const yOrigin = (size, max = maximum)=>Math.round(height * (0.18 + 0.48 * (1 - size / max)))
+;
+const STRIP_NODES = /^.+(node_modules\/)((@(guardian|types)\/)?.+?)(\/.+)/g;
+const STRIP_EXTENSION = /(\.d)?\.(j|t)s$/;
+const clean = (s)=>s.replace(STRIP_EXTENSION, "").replace(STRIP_NODES, "$1$2 ")
+;
+const simpleHash = (s)=>s.split("").reduce((p, c)=>p + (c.codePointAt(0) ?? 9)
+    , 0)
+;
+const getTree = async (sha)=>{
+    const graph = await fetch(url(sha));
+    const tree = await graph.json();
+    return tree;
+};
+const getDataForHash = async (sha = branch)=>{
+    const tree = await getTree(sha);
+    delete tree["../lib/config.d.ts"];
+    const maxImports = Object.entries(tree).reduce((max, value)=>{
+        const [_, links] = value;
+        return Math.max(max, links.length);
+    }, 0);
+    maximum = maxImports;
+    Object.entries(tree).forEach((value)=>{
+        const [, links] = value;
+        links.forEach((link)=>{
+            if (link.includes("node_modules")) {
+                tree[clean(link)] = [];
+            }
+        });
+    });
+    console.log(tree);
+    const nodes = Object.entries(tree).map((value)=>{
+        const [id, links] = value;
+        const group = id.includes("commercial.") ? Groups.Entry : id.includes("node_modules") ? Groups.Packages : id.includes(".ts") ? Groups.Typescript : Groups.Javascript;
+        const folder = folders.reduce((prev, current, index)=>{
+            return id.includes(current) ? index : prev;
+        }, 0);
+        const imports = links.length;
+        const node = {
+            id: clean(id),
+            group,
+            folder,
+            imports
+        };
+        return node;
+    }).map((node)=>{
+        node.x = xOrigin(node.folder) - simpleHash(node.id) % 31 + 15;
+        node.y = yOrigin(node.imports, maxImports) - simpleHash(node.id) % 29 + 15;
+        return node;
+    });
+    const links = Object.entries(tree).reduce((links, branch)=>{
+        const [source, targets] = branch;
+        const newLinks = targets.map((target)=>({
+                target: clean(target),
+                source: clean(source),
+                value: targets.length > 0 ? 0.5 : 0.25
+            })
+        );
+        return [
+            ...links,
+            ...newLinks
+        ];
+    }, []);
+    return {
+        nodes,
+        links
+    };
+};
 function define(constructor, factory, prototype) {
     constructor.prototype = factory.prototype = prototype;
     prototype.constructor = constructor;
@@ -4860,11 +4957,6 @@ function ordinal() {
     initRange.apply(scale, arguments);
     return scale;
 }
-const [width, height] = [
-    1200,
-    600
-];
-const repo = "guardian/frontend";
 const svg = create("svg").attr("viewBox", [
     0,
     0,
@@ -4874,29 +4966,6 @@ const svg = create("svg").attr("viewBox", [
 const scale = ordinal(category10);
 const isNode = (n)=>typeof n !== "string"
 ;
-const branch = "main";
-const path = "tools/__tasks__/commercial/graph/output/standalone.commercial.ts.json";
-const url = (sha = branch)=>`https://raw.githubusercontent.com/${repo}/${sha}/${path}`
-;
-var Groups;
-(function(Groups) {
-    Groups[Groups["Entry"] = 0] = "Entry";
-    Groups[Groups["Typescript"] = 1] = "Typescript";
-    Groups[Groups["Javascript"] = 2] = "Javascript";
-    Groups[Groups["Tests"] = 3] = "Tests";
-    Groups[Groups["Packages"] = 4] = "Packages";
-    Groups[Groups["Hosted"] = 5] = "Hosted";
-})(Groups || (Groups = {
-}));
-const folders = [
-    "node_modules",
-    "/lib/",
-    "projects/commercial",
-    "/hosted/",
-    "projects/common", 
-];
-const xOrigin = (folder)=>width * ((folder + 0.5) / folders.length)
-;
 svg.append("g").attr("class", "folders").selectAll("text").data(folders).join("text").text((d)=>d
 ).attr("font-size", 10).attr("text-anchor", "middle").attr("y", 540).attr("x", (d)=>xOrigin(folders.indexOf(d))
 );
@@ -4905,14 +4974,11 @@ const nodeGroup = svg.append("g").attr("class", "nodes");
 transition();
 const radius = (d)=>Math.sqrt(d.imports + 1) * 3 + 4
 ;
-let maximum = 0;
-const yOrigin = (size, max = maximum)=>Math.round(height * (0.18 + 0.48 * (1 - size / max)))
-;
 const simulation1 = simulation().force("link", link().id((n)=>n.id
 ).strength(0)).force("collide", collide((d)=>radius(d) + 6
 )).force("x", x$2().x((n)=>xOrigin(n.folder)
-)).force("y", y$2().y((n)=>yOrigin(n.imports)
-));
+).strength(0.06)).force("y", y$2().y((n)=>yOrigin(n.imports)
+).strength(0.06));
 const updateSimulationData = (data)=>{
     const { nodes , links  } = data;
     const oldNodes = simulation1.nodes();
@@ -5018,66 +5084,6 @@ const updateSvgData = (data, simulation)=>{
         );
     });
 };
-const STRIP_NODES = /^.+(node_modules\/)((@(guardian|types)\/)?.+?)(\/.+)/g;
-const clean = (s)=>s.replace(/(\.d)?\.(j|t)s$/, "").replace(STRIP_NODES, "$1$2 ")
-;
-const simpleHash = (s)=>s.split("").reduce((p, c)=>p + (c.codePointAt(0) ?? 9)
-    , 0)
-;
-const getDataForHash = async (sha = branch)=>{
-    const graph = await fetch(url(sha));
-    const tree = await graph.json();
-    const maxImports = Object.entries(tree).reduce((max, value)=>{
-        const [_, links] = value;
-        return Math.max(max, links.length);
-    }, 0);
-    maximum = maxImports;
-    Object.entries(tree).forEach((value)=>{
-        const [, links] = value;
-        links.forEach((link)=>{
-            if (link.includes("node_modules")) {
-                tree[clean(link)] = [];
-            }
-        });
-    });
-    console.log(tree);
-    const nodes = Object.entries(tree).map((value)=>{
-        const [id, links] = value;
-        const group = id.includes("commercial.") ? Groups.Entry : id.includes("node_modules") ? Groups.Packages : id.includes(".ts") ? Groups.Typescript : Groups.Javascript;
-        const folder = folders.reduce((prev, current, index)=>{
-            return id.includes(current) ? index : prev;
-        }, 0);
-        const imports = links.length;
-        const node = {
-            id: clean(id),
-            group,
-            folder,
-            imports
-        };
-        return node;
-    }).map((node)=>{
-        node.x = xOrigin(node.folder) - simpleHash(node.id) % 31 + 15;
-        node.y = yOrigin(node.imports, maxImports) - simpleHash(node.id) % 29 + 15;
-        return node;
-    });
-    const links = Object.entries(tree).reduce((links, branch)=>{
-        const [source, targets] = branch;
-        const newLinks = targets.map((target)=>({
-                target: clean(target),
-                source: clean(source),
-                value: targets.length > 0 ? 0.5 : 0.25
-            })
-        );
-        return [
-            ...links,
-            ...newLinks
-        ];
-    }, []);
-    return {
-        nodes,
-        links
-    };
-};
 const directedGraph = document.querySelector("#directed-graph");
 const fragment = document.createDocumentFragment();
 const hashes = [
@@ -5096,6 +5102,16 @@ const hashes = [
     "e100b13ba833653d1d32d0c04f217779e3c6ebb2",
     "79b05f1b10ad0d33076fae4b772cc7ce5e00c48d",
     "410d5417877b0d6ca13860dda79606d133368389",
+    "2e82565dec2bf3d837536833b97e0813702796a9",
+    "09a82d56786e143f376b2ad6e2c53ffdf56d6aa6",
+    "c789dda9024cdcb62d77eea8e47cbf51f5e7826f",
+    "ddc8edd599704da7e0399b8d8bb9d2f95f766a1e",
+    "42889a8411b950581a650f7ed9253911d36d68eb",
+    "9fa01f89bef833452bfc1d24b0cdd5de5dfe0108",
+    "f6deab14f8ad595dd87e1641de320f150f4ef406",
+    "86a5b6766098fd7515b7b0e1715be9fdc5553165",
+    "7282823f3d8c10c4b6eee9c87ba62560bb6392db",
+    "8908ed8fe13dc468a9738545009e7e6b92ea567b",
     "main", 
 ];
 const updateGraph = async (hash)=>{
@@ -5106,11 +5122,14 @@ const updateGraph = async (hash)=>{
 updateGraph("main");
 for (const hash of hashes){
     const button = document.createElement("button");
-    button.innerText = hash.substring(0, 8);
+    button.innerText = hash.substring(0, 6);
     fragment.appendChild(button);
     button.addEventListener("click", ()=>{
         updateGraph(hash);
     });
 }
-directedGraph.appendChild(svg.node());
-directedGraph.appendChild(fragment);
+if (directedGraph) {
+    const node = svg.node();
+    node && directedGraph.appendChild(node);
+    directedGraph.appendChild(fragment);
+}
