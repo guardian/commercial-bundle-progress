@@ -39,7 +39,7 @@ const folders = [
   "projects/commercial",
   // "/messenger/",
   // "/dfp/",
-  "/hosted/",
+  // "/hosted/",
   "projects/common",
 ];
 
