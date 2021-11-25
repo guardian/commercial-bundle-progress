@@ -9,7 +9,7 @@ dependencies in `common`.
 
 ## Current TypeScript conversion progress
 
-![Progress graph](https://raw.githubusercontent.com/guardian/commercial-bundle-progress/gh-pages/progress.svg)
+![Progress graph](https://raw.githubusercontent.com/guardian/commercial-bundle-progress/gh-pages/build/progress.svg)
 
 ## Add commit URLS
 
