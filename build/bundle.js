@@ -5122,7 +5122,7 @@ if (directedGraph) {
     directedGraph.appendChild(fragment);
 }
 const largeFilesList = document.querySelector("#largest-files");
-fetch("/build/largest-files.json").then((r)=>r.json()
+fetch("build/largest-files.json").then((r)=>r.json()
 ).then((files)=>{
     files.forEach((file)=>{
         const [size, path] = file;
