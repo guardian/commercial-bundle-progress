@@ -118,7 +118,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
   </g>
 </svg>`;
 
-Deno.writeTextFileSync(dir + "../public/progress.svg", svg);
+Deno.writeTextFileSync(dir + "../public/build/progress.svg", svg);
 
 // deno run --allow-read --allow-write visualisation/line-graph.ts
 

@@ -10,3 +10,7 @@ deno --version;
 deno bundle "$top_dir/visualisation/index.ts" \
     "$top_dir/public/build/bundle.js" \
     --config="$top_dir/visualisation/tsconfig.json";
+
+deno run --allow-read --allow-write visualisation/line-graph.ts
+
+deno run --allow-read --allow-write largest-files.ts

@@ -5,11 +5,11 @@ commercial bundle to Typescript. You can see the [result here][result here] for
 the content of the `commercial` project. This excludes libs and other
 dependencies in `common`.
 
-[result here]: https://flatgithub.com/mxdvl/commercial-bundle-progress?filename=progress.json&sha=7415c7bac675bf3b696c677c6af486761363d24c
+[result here]: https://guardian.github.io/commercial-bundle-progress/
 
 ## Current TypeScript conversion progress
 
-![Progress graph](https://raw.githubusercontent.com/guardian/commercial-bundle-progress/gh-pages/progress.svg)
+![Progress graph](https://raw.githubusercontent.com/guardian/commercial-bundle-progress/gh-pages/build/progress.svg)
 
 ## Add commit URLS
 

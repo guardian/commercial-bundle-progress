@@ -1,6 +1,15 @@
 import type { File, Tree } from "./commercial-bundle.ts";
+import type { Progress } from "./progress.ts";
 
-const sha = "25a4079b3b5170b45d0525499171aee092eab773";
+const dir = new URL(".", import.meta.url).pathname;
+
+const progress: Progress[] = JSON.parse(
+  Deno.readTextFileSync(
+    dir + "/progress.json",
+  ),
+);
+
+const sha = progress[0].sha;
 
 const tree: Tree = JSON.parse(
   Deno.readTextFileSync(`./trees/${sha}.json`),
@@ -15,3 +24,8 @@ const jsFiles = files
   .map((file) => [file.size, file.path]);
 
 console.log(jsFiles);
+
+Deno.writeTextFileSync(
+  dir + "/public/build/largest-files.json",
+  JSON.stringify(jsFiles),
+);
