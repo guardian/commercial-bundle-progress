@@ -1,5 +1,17 @@
 [
   {
+    "date": "2021-12-16T14:33:09Z",
+    "author": "Zeke Hunter-Green",
+    "sha": "d0c8b135560015ee747e14c84c893272d2ba0913",
+    "typed": 81,
+    "typedSize": 211596,
+    "untyped": 49,
+    "untypedSize": 111747,
+    "percentage": 0.6230769230769231,
+    "percentageSize": 0.6544010539891075,
+    "totalSize": 323343
+  },
+  {
     "date": "2021-12-07T11:31:23Z",
     "author": "Max Duval",
     "sha": "3bb4ab3976ba02b28b035b8186dc9b52eacce054",
