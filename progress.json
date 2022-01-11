@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-01-10T15:21:35Z",
+    "author": "Chris Jones",
+    "sha": "97c96e2c35f03edd616d6e4af6cd02756d4e459e",
+    "typed": 82,
+    "typedSize": 215468,
+    "untyped": 47,
+    "untypedSize": 106881,
+    "percentage": 0.6356589147286822,
+    "percentageSize": 0.6684308001575932,
+    "totalSize": 322349
+  },
+  {
     "date": "2022-01-06T14:39:00Z",
     "author": "Zeke Hunter-Green",
     "sha": "91fd3f6c1c0e1ba9a4584609abfc28fc92e8b25b",
