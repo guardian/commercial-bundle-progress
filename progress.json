@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-01-06T14:39:00Z",
+    "author": "Zeke Hunter-Green",
+    "sha": "91fd3f6c1c0e1ba9a4584609abfc28fc92e8b25b",
+    "typed": 83,
+    "typedSize": 215923,
+    "untyped": 47,
+    "untypedSize": 107067,
+    "percentage": 0.6384615384615384,
+    "percentageSize": 0.668512957057494,
+    "totalSize": 322990
+  },
+  {
     "date": "2021-12-16T14:33:09Z",
     "author": "Zeke Hunter-Green",
     "sha": "d0c8b135560015ee747e14c84c893272d2ba0913",
@@ -10,6 +22,18 @@
     "percentage": 0.6230769230769231,
     "percentageSize": 0.6544010539891075,
     "totalSize": 323343
+  },
+  {
+    "date": "2021-12-15T10:53:11Z",
+    "author": "Simon Byford",
+    "sha": "db703f85999c477cd65abc5dfa6c663aa979c313",
+    "typed": 82,
+    "typedSize": 212846,
+    "untyped": 49,
+    "untypedSize": 111747,
+    "percentage": 0.6259541984732825,
+    "percentageSize": 0.6557319473925809,
+    "totalSize": 324593
   },
   {
     "date": "2021-12-07T11:31:23Z",

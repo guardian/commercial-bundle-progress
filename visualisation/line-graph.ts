@@ -25,7 +25,7 @@ const yScale = scaleLinear()
   .range([height - 20, 0]); // note direction of y-axis in SVG
 
 const xScale = scaleTime()
-  .domain([new Date(2021, 1, 1), new Date(2021, now.getMonth() + 1, 5)])
+  .domain([new Date(now.getFullYear() - 1, now.getMonth(), 21), new Date(now.getFullYear(), now.getMonth() + 1, 5)])
   .range([0, width]);
 
 // SVG methods //
@@ -46,8 +46,9 @@ const path = (
   }" />`;
 
 const xAxis = (): string => {
-  const dates: string[] = [
-    // "Feb",
+  const months: string[] = [
+    "Jan",
+    "Feb",
     "Mar",
     "Apr",
     "May",
@@ -60,13 +61,18 @@ const xAxis = (): string => {
     "Dec",
   ];
 
-  const ticks = dates.map((date, index) => {
-    const pos = xScale(Date.parse("1 " + date + " 2021"));
+  const many = Array<undefined>(13).fill(undefined); 
+
+  const ticks = many.map((_,index) => {
+    const then = new Date(now);
+    const pos = xScale(then.setUTCMonth(-index));
+    const month = months[then.getUTCMonth()];
+    const year = month === "Jan" ? ' ’' + then.toISOString().slice(2,4) : '';
     return `<g transform="translate(${Math.round(pos)}, 0)">
       <text text-anchor="middle"
       fill="black"
       stroke="none"
-      transform="translate(0, 12)">${dates[index]}</text>
+      transform="translate(0, 12)">${month}${year}</text>
       <path d="M0,0 v-5" />
     </g>`;
   });
