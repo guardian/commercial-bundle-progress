@@ -67,13 +67,12 @@ const xAxis = (): string => {
   const many = Array<undefined>(13).fill(undefined);
 
   const ticks = many.map((_, index) => {
-    const then = new Date(now);
-    const pos = xScale(then.setUTCMonth(-index));
+    const then = new Date(now.getUTCFullYear(), now.getUTCMonth() - index, 5);
     const month = months[then.getUTCMonth()];
     const year = month === "Jan"
       ? " ’" + then.getUTCFullYear().toString().slice(-2)
       : "";
-    return `<g transform="translate(${Math.round(pos)}, 0)">
+    return `<g transform="translate(${Math.round(xScale(then))}, 0)">
       <text text-anchor="middle"
       fill="black"
       stroke="none"
