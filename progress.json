@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-02-01T16:13:17Z",
+    "author": "Chris Jones",
+    "sha": "20d682b2a1e522361280d0f069f831097f3a341c",
+    "typed": 88,
+    "typedSize": 236143,
+    "untyped": 41,
+    "untypedSize": 95092,
+    "percentage": 0.6821705426356589,
+    "percentageSize": 0.7129168113273053,
+    "totalSize": 331235
+  },
+  {
     "date": "2022-02-01T11:21:01Z",
     "author": "Chris Jones",
     "sha": "8dbaec95d4fec050dc5f5023f829c98b847c26fb",
