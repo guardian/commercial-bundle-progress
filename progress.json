@@ -1,5 +1,41 @@
 [
   {
+    "date": "2022-07-07T14:53:29Z",
+    "author": "Emma Imber",
+    "sha": "78c901d0772cd34e4b71ecaab5b00b23dd95d208",
+    "typed": 111,
+    "typedSize": 304701,
+    "untyped": 29,
+    "untypedSize": 62996,
+    "percentage": 0.7928571428571428,
+    "percentageSize": 0.8286741529030697,
+    "totalSize": 367697
+  },
+  {
+    "date": "2022-06-30T08:58:16Z",
+    "author": "Jake Lee Kennedy",
+    "sha": "555fc4c1ab75ab5abd7c5f7c2a5090d8c9d0ae2d",
+    "typed": 111,
+    "typedSize": 306187,
+    "untyped": 30,
+    "untypedSize": 63807,
+    "percentage": 0.7872340425531915,
+    "percentageSize": 0.8275458520948988,
+    "totalSize": 369994
+  },
+  {
+    "date": "2022-05-31T14:54:39Z",
+    "author": "Ravi",
+    "sha": "5e818072c194b7a6270dfe61330fc6257b9414bd",
+    "typed": 105,
+    "typedSize": 289545,
+    "untyped": 31,
+    "untypedSize": 69671,
+    "percentage": 0.7720588235294118,
+    "percentageSize": 0.8060470580375039,
+    "totalSize": 359216
+  },
+  {
     "date": "2022-05-05T15:16:19Z",
     "author": "Jake Lee Kennedy",
     "sha": "cfdf6fa473a5cce71b0c9b47ef30814b61b22b90",
