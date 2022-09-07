@@ -90,7 +90,15 @@ const yAxis = (sections: number): string => {
   const marks = Array(sections - 1).fill(yScale.domain()[1])
     .map((max, count) => {
       const y = yScale((count + 1) * max / sections);
-      return `<path d="M 0,${Math.round(y)} h${width}" />`;
+      const yLabel = ((count + 1) * max / sections) * 100;
+      return `<path d="M 20,${Math.round(y)} h${width}" />
+      <g transform="translate(0, ${Math.round(y)})">
+      <text text-anchor="middle"
+      fill="black"
+      stroke="none"
+      transform="translate(0, 3)">${Math.round(yLabel)}%</text>
+      <path d="M0,v-5 0" />
+      </g>`;
     });
 
   return marks.join("");
@@ -109,7 +117,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
       font-size: 12px;
     }
   </style>
-  <g class="lines" fill="none">
+  <g class="lines" fill="none" transform="translate(20, 0)">>
     ${path("percentage", { stroke: "darkblue" })}
     ${path("percentageSize", { stroke: "blue" })}
     
@@ -117,13 +125,13 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
     ${path("percentageSize", { stroke: "orange", typed: false })}
   </g>
   
-  <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6">
+  <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6" transform="translate(10, 0)">
     ${yAxis(4)}
   </g>
   <g
     class="axis x"
     stroke="black" fill="none"
-    transform="translate(0, ${height - 20})">
+    transform="translate(20, ${height - 20})">
   ${xAxis()}
   </g>
 </svg>`;
