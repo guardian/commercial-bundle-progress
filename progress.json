@@ -1,5 +1,29 @@
 [
   {
+    "date": "2022-09-01T09:05:19Z",
+    "author": "Jake Lee Kennedy",
+    "sha": "3765a6e50e186eb2557a6ee9ca1347de1e8b0faf",
+    "typed": 118,
+    "typedSize": 327587,
+    "untyped": 25,
+    "untypedSize": 42414,
+    "percentage": 0.8251748251748252,
+    "percentageSize": 0.8853678773841152,
+    "totalSize": 370001
+  },
+  {
+    "date": "2022-08-31T09:11:56Z",
+    "author": "Jake Lee Kennedy",
+    "sha": "c969cab2e8da687543abe090fc1eec5aa19c3fb2",
+    "typed": 118,
+    "typedSize": 327417,
+    "untyped": 26,
+    "untypedSize": 46213,
+    "percentage": 0.8194444444444444,
+    "percentageSize": 0.8763134651928378,
+    "totalSize": 373630
+  },
+  {
     "date": "2022-07-28T13:56:59Z",
     "author": "Jake Lee Kennedy",
     "sha": "df6b4b7d74dfbd72a6d9e83eb791364320e85a2b",
