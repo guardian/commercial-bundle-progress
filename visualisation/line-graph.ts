@@ -134,6 +134,22 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
     transform="translate(20, ${height - 20})">
   ${xAxis()}
   </g>
+  <g class="legend" transform="translate(20,10)">
+    <rect width="18" height="18" style="fill: darkblue; stroke: darkblue;"></rect>
+    <text x="22" y="14">TypeScript (by file number)</text>
+  </g>
+  <g class="legend" transform="translate(20,30)">
+    <rect width="18" height="18" style="fill: blue; stroke: blue;"></rect>
+    <text x="22" y="14">TypeScript (by file size)</text>
+  </g>
+  <g class="legend" transform="translate(260,10)">
+    <rect width="18" height="18" style="fill: darkorange; stroke: darkorange;"></rect>
+    <text x="22" y="14">JavaScript (by file number)</text>
+  </g>
+  <g class="legend" transform="translate(260,30)">
+    <rect width="18" height="18" style="fill: orange; stroke: orange;"></rect>
+    <text x="22" y="14">JavaScript (by file size)</text>
+  </g>
 </svg>`;
 
 Deno.writeTextFileSync(dir + "../public/build/progress.svg", svg);
