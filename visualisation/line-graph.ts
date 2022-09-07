@@ -46,7 +46,17 @@ const path = (
       (d) => xScale(Date.parse(d.date)),
       (d) => yScale(typed ? d[key] : 1 - d[key]),
     ).curve(curveBundle)(data)
-  }" />`;
+  }" />
+  <text 
+    fill="${stroke}"
+    stroke="none"
+    transform="translate(5, 2)"
+    x="${xScale(Date.parse(data[0].date))}"
+    y="${yScale(typed ? data[0][key] : 1 - data[0][key])}">${
+    typed ? "ts" : "js"
+  } ${key} ${
+    Math.round(100 * (typed ? data[0][key] : 1 - data[0][key]))
+  }%</text>`;
 
 const xAxis = (): string => {
   const months: string[] = [
