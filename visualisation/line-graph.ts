@@ -16,13 +16,13 @@ const data: Progress[] = JSON.parse(
 
 // Dimensions //
 const width = 900;
-const height = 400;
+const height = 460;
 
 const now = new Date();
 
 const yScale = scaleLinear()
   .domain([0, 1])
-  .range([height - 20, 0]); // note direction of y-axis in SVG
+  .range([height - 100, 0]); // note direction of y-axis in SVG
 
 const xScale = scaleTime()
   .domain([
@@ -90,9 +90,24 @@ const yAxis = (sections: number): string => {
   const marks = Array(sections - 1).fill(yScale.domain()[1])
     .map((max, count) => {
       const y = yScale((count + 1) * max / sections);
-      return `<path d="M 0,${Math.round(y)} h${width}" />`;
+      const yLabel = ((count + 1) * max / sections) * 100;
+      return `<path d="M 20,${Math.round(y)} h${width}" />
+      <g transform="translate(0, ${Math.round(y)})">
+      <text text-anchor="middle"
+      fill="black"
+      stroke="none"
+      transform="translate(0, 3)">${Math.round(yLabel)}%</text>
+      <path d="M0,v-5 0" />
+      </g>`;
     });
-
+  marks.push(`<path d="M 20,${Math.round(yScale(1))} h${width}" />
+    <g transform="translate(0, ${Math.round(yScale(1))})">
+    <text text-anchor="middle"
+    fill="black"
+    stroke="none"
+    transform="translate(0, 3)">${Math.round(100)}%</text>
+    <path d="M0,v-5 0" />
+    </g>`);
   return marks.join("");
 };
 
@@ -109,7 +124,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
       font-size: 12px;
     }
   </style>
-  <g class="lines" fill="none">
+  <g class="lines" fill="none" transform="translate(20, 80)">>
     ${path("percentage", { stroke: "darkblue" })}
     ${path("percentageSize", { stroke: "blue" })}
     
@@ -117,14 +132,30 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
     ${path("percentageSize", { stroke: "orange", typed: false })}
   </g>
   
-  <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6">
+  <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6" transform="translate(20, 80)">
     ${yAxis(4)}
   </g>
   <g
     class="axis x"
     stroke="black" fill="none"
-    transform="translate(0, ${height - 20})">
+    transform="translate(20, ${height - 20})">
   ${xAxis()}
+  </g>
+  <g class="legend" transform="translate(20,10)">
+    <rect width="18" height="18" style="fill: darkblue; stroke: darkblue;"></rect>
+    <text x="22" y="14">TypeScript (by file number)</text>
+  </g>
+  <g class="legend" transform="translate(20,30)">
+    <rect width="18" height="18" style="fill: blue; stroke: blue;"></rect>
+    <text x="22" y="14">TypeScript (by file size)</text>
+  </g>
+  <g class="legend" transform="translate(260,10)">
+    <rect width="18" height="18" style="fill: darkorange; stroke: darkorange;"></rect>
+    <text x="22" y="14">JavaScript (by file number)</text>
+  </g>
+  <g class="legend" transform="translate(260,30)">
+    <rect width="18" height="18" style="fill: orange; stroke: orange;"></rect>
+    <text x="22" y="14">JavaScript (by file size)</text>
   </g>
 </svg>`;
 
