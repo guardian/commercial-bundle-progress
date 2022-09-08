@@ -16,13 +16,13 @@ const data: Progress[] = JSON.parse(
 
 // Dimensions //
 const width = 900;
-const height = 400;
+const height = 460;
 
 const now = new Date();
 
 const yScale = scaleLinear()
   .domain([0, 1])
-  .range([height - 20, 0]); // note direction of y-axis in SVG
+  .range([height - 100, 0]); // note direction of y-axis in SVG
 
 const xScale = scaleTime()
   .domain([
@@ -100,7 +100,14 @@ const yAxis = (sections: number): string => {
       <path d="M0,v-5 0" />
       </g>`;
     });
-
+  marks.push(`<path d="M 20,${Math.round(yScale(1))} h${width}" />
+    <g transform="translate(0, ${Math.round(yScale(1))})">
+    <text text-anchor="middle"
+    fill="black"
+    stroke="none"
+    transform="translate(0, 3)">${Math.round(100)}%</text>
+    <path d="M0,v-5 0" />
+    </g>`);
   return marks.join("");
 };
 
@@ -117,7 +124,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
       font-size: 12px;
     }
   </style>
-  <g class="lines" fill="none" transform="translate(20, 0)">>
+  <g class="lines" fill="none" transform="translate(20, 80)">>
     ${path("percentage", { stroke: "darkblue" })}
     ${path("percentageSize", { stroke: "blue" })}
     
@@ -125,7 +132,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
     ${path("percentageSize", { stroke: "orange", typed: false })}
   </g>
   
-  <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6" transform="translate(10, 0)">
+  <g class="axis y" stroke="black" fill="none" stroke-dasharray="4 6" transform="translate(20, 80)">
     ${yAxis(4)}
   </g>
   <g
