@@ -17,33 +17,33 @@ import { radius } from "./directed-graph.ts";
 
 const ORIGIN_STRENGTH = 0.06; // default 0.1
 
-const simulation = forceSimulation<Node, Link>()
-  .force(
-    "link",
-    forceLink<Node, Link>()
-      .id((n) => n.id)
-      .strength(0),
-  )
-  // .force("charge", forceManyBody<Node>())
-  .force(
-    "collide",
-    forceCollide<Node>((d) => radius(d) + 6),
-  )
-  // .force("center", forceCenter(width / 2, height / 2))
-  .force(
-    "x",
-    forceX<Node>()
-      .x((n: Node) => xOrigin(n.folder))
-      .strength(ORIGIN_STRENGTH),
-  )
-  .force(
-    "y",
-    forceY<Node>()
-      .y((n) => yOrigin(n.imports))
-      .strength(ORIGIN_STRENGTH),
-  );
+const updateSimulationData = (data: Data, folders: string[]) => {
+  const simulation = forceSimulation<Node, Link>()
+    .force(
+      "link",
+      forceLink<Node, Link>()
+        .id((n) => n.id)
+        .strength(0),
+    )
+    // .force("charge", forceManyBody<Node>())
+    .force(
+      "collide",
+      forceCollide<Node>((d) => radius(d) + 6),
+    )
+    // .force("center", forceCenter(width / 2, height / 2))
+    .force(
+      "x",
+      forceX<Node>()
+        .x((n: Node) => xOrigin(n.folder, folders))
+        .strength(ORIGIN_STRENGTH),
+    )
+    .force(
+      "y",
+      forceY<Node>()
+        .y((n) => yOrigin(n.imports))
+        .strength(ORIGIN_STRENGTH),
+    );
 
-const updateSimulationData = (data: Data) => {
   const { nodes, links } = data;
 
   const oldNodes = simulation.nodes();
