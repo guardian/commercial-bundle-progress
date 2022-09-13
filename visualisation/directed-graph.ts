@@ -20,7 +20,7 @@ const isNode = (n: string | Node): n is Node => typeof n !== "string";
 
 const foldersGroup = svg.append("g")
   .attr("class", "folders")
-  .attr("font-size", 10)
+  .attr("font-size", 14)
   .attr("text-anchor", "middle")
   .attr("y", 580);
 
@@ -206,7 +206,7 @@ const updateSvgData = (
     .join("text")
     .text((d) => d)
     .attr("x", (d) => xOrigin(updatedFolders.indexOf(d), updatedFolders))
-    .attr("font-size", 10)
+    .attr("font-size", 14)
     .attr("text-anchor", "middle")
     .attr("y", 580);
 };

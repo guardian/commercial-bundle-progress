@@ -121,6 +121,8 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
   <style>
     text {
       font-family: \"Courier New\", Courier, monospace;
+    }
+    .legend {
       font-size: 12px;
     }
   </style>
@@ -156,6 +158,11 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg"
   <g class="legend" transform="translate(260,30)">
     <rect width="18" height="18" style="fill: orange; stroke: orange;"></rect>
     <text x="22" y="14">JavaScript (by file size)</text>
+  </g>
+  <g class="total" transform="translate(570,30)">
+    <text x="22" y="14" font-size="35px">${
+  (data[0].percentage * 100).toString().substring(0, 4)
+}% complete</text>
   </g>
 </svg>`;
 
