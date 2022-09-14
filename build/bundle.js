@@ -1827,18 +1827,11 @@ var Groups;
     Groups[Groups["Hosted"] = 5] = "Hosted";
 })(Groups || (Groups = {
 }));
-const folders = [
-    "node_modules",
-    "/lib/",
-    "projects/commercial",
-    "/hosted/",
-    "projects/common", 
-];
 const [width, height] = [
     1200,
     600
 ];
-const xOrigin = (folder)=>width * ((folder + 0.5) / folders.length)
+const xOrigin = (folder, foldersList)=>width * ((folder + 0.5) / foldersList.length)
 ;
 let maximum = 0;
 const yOrigin = (size, max = maximum)=>Math.round(height * (0.18 + 0.48 * (1 - size / max)))
@@ -1854,6 +1847,29 @@ const getTree = async (sha)=>{
     const graph = await fetch(url(sha));
     const tree = await graph.json();
     return tree;
+};
+const folders = [
+    "node_modules",
+    "/lib/",
+    "projects/commercial",
+    "/hosted/",
+    "projects/common", 
+];
+const getFolders = async (sha)=>{
+    const tree = await getTree(sha);
+    delete tree["../lib/config.d.ts"];
+    const newFolders = new Set();
+    Object.entries(tree).forEach((entry)=>{
+        const folder = folders.reduce((prev, current, index)=>{
+            return entry[0].includes(current) ? index : prev;
+        }, 0);
+        if (folders[folder]) {
+            newFolders.add(folders[folder]);
+        }
+    });
+    return [
+        ...newFolders
+    ];
 };
 const getDataForHash = async (sha = branch)=>{
     const tree = await getTree(sha);
@@ -1871,11 +1887,24 @@ const getDataForHash = async (sha = branch)=>{
             }
         });
     });
-    console.log(tree);
+    const newFoldersSet = new Set();
+    Object.entries(tree).forEach((entry)=>{
+        const folder = folders.reduce((prev, current, index)=>{
+            return entry[0].includes(current) ? index : prev;
+        }, 0);
+        if (folders[folder]) {
+            newFoldersSet.add(folders[folder]);
+        }
+    });
+    const newFolders = [
+        ...newFoldersSet
+    ];
+    const adjustedXOrigin = (folder)=>width * ((folder + 0.5) / newFolders.length)
+    ;
     const nodes = Object.entries(tree).map((value)=>{
         const [id, links] = value;
         const group = id.includes("commercial.") ? Groups.Entry : id.includes("node_modules") ? Groups.Packages : id.includes(".ts") ? Groups.Typescript : Groups.Javascript;
-        const folder = folders.reduce((prev, current, index)=>{
+        const folder = newFolders.reduce((prev, current, index)=>{
             return id.includes(current) ? index : prev;
         }, 0);
         const imports = links.length;
@@ -1887,7 +1916,7 @@ const getDataForHash = async (sha = branch)=>{
         };
         return node;
     }).map((node)=>{
-        node.x = xOrigin(node.folder) - simpleHash(node.id) % 31 + 15;
+        node.x = adjustedXOrigin(node.folder) - simpleHash(node.id) % 31 + 15;
         node.y = yOrigin(node.imports, maxImports) - simpleHash(node.id) % 29 + 15;
         return node;
     });
@@ -4966,20 +4995,18 @@ const svg = create("svg").attr("viewBox", [
 const scale = ordinal(category10);
 const isNode = (n)=>typeof n !== "string"
 ;
-svg.append("g").attr("class", "folders").selectAll("text").data(folders).join("text").text((d)=>d
-).attr("font-size", 10).attr("text-anchor", "middle").attr("y", 540).attr("x", (d)=>xOrigin(folders.indexOf(d))
-);
+const foldersGroup = svg.append("g").attr("class", "folders").attr("font-size", 14).attr("text-anchor", "middle").attr("y", 580);
 const linkGroup = svg.append("g").attr("class", "links").attr("stroke", "#999").attr("stroke-opacity", 0.6);
 const nodeGroup = svg.append("g").attr("class", "nodes");
 transition();
 const radius = (d)=>Math.sqrt(d.imports + 1) * 3 + 4
 ;
-const simulation1 = simulation().force("link", link().id((n)=>n.id
-).strength(0)).force("collide", collide((d)=>radius(d) + 6
-)).force("x", x$2().x((n)=>xOrigin(n.folder)
-).strength(0.06)).force("y", y$2().y((n)=>yOrigin(n.imports)
-).strength(0.06));
-const updateSimulationData = (data)=>{
+const updateSimulationData = (data, folders)=>{
+    const simulation1 = simulation().force("link", link().id((n)=>n.id
+    ).strength(0)).force("collide", collide((d)=>radius(d) + 6
+    )).force("x", x$2().x((n)=>xOrigin(n.folder, folders)
+    ).strength(0.06)).force("y", y$2().y((n)=>yOrigin(n.imports)
+    ).strength(0.06));
     const { nodes , links  } = data;
     const oldNodes = simulation1.nodes();
     oldNodes.forEach((oldNode)=>{
@@ -5012,7 +5039,7 @@ const dragging = (simulation)=>{
     };
     return drag().on("start", dragStarted).on("drag", dragged).on("end", dragEnded);
 };
-const updateSvgData = (data, simulation)=>{
+const updateSvgData = (data, simulation, updatedFolders)=>{
     const { links , nodes  } = data;
     const link = linkGroup.selectAll("line").data(links, (d)=>{
         const s = isNode(d.source) ? d.source.id : d.source;
@@ -5028,7 +5055,7 @@ const updateSvgData = (data, simulation)=>{
         const newNode = enter.append("g").attr("fill", "purple").call((n)=>n.transition().duration(600).attr("fill", (d)=>scale(String(d.group))
             )
         ).attr("data-imports", (d)=>d.imports
-        ).attr("data-origin", (d)=>`${xOrigin(d.imports)},${yOrigin(d.imports)}`
+        ).attr("data-origin", (d)=>`${xOrigin(d.imports, updatedFolders)},${yOrigin(d.imports)}`
         ).call(dragging(simulation));
         newNode.append("circle").attr("stroke", "#fff").attr("cx", 0).attr("cy", 0).attr("r", radius);
         newNode.append("title").text((d)=>d.id
@@ -5083,6 +5110,9 @@ const updateSvgData = (data, simulation)=>{
         node.attr("transform", (d)=>`translate(${d.x}, ${d.y})`
         );
     });
+    foldersGroup.selectAll("text").data(updatedFolders).join("text").text((d)=>d
+    ).attr("x", (d)=>xOrigin(updatedFolders.indexOf(d), updatedFolders)
+    ).attr("font-size", 14).attr("text-anchor", "middle").attr("y", 580);
 };
 const directedGraph = document.querySelector("#directed-graph");
 const fragment = document.createDocumentFragment();
@@ -5104,8 +5134,9 @@ const hashes = [
 ];
 const updateGraph = async (hash)=>{
     const data = await getDataForHash(hash);
-    const simulation = updateSimulationData(data);
-    updateSvgData(data, simulation);
+    const folders = await getFolders(hash);
+    const simulation = updateSimulationData(data, folders);
+    updateSvgData(data, simulation, folders);
 };
 updateGraph("main");
 for (const hash of hashes){
