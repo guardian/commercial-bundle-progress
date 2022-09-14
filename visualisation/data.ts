@@ -87,24 +87,18 @@ const getFolders = async (sha: string) => {
   // config.d.ts can be safely ignored
   delete tree["../lib/config.d.ts"];
 
-  let newFolders: string[] = [];
+  const newFolders = new Set<string>();
 
   Object.entries(tree).forEach((entry) => {
     const folder = folders.reduce((prev, current, index) => {
       return entry[0].includes(current) ? index : prev;
     }, 0);
-    let alreadyIn = false;
-    for (let i = 0; i < newFolders.length; i++) {
-      if (newFolders[i] == folders[folder]) {
-        alreadyIn = true;
-      }
-    }
-    if (!alreadyIn) {
-      newFolders.push(folders[folder]);
+    if (folders[folder]) {
+      newFolders.add(folders[folder]);
     }
   });
 
-  return newFolders;
+  return [...newFolders];
 };
 
 const getDataForHash = async (sha = branch) => {
@@ -129,22 +123,18 @@ const getDataForHash = async (sha = branch) => {
     });
   });
 
-  let newFolders: string[] = [];
+  const newFoldersSet = new Set<string>();
 
   Object.entries(tree).forEach((entry) => {
     const folder = folders.reduce((prev, current, index) => {
       return entry[0].includes(current) ? index : prev;
     }, 0);
-    let alreadyIn = false;
-    for (let i = 0; i < newFolders.length; i++) {
-      if (newFolders[i] == folders[folder]) {
-        alreadyIn = true;
-      }
-    }
-    if (!alreadyIn) {
-      newFolders.push(folders[folder]);
+    if (folders[folder]) {
+      newFoldersSet.add(folders[folder]);
     }
   });
+
+  const newFolders = [...newFoldersSet];
 
   const adjustedXOrigin = (folder: number) =>
     width * ((folder + 0.5) / newFolders.length);
