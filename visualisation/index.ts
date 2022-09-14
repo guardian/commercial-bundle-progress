@@ -1,5 +1,5 @@
 import { svg } from "./directed-graph.ts";
-import { getDataForHash } from "./data.ts";
+import { getDataForHash, getFolders } from "./data.ts";
 import { updateSimulationData } from "./simulation.ts";
 import { updateSvgData } from "./directed-graph.ts";
 
@@ -29,9 +29,10 @@ const hashes = [
 
 const updateGraph = async (hash: string) => {
   const data = await getDataForHash(hash);
-  const simulation = updateSimulationData(data);
+  const folders = await getFolders(hash);
+  const simulation = updateSimulationData(data, folders);
 
-  updateSvgData(data, simulation);
+  updateSvgData(data, simulation, folders);
 };
 updateGraph("main");
 

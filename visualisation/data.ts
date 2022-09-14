@@ -33,16 +33,6 @@ export enum Groups {
   Hosted,
 }
 
-const folders = [
-  "node_modules",
-  "/lib/",
-  "projects/commercial",
-  // "/messenger/",
-  // "/dfp/",
-  "/hosted/",
-  "projects/common",
-];
-
 const waitFor = (n = 600): Promise<void> =>
   new Promise((resolve) => {
     setTimeout(() => {
@@ -52,7 +42,8 @@ const waitFor = (n = 600): Promise<void> =>
 
 const [width, height] = [1200, 600];
 
-const xOrigin = (folder: number) => width * ((folder + 0.5) / folders.length);
+const xOrigin = (folder: number, foldersList: string[]) =>
+  width * ((folder + 0.5) / foldersList.length);
 
 let maximum = 0;
 const yOrigin = (size: number, max = maximum) =>
@@ -82,6 +73,34 @@ const getTree = async (sha: string) => {
   return tree;
 };
 
+const folders = [
+  "node_modules",
+  "/lib/",
+  "projects/commercial",
+  "/hosted/",
+  "projects/common",
+];
+
+const getFolders = async (sha: string) => {
+  const tree = await getTree(sha);
+
+  // config.d.ts can be safely ignored
+  delete tree["../lib/config.d.ts"];
+
+  const newFolders = new Set<string>();
+
+  Object.entries(tree).forEach((entry) => {
+    const folder = folders.reduce((prev, current, index) => {
+      return entry[0].includes(current) ? index : prev;
+    }, 0);
+    if (folders[folder]) {
+      newFolders.add(folders[folder]);
+    }
+  });
+
+  return [...newFolders];
+};
+
 const getDataForHash = async (sha = branch) => {
   const tree = await getTree(sha);
 
@@ -104,7 +123,21 @@ const getDataForHash = async (sha = branch) => {
     });
   });
 
-  console.log(tree);
+  const newFoldersSet = new Set<string>();
+
+  Object.entries(tree).forEach((entry) => {
+    const folder = folders.reduce((prev, current, index) => {
+      return entry[0].includes(current) ? index : prev;
+    }, 0);
+    if (folders[folder]) {
+      newFoldersSet.add(folders[folder]);
+    }
+  });
+
+  const newFolders = [...newFoldersSet];
+
+  const adjustedXOrigin = (folder: number) =>
+    width * ((folder + 0.5) / newFolders.length);
 
   const nodes: Node[] = Object.entries(tree)
     .map<Node>((value) => {
@@ -117,7 +150,7 @@ const getDataForHash = async (sha = branch) => {
         ? Groups.Typescript
         : Groups.Javascript;
 
-      const folder = folders.reduce((prev, current, index) => {
+      const folder = newFolders.reduce((prev, current, index) => {
         return id.includes(current) ? index : prev;
       }, 0);
 
@@ -133,7 +166,7 @@ const getDataForHash = async (sha = branch) => {
       return node;
     })
     .map((node) => {
-      node.x = xOrigin(node.folder) - (simpleHash(node.id) % 31) + 15;
+      node.x = adjustedXOrigin(node.folder) - (simpleHash(node.id) % 31) + 15;
       node.y = yOrigin(node.imports, maxImports) - (simpleHash(node.id) % 29) +
         15;
       return node;
@@ -190,5 +223,14 @@ const hashes = [
   "main",
 ];
 
-export { folders, getDataForHash, getTree, height, width, xOrigin, yOrigin };
+export {
+  folders,
+  getDataForHash,
+  getFolders,
+  getTree,
+  height,
+  width,
+  xOrigin,
+  yOrigin,
+};
 export type { Data, Link, Node };

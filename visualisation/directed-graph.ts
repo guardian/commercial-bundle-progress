@@ -4,13 +4,13 @@ import { schemeCategory10 } from "https://cdn.skypack.dev/d3-scale-chromatic@3?d
 import { scaleOrdinal } from "../d3/scale.ts";
 import { Data, Link, Node } from "./data.ts";
 import { height, width } from "./data.ts";
-import { folders, xOrigin, yOrigin } from "./data.ts";
+import { xOrigin, yOrigin } from "./data.ts";
 import type { Simulation } from "../d3/force.ts";
 import { dragging } from "./simulation.ts";
 
 /** ********************
  *      Constants     *
- * ******************** */
+ * *********************/
 
 const svg = create("svg").attr("viewBox", [0, 0, width, height].join(" "));
 
@@ -18,16 +18,11 @@ const scale = scaleOrdinal(schemeCategory10);
 
 const isNode = (n: string | Node): n is Node => typeof n !== "string";
 
-svg.append("g")
+const foldersGroup = svg.append("g")
   .attr("class", "folders")
-  .selectAll<Window, string>("text")
-  .data(folders)
-  .join("text")
-  .text((d) => d)
-  .attr("font-size", 10)
+  .attr("font-size", 14)
   .attr("text-anchor", "middle")
-  .attr("y", 540)
-  .attr("x", (d) => xOrigin(folders.indexOf(d)));
+  .attr("y", 580);
 
 const linkGroup = svg.append("g")
   .attr("class", "links")
@@ -42,7 +37,11 @@ const _t = transition();
 
 const radius = (d: Node) => Math.sqrt(d.imports + 1) * 3 + 4;
 
-const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
+const updateSvgData = (
+  data: Data,
+  simulation: Simulation<Node, Link>,
+  updatedFolders: string[],
+) => {
   const { links, nodes } = data;
 
   // @ts-expect-error -- actually typeof d is Link
@@ -84,7 +83,8 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
           .attr("data-imports", (d) => d.imports)
           .attr(
             "data-origin",
-            (d) => `${xOrigin(d.imports)},${yOrigin(d.imports)}`,
+            (d) =>
+              `${xOrigin(d.imports, updatedFolders)},${yOrigin(d.imports)}`,
           )
           .call(dragging(simulation));
 
@@ -199,6 +199,16 @@ const updateSvgData = (data: Data, simulation: Simulation<Node, Link>) => {
     node
       .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
   });
+
+  foldersGroup
+    .selectAll<Window, string>("text")
+    .data(updatedFolders)
+    .join("text")
+    .text((d) => d)
+    .attr("x", (d) => xOrigin(updatedFolders.indexOf(d), updatedFolders))
+    .attr("font-size", 14)
+    .attr("text-anchor", "middle")
+    .attr("y", 580);
 };
 
 export { height, radius, svg, updateSvgData, width };
