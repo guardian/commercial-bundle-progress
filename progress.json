@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-09-26T12:10:32Z",
+    "author": "Zeke Hunter-Green",
+    "sha": "9766e401ede4190314939233f2baaff68bfe83c2",
+    "typed": 123,
+    "typedSize": 343965,
+    "untyped": 24,
+    "untypedSize": 40686,
+    "percentage": 0.8367346938775511,
+    "percentageSize": 0.894226194654375,
+    "totalSize": 384651
+  },
+  {
     "date": "2022-09-01T09:05:19Z",
     "author": "Jake Lee Kennedy",
     "sha": "3765a6e50e186eb2557a6ee9ca1347de1e8b0faf",
