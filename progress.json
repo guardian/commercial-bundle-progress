@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-10-03T08:13:23Z",
+    "author": "Emma Imber",
+    "sha": "6f63c084b7e795fb66ef3310204ed77d48b74f0e",
+    "typed": 124,
+    "typedSize": 334498,
+    "untyped": 20,
+    "untypedSize": 33567,
+    "percentage": 0.8611111111111112,
+    "percentageSize": 0.9088014345292271,
+    "totalSize": 368065
+  },
+  {
     "date": "2022-09-26T12:10:32Z",
     "author": "Zeke Hunter-Green",
     "sha": "9766e401ede4190314939233f2baaff68bfe83c2",
