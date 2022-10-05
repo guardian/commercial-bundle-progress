@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-10-05T11:51:57Z",
+    "author": "Jake Lee Kennedy",
+    "sha": "936a828effb43cc79e0655aa942693ebe78cb382",
+    "typed": 127,
+    "typedSize": 340583,
+    "untyped": 18,
+    "untypedSize": 29487,
+    "percentage": 0.8758620689655172,
+    "percentageSize": 0.9203204799092064,
+    "totalSize": 370070
+  },
+  {
     "date": "2022-10-03T08:13:23Z",
     "author": "Emma Imber",
     "sha": "6f63c084b7e795fb66ef3310204ed77d48b74f0e",
