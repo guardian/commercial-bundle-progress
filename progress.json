@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-10-13T16:18:48Z",
+    "author": "Jake Lee Kennedy",
+    "sha": "67205b2292b3841de921a5835b4c4b45ce552db7",
+    "typed": 112,
+    "typedSize": 311651,
+    "untyped": 12,
+    "untypedSize": 21179,
+    "percentage": 0.9032258064516129,
+    "percentageSize": 0.9363669140402007,
+    "totalSize": 332830
+  },
+  {
     "date": "2022-10-05T11:51:57Z",
     "author": "Jake Lee Kennedy",
     "sha": "936a828effb43cc79e0655aa942693ebe78cb382",
