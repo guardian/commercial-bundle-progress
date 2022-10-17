@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-10-17T16:00:00Z",
+    "author": "Chris Jones",
+    "sha": "67cc0e996656be950d0193dfa59be8ebe1e67555",
+    "typed": 113,
+    "typedSize": 313876,
+    "untyped": 11,
+    "untypedSize": 18713,
+    "percentage": 0.9112903225806451,
+    "percentageSize": 0.9437353610612498,
+    "totalSize": 332589
+  },
+  {
     "date": "2022-10-13T16:18:48Z",
     "author": "Jake Lee Kennedy",
     "sha": "67205b2292b3841de921a5835b4c4b45ce552db7",
