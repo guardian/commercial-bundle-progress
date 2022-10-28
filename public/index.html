@@ -26,18 +26,46 @@
       .active .label {
         visibility: visible;
       }
+      .wrapper {
+        position: relative;
+        min-height: 100vh;
+      }
+
+      [class|="confetti"] {
+        position: absolute;
+      }
+
+      .red {
+        background-color: #dc2626;
+      }
+
+      .yellow {
+        background-color: #ffbf00;
+      }
+
+      .blue {
+        background-color: #6eaff3;
+      }
+
+      .green {
+        background-color: #32cd32;
+      }
     </style>
-    <a href="https://github.com/guardian/commercial-bundle-progress"
-      >GitHub repo</a
-    >
-    <h1>Commercial Bundle Visualisation</h1>
-    <script type="module" src="build/bundle.js"></script>
-    <div id="directed-graph"></div>
+    <div class="wrapper">
+      <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+      <script src="confetti.js"></script>
+      <a href="https://github.com/guardian/commercial-bundle-progress"
+        >GitHub repo</a
+      >
+      <h1>Commercial Bundle Visualisation</h1>
+      <script type="module" src="build/bundle.js"></script>
+      <div id="directed-graph"></div>
 
-    <h2>TypeScript conversion progress</h2>
-    <img src="./build/progress.svg" />
+      <h2>TypeScript conversion progress</h2>
+      <img src="./build/progress.svg" />
 
-    <h3>Largest files</h3>
-    <ul id="largest-files"></ul>
+      <h3>Largest files</h3>
+      <ul id="largest-files"></ul>
+    </div>
   </body>
 </html>
