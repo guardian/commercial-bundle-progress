@@ -1,5 +1,17 @@
 [
   {
+    "date": "2022-10-28T10:46:06Z",
+    "author": "Ravi",
+    "sha": "10773cbbaeb96c9b689dbecab04e29b24007f2fc",
+    "typed": 120,
+    "typedSize": 322308,
+    "untyped": 0,
+    "untypedSize": 0,
+    "percentage": 1,
+    "percentageSize": 1,
+    "totalSize": 322308
+  },
+  {
     "date": "2022-10-26T15:35:36Z",
     "author": "Chris Jones",
     "sha": "60a6f66346c5394109e927dce2983961e5330373",
